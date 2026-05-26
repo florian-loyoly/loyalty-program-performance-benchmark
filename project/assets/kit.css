@@ -1,0 +1,185 @@
+/* =============================================================
+   Loyoly Website UI Kit — shared stylesheet
+   Reflects the real figma/webflow design of loyoly.io
+   ============================================================= */
+@import url('colors_and_type.css');
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+
+/* ---------- Layout ---------- */
+.lyly-container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+.lyly-section { padding: 80px 40px; }
+.lyly-section--tight { padding: 48px 40px; }
+
+/* Dark sections (testimonial hero + stats + CTA) */
+.lyly-section--dark { background: var(--bg-dark); color: var(--fg-on-dark); position: relative; overflow: hidden; }
+.lyly-section--dark h1, .lyly-section--dark h2, .lyly-section--dark h3 { color: #fff; }
+.lyly-section--dark p { color: var(--pampas-300); }
+
+/* Hero with photo background */
+.lyly-section--hero-photo {
+  position: relative; overflow: hidden;
+  background: #2B251F url('../../assets/bg-grid.webp') center/cover no-repeat;
+  color: #fff;
+}
+.lyly-section--hero-photo::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(43,37,31,0.55);
+  pointer-events: none;
+}
+.lyly-section--hero-photo h1, .lyly-section--hero-photo h2 { color: #fff; }
+.lyly-section--hero-photo p { color: rgba(255,255,255,0.82); }
+
+/* Yellow curve divider — signature decorative element */
+.lyly-curve {
+  position: relative; height: 80px; margin-top: -80px; pointer-events: none;
+}
+.lyly-curve--dark-to-light {
+  height: 140px; background: none;
+}
+.lyly-curve--dark-to-light svg { width: 100%; height: 100%; display: block; }
+
+/* ---------- Eyebrow pill ---------- */
+.lyly-eyebrow-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--pampas-100); border: 1px solid var(--pampas-200);
+  font-family: var(--font-body); font-size: 12px; font-weight: 500;
+  color: var(--fg-muted);
+}
+
+.lyly-eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 500;
+  color: var(--fg);
+}
+
+/* ---------- Buttons ---------- */
+.lyly-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 500;
+  padding: 0 16px; height: 40px; border-radius: 8px;
+  border: none; cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+  text-decoration: none; white-space: nowrap;
+}
+.lyly-btn--primary { background: var(--blue-primary); color: #fff; box-shadow: 0 1px 2px rgba(41,101,254,0.18); }
+.lyly-btn--primary:hover { background: var(--accent-hover); color: #fff; }
+.lyly-btn--secondary { background: var(--pampas-100); color: var(--fg); border: 1px solid var(--pampas-200); }
+.lyly-btn--secondary:hover { background: var(--pampas-200); }
+.lyly-btn--tertiary { background: var(--yellow-primary); color: var(--pampas-950); }
+.lyly-btn--tertiary:hover { background: var(--yellow-secondary); }
+.lyly-btn--ghost { background: transparent; color: var(--fg); }
+.lyly-btn--ghost:hover { background: var(--pampas-100); }
+.lyly-btn--on-dark { color: #fff; }
+.lyly-btn--on-dark.lyly-btn--secondary { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #fff; }
+.lyly-btn--on-dark.lyly-btn--secondary:hover { background: rgba(255,255,255,0.14); }
+.lyly-btn--on-dark.lyly-btn--ghost:hover { background: rgba(255,255,255,0.08); }
+.lyly-btn--lg { height: 46px; padding: 0 20px; font-size: 15px; }
+.lyly-btn--sm { height: 32px; padding: 0 12px; font-size: 13px; border-radius: 6px; }
+.lyly-btn--link { background: none; padding: 0; height: auto; color: var(--fg-muted); font-weight: 500; }
+.lyly-btn--link:hover { color: var(--fg); background: none; }
+
+/* ---------- Pills / tabs ---------- */
+.lyly-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--pampas-100); border: 1px solid var(--pampas-200);
+  border-radius: 999px; padding: 4px 12px;
+  font-family: var(--font-body); font-size: 12px; font-weight: 500;
+  color: var(--fg);
+}
+.lyly-pill--accent { background: var(--blue-tertiary); border-color: var(--blue-secondary); color: var(--blue-primary); }
+.lyly-pill--yellow { background: var(--yellow-tertiary); border-color: var(--yellow-secondary); color: #7A5B00; }
+.lyly-pill--on-dark { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #fff; }
+.lyly-pill__dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; }
+
+.lyly-tab {
+  padding: 10px 18px; border-radius: 8px; cursor: pointer;
+  font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  border: 1px solid var(--pampas-200); background: transparent; color: var(--fg-muted);
+  transition: all 150ms ease;
+}
+.lyly-tab:hover { color: var(--fg); background: var(--pampas-100); }
+.lyly-tab--active { background: var(--pampas-900); color: #fff; border-color: var(--pampas-900); }
+
+/* ---------- Cards ---------- */
+.lyly-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--pampas-200);
+  border-radius: 2px;
+  padding: 24px;
+  transition: border-color 180ms ease;
+}
+.lyly-card--plain { border: none; background: transparent; padding: 0; }
+.lyly-card--dark { background: #1A1611; border-color: #2B251F; color: #fff; }
+.lyly-card--feature {
+  background: transparent; border: none; padding: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+/* ---------- Icon tile ---------- */
+.lyly-icon-tile {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: #fff; border: 1px solid var(--pampas-200);
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.lyly-icon-tile svg { width: 20px; height: 20px; stroke: var(--blue-primary); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.lyly-icon-tile--lg { width: 48px; height: 48px; }
+.lyly-icon-tile--lg svg { width: 24px; height: 24px; }
+.lyly-icon-tile--dark { background: #1A1611; border-color: #3A3228; }
+.lyly-icon-tile--dark svg { stroke: #fff; }
+
+/* ---------- Form ---------- */
+.lyly-input {
+  width: 100%;
+  background: #fff; border: 1px solid var(--pampas-200);
+  border-radius: 10px; padding: 11px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--fg);
+  outline: none; transition: border-color 160ms, box-shadow 160ms;
+}
+.lyly-input:focus { border-color: var(--blue-primary); box-shadow: 0 0 0 3px var(--blue-tertiary); }
+.lyly-input::placeholder { color: var(--pampas-500); }
+.lyly-label { font-size: 12px; font-weight: 500; color: var(--pampas-900); display: block; margin-bottom: 6px; }
+
+.lyly-input-group {
+  display: flex; align-items: center; gap: 8px;
+  background: #fff; border: 1px solid var(--pampas-200);
+  border-radius: 10px; padding: 4px 4px 4px 14px;
+}
+.lyly-input-group input {
+  flex: 1; border: none; outline: none; background: transparent;
+  font-family: var(--font-body); font-size: 14px; color: var(--fg); padding: 8px 0;
+}
+.lyly-input-group svg { color: var(--pampas-500); flex-shrink: 0; }
+
+/* ---------- Accent feature-stripe (vertical blue bar on key features) ---------- */
+.lyly-feature-stripe {
+  border-left: 2px solid var(--blue-primary);
+  padding-left: 16px;
+}
+
+/* ---------- Divider line used between feature columns ---------- */
+.lyly-v-div { border-left: 1px solid var(--pampas-200); }
+
+/* ---------- Utility ---------- */
+.lyly-stack { display: flex; flex-direction: column; }
+.lyly-row { display: flex; align-items: center; }
+.lyly-wrap { flex-wrap: wrap; }
+
+/* Accordion */
+.lyly-accordion { border-top: 1px solid var(--pampas-200); }
+.lyly-accordion summary {
+  list-style: none; cursor: pointer;
+  padding: 22px 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px;
+  border-bottom: 1px solid var(--pampas-200);
+}
+.lyly-accordion summary::-webkit-details-marker { display: none; }
+.lyly-accordion summary svg { flex-shrink: 0; transition: transform 200ms ease; color: var(--fg-muted); margin-top: 4px; }
+.lyly-accordion details[open] summary svg { transform: rotate(180deg); }
+.lyly-accordion .lyly-accordion__body { padding: 0 0 22px; border-bottom: 1px solid var(--pampas-200); font-size: 14px; color: var(--fg-muted); line-height: 1.6; max-width: 760px; }
+
+/* Hero sub-link row */
+.lyly-sublinks { display: flex; gap: 24px; color: rgba(255,255,255,0.7); font-size: 13px; font-family: var(--font-body); }
+.lyly-sublinks span { display: inline-flex; align-items: center; gap: 6px; }
