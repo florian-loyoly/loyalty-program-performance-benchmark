@@ -529,7 +529,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
 // ============================================================================
 // KPI VIEW
 // ============================================================================
-function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaStyle }) {
+function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaStyle, goToIndustry }) {
   const { t, data, formatValue, classify } = useLang();
   const { KPIS, SECTORS, GLOBAL } = data;
   const kpi = KPIS.find(k => k.id === kpiId) || KPIS[0];
@@ -618,7 +618,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                 const pct = (v / axisMax) * 100;
                 const cmp = classify(v, avg);
                 return (
-                  <CompareRow key={s.id} sector={s} value={v} pct={pct} cmp={cmp} kpi={kpi} index={idx} />
+                  <CompareRow key={s.id} sector={s} value={v} pct={pct} cmp={cmp} kpi={kpi} index={idx} goToIndustry={goToIndustry} />
                 );
               })}
             </div>
@@ -657,16 +657,18 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
   );
 }
 
-function CompareRow({ sector, value, pct, cmp, kpi, index }) {
+function CompareRow({ sector, value, pct, cmp, kpi, index, goToIndustry }) {
   const { formatValue, formatDelta, t, data } = useLang();
   const [hover, setHover] = useState(false);
   return (
     <div className="bm-compare__row"
          style={{ animationDelay: (index * 50) + "ms" }}>
-      <div className="bm-compare__name">
+      <button className="bm-compare__name bm-compare__name--link"
+              onClick={() => goToIndustry && goToIndustry(sector.id)}
+              title={`View ${sector.name} in industry tab`}>
         <Icon name={sector.icon} size={14} />
         {sector.name}
-      </div>
+      </button>
       <div className="bm-compare__bar-wrap" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <div className="bm-compare__bar-track" />
         <div className="bm-compare__bar-fill"

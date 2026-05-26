@@ -93,6 +93,7 @@ function App() {
               setKpiId={setKpiId}
               vizOverride={t.vizOverride}
               formulaStyle={t.formulaStyle}
+              goToIndustry={(sid) => { setSectorId(sid); setView("industry"); }}
             />
           )}
         </main>
@@ -104,6 +105,7 @@ function App() {
           onClose={() => setBmOpen(false)}
           dark={t.darkMode}
           initialSector={view === "industry" ? sectorId : null}
+          goToKpi={(kid) => { setBmOpen(false); setKpiId(kid); setView("kpi"); }}
         />
 
         <TweaksPanel title="Tweaks">

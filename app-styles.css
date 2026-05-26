@@ -829,8 +829,9 @@ body {
 }
 .bm-app[data-theme="dark"] .bm-kpi-hero__formula { background: rgba(255,255,255,0.05); color: var(--pampas-200); }
 .bm-kpi-hero__hero-num {
-  display: flex; flex-direction: column; gap: 8px; justify-content: center;
+  display: flex; flex-direction: column; gap: 8px; justify-content: center; align-items: center;
   border-left: 1px solid var(--border); padding-left: 24px;
+  text-align: center;
 }
 .bm-app[data-theme="dark"] .bm-kpi-hero__hero-num { border-color: rgba(255,255,255,0.10); }
 
@@ -869,6 +870,18 @@ body {
   color: var(--fg);
 }
 .bm-app[data-theme="dark"] .bm-compare__name { color: #fff; }
+.bm-compare__name--link {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  font-family: var(--font-body); text-align: left;
+  padding: 4px 8px; border-radius: 6px; margin: -4px -8px;
+  transition: background 150ms, color 150ms;
+}
+.bm-compare__name--link:hover {
+  background: var(--pampas-100); color: var(--blue-primary);
+}
+.bm-app[data-theme="dark"] .bm-compare__name--link:hover {
+  background: rgba(255,255,255,0.08); color: var(--blue-secondary);
+}
 .bm-compare__bar-wrap {
   position: relative; height: 22px;
 }
@@ -1141,6 +1154,16 @@ body {
 .bm-app[data-theme="dark"] .bm-result-row { border-bottom-color: rgba(255,255,255,0.06); }
 .bm-result-row__name { font-size: 13px; font-weight: 500; }
 .bm-result-row__name small { display: block; font-size: 11px; color: var(--fg-faint); font-weight: 400; }
+.bm-result-kpi-link {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  color: var(--fg); padding: 0;
+  transition: color 150ms;
+}
+.bm-result-kpi-link:hover { color: var(--blue-primary); }
+.bm-app[data-theme="dark"] .bm-result-kpi-link { color: #fff; }
+.bm-app[data-theme="dark"] .bm-result-kpi-link:hover { color: var(--blue-secondary); }
 .bm-result-row__vals { display: flex; align-items: center; gap: 12px; }
 .bm-result-row__bar-row { grid-column: 1 / -1; }
 .bm-result-bar {

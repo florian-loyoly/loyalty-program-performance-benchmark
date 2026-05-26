@@ -5,7 +5,7 @@
    ============================================================ */
 const { useState: bpUseState, useEffect: bpUseEffect } = React;
 
-function BenchmarkPanel({ open, onClose, dark, initialSector = null }) {
+function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) {
   const { t, data, classify, formatValue, formatDelta } = useLang();
   const { KPIS, SECTORS } = data;
   const [step, setStep]   = bpUseState(1);
@@ -67,7 +67,7 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null }) {
         <div className="bm-panel__body">
           {step === 1 && <Step1 sector={sector} sectorId={sectorId} setSectorId={setSectorId} />}
           {step === 2 && <Step2 sector={sector} values={values} setValues={setValues} />}
-          {step === 3 && <Step3 sector={sector} values={values} dark={dark} />}
+          {step === 3 && <Step3 sector={sector} values={values} dark={dark} goToKpi={goToKpi} />}
         </div>
 
         <div className="bm-panel__foot">
@@ -159,7 +159,7 @@ function Step2({ sector, values, setValues }) {
 }
 
 // ── Step 3 ───────────────────────────────────────────────────────────
-function Step3({ sector, values, dark }) {
+function Step3({ sector, values, dark, goToKpi }) {
   const { t, data, formatValue } = useLang();
   const { KPIS } = data;
   const filled = KPIS.filter(k => values[k.id] != null && values[k.id] !== "");
@@ -209,7 +209,10 @@ function Step3({ sector, values, dark }) {
         return (
           <div key={k.id} className="bm-result-row">
             <div className="bm-result-row__name">
-              {k.short || k.name}
+              <button className="bm-result-kpi-link" onClick={() => goToKpi && goToKpi(k.id)}>
+                {k.short || k.name}
+                <Icon name="arrow-right" size={10} />
+              </button>
               <small>{t("bp_you_vs_avg", { you: formatValue(k, v), avg: formatValue(k, bench) })}</small>
             </div>
             <div className="bm-result-row__vals">
