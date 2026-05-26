@@ -1,0 +1,13 @@
+{
+  "name": "loyoly-benchmark-2026",
+  "version": "1.0.0",
+  "description": "Loyoly Loyalty Benchmark 2026 — interactive data report",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000",
+    "preview": "npx serve . -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

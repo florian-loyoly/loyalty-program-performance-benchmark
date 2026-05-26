@@ -1,0 +1,45 @@
+/* =============================================================
+   Loyoly Website UI Kit — shared stylesheet
+   ============================================================= */
+@import url('colors_and_type.css');
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+
+/* ---------- Layout ---------- */
+.lyly-container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+.lyly-section { padding: 80px 40px; }
+.lyly-section--tight { padding: 48px 40px; }
+
+.lyly-section--dark { background: var(--bg-dark); color: var(--fg-on-dark); position: relative; overflow: hidden; }
+.lyly-section--dark h1, .lyly-section--dark h2, .lyly-section--dark h3 { color: #fff; }
+.lyly-section--dark p { color: var(--pampas-300); }
+
+.lyly-section--hero-photo {
+  position: relative; overflow: hidden;
+  background: #2B251F url('bg-grid.webp') center/cover no-repeat;
+  color: #fff;
+}
+.lyly-section--hero-photo::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(43,37,31,0.55);
+  pointer-events: none;
+}
+.lyly-section--hero-photo h1, .lyly-section--hero-photo h2 { color: #fff; }
+.lyly-section--hero-photo p { color: rgba(255,255,255,0.82); }
+
+.lyly-curve {
+  position: relative; height: 80px; margin-top: -80px; pointer-events: none;
+}
+.lyly-curve--dark-to-light {
+  height: 140px; background: none;
+}
+.lyly-curve--dark-to-light svg { width: 100%; height: 100%; display: block; }
+
+.lyly-eyebrow-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--pampas-100); border: 1px solid var(--pampas-200);
+  font-family: var(--font-body); font-size: 12px; font-weight: 500;
+  color: var(--fg-muted);
+}
