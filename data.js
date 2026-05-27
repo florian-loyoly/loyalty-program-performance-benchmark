@@ -116,23 +116,6 @@
       ]
     },
     {
-      id: "ltv_growth",
-      name: "LTV growth",
-      short: "LTV growth",
-      category: "Business",
-      type: "growth",
-      defaultViz: "bar",
-      unit: "%",
-      definition: "LTV growth measures the revenue delta between loyalty members and a matched cohort of non-members over 12 months. It is the foundational proof of loyalty ROI: the difference between a program that drives real incremental value and one that simply rewards customers who would have bought anyway. Tracking LTV growth by cohort controls for selection bias and reveals the true causal impact of program membership.",
-      formula: "(LTV_members − LTV_non-members) ÷ LTV_non-members",
-      formulaParts: { num: "LTV(members) − LTV(non-members)", denom: "LTV(non-members)" },
-      tips: [
-        { title: "Experiential VIP tiers",      body: "VIP tiers with experiential rewards beat pure-discount tiers on retention." },
-        { title: "Personalised next mission",   body: "Trigger a personalised 'next best mission' after each purchase." },
-        { title: "Win-back at 60 / 90 / 120 days", body: "Win-back missions at 60 / 90 / 120 days catch the lapse before it sets." }
-      ]
-    },
-    {
       id: "aov_growth",
       name: "AOV growth",
       short: "AOV growth",
@@ -164,6 +147,23 @@
         { title: "Anniversary missions",       body: "Birthday and anniversary missions create natural re-purchase triggers." },
         { title: "Tier expiration timers",     body: "Tier expiration timers (\"keep your VIP status\") accelerate the next order." },
         { title: "Cross-sell mission rewards", body: "Cross-sell mission rewards tied to a complementary product category." }
+      ]
+    },
+    {
+      id: "ltv_growth",
+      name: "LTV growth",
+      short: "LTV growth",
+      category: "Business",
+      type: "growth",
+      defaultViz: "bar",
+      unit: "%",
+      definition: "LTV growth measures the revenue delta between loyalty members and a matched cohort of non-members over 12 months. It is the foundational proof of loyalty ROI: the difference between a program that drives real incremental value and one that simply rewards customers who would have bought anyway. Tracking LTV growth by cohort controls for selection bias and reveals the true causal impact of program membership.",
+      formula: "(LTV_members − LTV_non-members) ÷ LTV_non-members",
+      formulaParts: { num: "LTV(members) − LTV(non-members)", denom: "LTV(non-members)" },
+      tips: [
+        { title: "Experiential VIP tiers",      body: "VIP tiers with experiential rewards beat pure-discount tiers on retention." },
+        { title: "Personalised next mission",   body: "Trigger a personalised 'next best mission' after each purchase." },
+        { title: "Win-back at 60 / 90 / 120 days", body: "Win-back missions at 60 / 90 / 120 days catch the lapse before it sets." }
       ]
     },
     {
