@@ -690,7 +690,7 @@ body {
 }
 @media (max-width: 900px) { .bm-iv__intro { grid-template-columns: 1fr; } }
 .bm-app[data-theme="dark"] .bm-iv__intro { background: #1A1611; border-color: rgba(255,255,255,0.08); }
-.bm-iv__intro-text p { font-size: 15px; line-height: 1.55; color: var(--fg-muted); margin: 8px 0 0; }
+.bm-iv__intro-text p { font-size: 13px; line-height: 1.55; color: var(--fg-muted); margin: 8px 0 0; }
 .bm-app[data-theme="dark"] .bm-iv__intro-text p { color: var(--pampas-300); }
 
 /* ── Client logo strip (per sector) ── */
