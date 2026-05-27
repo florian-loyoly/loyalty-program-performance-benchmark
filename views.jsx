@@ -504,7 +504,6 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
                     onClick={() => setSectorId(s.id)}>
               <Icon name={s.icon} size={16} />
               <span>{s.short}</span>
-              <span className="ct">{s.brands}</span>
             </button>
           ))}
         </nav>
