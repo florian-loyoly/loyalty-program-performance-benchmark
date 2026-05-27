@@ -49,16 +49,16 @@ function Icon({ name, size = 16 }) {
 }
 
 const KPI_ICONS = {
-  activation_rate:    "zap",
-  points_usage_rate:  "coins",
-  redemption_rate:    "gift",
-  referral_cvr:       "share-2",
-  new_from_referral:  "user-plus",
-  participation_rate: "users",
-  ltv_growth:         "trending-up",
-  aov_growth:         "shopping-cart",
-  orders_growth:      "package",
-  roi:                "target",
+  activation_rate:      "zap",
+  points_usage_rate:    "coins",
+  redemption_rate:      "gift",
+  referral_conversion:  "share-2",
+  new_customer_rate:    "user-plus",
+  participation_rate:   "users",
+  ltv_growth:           "trending-up",
+  aov_growth:           "shopping-cart",
+  orders_growth:        "package",
+  roi:                  "target",
 };
 
 // resolve which viz to render for a KPI given the user's variant choice
