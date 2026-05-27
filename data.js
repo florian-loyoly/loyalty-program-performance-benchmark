@@ -281,10 +281,12 @@
       brands: 68,
       intro: "Home & Decoration operates on long purchase cycles that fundamentally reshape the loyalty dynamic. AOV growth at redemption is strong, but low transaction frequency causes members to disengage between purchases, pulling down participation and redemption rates. Re-engagement missions are the primary mechanism to keep the program alive between buying moments.",
       clients: [
-        { name: "Atelier Lin",  initials: "AL", color: "#917F65" },
-        { name: "Maison Quai",  initials: "MQ", color: "#2B251F" },
-        { name: "Form & Fold",  initials: "FF", color: "#52473C" },
-        { name: "Habitat 9",    initials: "H9", color: "#1F52D8" }
+        { name: "Atma",               logo: "assets/logos/atma.webp",                url: "https://atmakitchenware.fr/pages/la-brigade-du-kiff" },
+        { name: "Ma Petite Chaise",   logo: "assets/logos/ma-petite-chaise.webp",    url: "https://www.mapetitechaise.com/content/111-Fidelite" },
+        { name: "Céladon Paris",      logo: "assets/logos/celadon.avif",             url: "https://celadon-paris.com/pages/fidelite-parrainage-celadon-paris" },
+        { name: "Cigoire",            logo: "assets/logos/cigoire.webp",             url: "https://cigoire.com/pages/fidelite-parrainage" },
+        { name: "Emily's Pillow",     logo: "assets/logos/emilys-pillow.png",        url: "https://emilyspillow.com/pages/fidelite-parrainage" },
+        { name: "La Bourse aux Livres", logo: "assets/logos/la-bourse-aux-livres.webp", url: "https://labourseauxlivres.fr/pages/gagner-des-cadeaux" }
       ],
       kpis: {
         activation_rate: 4.7, points_usage_rate: 9, redemption_rate: 38.8, referral_conversion: 44.1, new_customer_rate: 0.9, participation_rate: 2,
