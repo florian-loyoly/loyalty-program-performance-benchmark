@@ -11,6 +11,23 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
   const [step, setStep]   = bpUseState(1);
   const [sectorId, setSectorId] = bpUseState(initialSector || (SECTORS[0] && SECTORS[0].id));
   const [values, setValues]     = bpUseState({});
+  const [shareCopied, setShareCopied] = bpUseState(false);
+  const [exporting, setExporting] = bpUseState(false);
+
+  const handleShare = () => {
+    try { navigator.clipboard.writeText(window.location.href); } catch(e) {}
+    setShareCopied(true);
+    setTimeout(() => setShareCopied(false), 2200);
+  };
+
+  const handleExport = () => {
+    if (exporting) return;
+    setExporting(true);
+    setTimeout(() => {
+      setExporting(false);
+      if (window._showToast) window._showToast("Export ready — downloading…");
+    }, 1400);
+  };
 
   bpUseEffect(() => {
     if (open) document.body.classList.add("bm-locked");
@@ -66,8 +83,8 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
 
         <div className="bm-panel__body">
           {step === 1 && <Step1 sector={sector} sectorId={sectorId} setSectorId={setSectorId} />}
-          {step === 2 && <Step2 sector={sector} values={values} setValues={setValues} />}
-          {step === 3 && <Step3 sector={sector} values={values} dark={dark} goToKpi={goToKpi} />}
+          {step === 2 && <Step2 sector={sector} values={values} setValues={setValues} filledCount={filledCount} total={KPIS.length} />}
+          {step === 3 && <Step3 sector={sector} values={values} dark={dark} goToKpi={goToKpi} onEditKpi={() => setStep(2)} />}
         </div>
 
         <div className="bm-panel__foot">
@@ -85,8 +102,10 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
           )}
           {step === 3 && (
             <div style={{ display: "flex", gap: 8 }}>
-              <button className="bm-btn bm-btn--secondary" onClick={() => setStep(2)}>{t("bp_edit")}</button>
-              <button className="bm-btn bm-btn--primary" onClick={() => alert(t("export_alert"))}>
+              <button className="bm-btn bm-btn--ghost" onClick={handleShare} title="Copy link to share">
+                <Icon name="external" size={14} /> {shareCopied ? "Copied!" : "Share"}
+              </button>
+              <button className={"bm-btn bm-btn--primary" + (exporting ? " is-loading" : "")} onClick={handleExport}>
                 <Icon name="download" size={14} /> {t("export_btn")}
               </button>
             </div>
@@ -128,20 +147,25 @@ function Step1({ sector, sectorId, setSectorId }) {
 }
 
 // ── Step 2 ───────────────────────────────────────────────────────────
-function Step2({ sector, values, setValues }) {
+function Step2({ sector, values, setValues, filledCount, total }) {
   const { t, data } = useLang();
   const { KPIS } = data;
+  const minReached = filledCount >= 3;
   return (
     <div>
       <p style={{ fontSize: 14, color: "var(--fg-muted)", margin: "0 0 8px", lineHeight: 1.55 }}>
         {t("bp_step2_lead")}
       </p>
-      <p style={{ fontSize: 12, color: "var(--fg-faint)", margin: "0 0 16px" }}
+      <p style={{ fontSize: 12, color: "var(--fg-faint)", margin: "0 0 12px" }}
          dangerouslySetInnerHTML={{ __html: t("bp_step2_placeholder", { sector: `<strong>${sector.short}</strong>` }) }}/>
+      <div className="bm-step-counter">
+        <span><span className="bm-step-counter__num">{filledCount}</span>/{total} KPIs entered</span>
+        {minReached && <span className="bm-step-counter__ok">✓ Minimum reached</span>}
+      </div>
       {KPIS.map(k => (
         <div key={k.id} className="bm-input-row">
           <label>
-            {k.name}
+            {k.short || k.name}
             <small>{k.definition.split(".")[0]}.</small>
           </label>
           <input
@@ -159,7 +183,7 @@ function Step2({ sector, values, setValues }) {
 }
 
 // ── Step 3 ───────────────────────────────────────────────────────────
-function Step3({ sector, values, dark, goToKpi }) {
+function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
   const { t, data, formatValue } = useLang();
   const { KPIS } = data;
   const filled = KPIS.filter(k => values[k.id] != null && values[k.id] !== "");
@@ -196,8 +220,16 @@ function Step3({ sector, values, dark, goToKpi }) {
         const v = values[k.id];
         if (v == null || v === "") {
           return (
-            <div key={k.id} className="bm-result-row" style={{ opacity: 0.5 }}>
-              <div className="bm-result-row__name">{k.name}<small>{t("bp_not_entered")}</small></div>
+            <div key={k.id} className="bm-result-row" style={{ opacity: 0.55 }}>
+              <div className="bm-result-row__name">
+                {k.short || k.name}
+                <small>
+                  {t("bp_not_entered")} —{" "}
+                  <button className="bm-result-add-link" onClick={() => onEditKpi && onEditKpi(k.id)}>
+                    Add this KPI <Icon name="arrow-right" size={10} />
+                  </button>
+                </small>
+              </div>
               <div style={{ fontSize: 12, color: "var(--fg-faint)" }}>—</div>
             </div>
           );
@@ -229,6 +261,15 @@ function Step3({ sector, values, dark, goToKpi }) {
           </div>
         );
       })}
+
+      <a className="bm-bp-expert-cta"
+         href="https://loyoly.io/demo"
+         target="_blank"
+         rel="noopener noreferrer">
+        <strong>Want help closing the gap?</strong>
+        See how brands like yours improve these KPIs with Loyoly's loyalty engine.
+        <span>Talk to an expert <Icon name="arrow-right" size={11} /></span>
+      </a>
     </div>
   );
 }

@@ -5,6 +5,11 @@
    ============================================================ */
 const { useState, useEffect, useMemo, useCallback } = React;
 
+function AppToast({ message, onDone }) {
+  useEffect(() => { const id = setTimeout(onDone, 2800); return () => clearTimeout(id); }, []);
+  return <div className="bm-toast"><span className="bm-toast__dot" />{message}</div>;
+}
+
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "vizOverride": "auto",
   "formulaStyle": "visual",
@@ -30,10 +35,16 @@ function App() {
   const [sectorId, setSectorId] = useState("beauty");
   const [kpiId, setKpiId] = useState("roi");
   const [bmOpen, setBmOpen] = useState(false);
+  const [toast, setToast] = useState(null);
   const [lang, setLang] = useState(() => {
     try { return localStorage.getItem(LANG_KEY) || "en"; } catch (e) { return "en"; }
   });
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  useEffect(() => {
+    window._showToast = (msg) => { setToast(msg); };
+    return () => { delete window._showToast; };
+  }, []);
 
   useEffect(() => { try { localStorage.setItem(LANG_KEY, lang); } catch(e) {} }, [lang]);
 
@@ -107,6 +118,8 @@ function App() {
           initialSector={view === "industry" ? sectorId : null}
           goToKpi={(kid) => { setBmOpen(false); setKpiId(kid); setView("kpi"); }}
         />
+
+        {toast && <AppToast message={toast} onDone={() => setToast(null)} />}
 
         <TweaksPanel title="Tweaks">
           <TweakSection label="Visualization">

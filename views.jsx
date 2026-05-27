@@ -258,7 +258,11 @@ function ClientStrip({ sector }) {
             </div>
             <div className="bm-clients__meta">
               <span className="bm-clients__name">{c.name}</span>
-              <a className="bm-clients__cta" href="#" onClick={(e) => e.preventDefault()}>
+              <a className="bm-clients__cta"
+                   href="https://loyoly.io"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="View on loyoly.io">
                 {t("iv_see_program")}
                 <Icon name="external" size={11} />
               </a>
@@ -443,6 +447,14 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
   const { t, data } = useLang();
   const { KPIS, SECTORS, GLOBAL, CATEGORIES } = data;
   const sector = SECTORS.find(s => s.id === sectorId) || SECTORS[0];
+  const [exporting, setExporting] = useState(false);
+  const handleExport = () => {
+    if (exporting) return;
+    setExporting(true);
+    setTimeout(() => { setExporting(false); if (window._showToast) window._showToast("Export ready — downloading…"); }, 1400);
+  };
+
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "smooth" }); }, [sectorId]);
 
   return (
     <div className="bm-container">
@@ -452,7 +464,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
           <h2 className="bm-h2" style={{ fontSize: 28 }}>{t("iv_title")}</h2>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
-          <button className="bm-btn bm-btn--secondary" onClick={() => alert(t("export_alert"))}>
+          <button className={"bm-btn bm-btn--secondary" + (exporting ? " is-loading" : "")} onClick={handleExport}>
             <Icon name="download" size={14} /> {t("export_btn")}
           </button>
           <button className="bm-btn bm-btn--primary" onClick={openBenchmark}>
@@ -531,7 +543,13 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
 // ============================================================================
 function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaStyle, goToIndustry }) {
   const { t, data, formatValue, classify } = useLang();
-  const { KPIS, SECTORS, GLOBAL } = data;
+  const { KPIS, SECTORS, GLOBAL, CATEGORIES } = data;
+  const [exporting, setExporting] = useState(false);
+  const handleExport = () => {
+    if (exporting) return;
+    setExporting(true);
+    setTimeout(() => { setExporting(false); if (window._showToast) window._showToast("Export ready — downloading…"); }, 1400);
+  };
   const kpi = KPIS.find(k => k.id === kpiId) || KPIS[0];
   const avg = GLOBAL[kpi.id];
   const allVals = SECTORS.map(s => s.kpis[kpi.id]).concat([avg]).filter(v => typeof v === "number");
@@ -548,7 +566,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
           <h2 className="bm-h2" style={{ fontSize: 28 }}>{t("kv_title")}</h2>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
-          <button className="bm-btn bm-btn--secondary" onClick={() => alert(t("export_alert"))}>
+          <button className={"bm-btn bm-btn--secondary" + (exporting ? " is-loading" : "")} onClick={handleExport}>
             <Icon name="download" size={14} /> {t("export_btn")}
           </button>
           <button className="bm-btn bm-btn--primary" onClick={openBenchmark}>
@@ -559,16 +577,25 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
 
       <div className="bm-kpiv">
         <nav className="bm-rail bm-kpiv__rail" aria-label="KPIs">
-          {KPIS.map(k => (
-            <button key={k.id}
-                    className="bm-rail__btn"
-                    aria-current={k.id === kpi.id}
-                    onClick={() => setKpiId(k.id)}>
-              <Icon name={k.type === "roi" ? "target" : k.type === "growth" ? "chart" : "grid"} size={14} />
-              <span>{k.short || k.name}</span>
-              <span className="vmini">{formatValue(k, GLOBAL[k.id])}</span>
-            </button>
-          ))}
+          {(CATEGORIES || []).map(cat => {
+            const catKpis = KPIS.filter(k => k.category === cat.id);
+            if (catKpis.length === 0) return null;
+            return (
+              <React.Fragment key={cat.id}>
+                <div className="bm-rail__group">{cat.label}</div>
+                {catKpis.map(k => (
+                  <button key={k.id}
+                          className="bm-rail__btn"
+                          aria-current={k.id === kpi.id}
+                          onClick={() => setKpiId(k.id)}>
+                    <Icon name={k.type === "roi" ? "target" : k.type === "growth" ? "chart" : "grid"} size={14} />
+                    <span>{k.short || k.name}</span>
+                    <span className="vmini">{formatValue(k, GLOBAL[k.id])}</span>
+                  </button>
+                ))}
+              </React.Fragment>
+            );
+          })}
         </nav>
 
         <div key={kpi.id}>
@@ -647,6 +674,9 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                   <span className="bm-tip__num">{i + 1}</span>
                   {obj.title && <h3 className="bm-tip__title">{obj.title}</h3>}
                   <p>{obj.body}</p>
+                  <a className="bm-tip__cta" href="https://loyoly.io" target="_blank" rel="noopener noreferrer">
+                    See how Loyoly handles this <Icon name="arrow-right" size={11} />
+                  </a>
                 </article>
               );
             })}
@@ -660,29 +690,41 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
 function CompareRow({ sector, value, pct, cmp, kpi, index, goToIndustry }) {
   const { formatValue, formatDelta, t, data } = useLang();
   const [hover, setHover] = useState(false);
+  const avg = data.GLOBAL[kpi.id];
+  const delta = value - avg;
   return (
     <div className="bm-compare__row"
          style={{ animationDelay: (index * 50) + "ms" }}>
       <button className="bm-compare__name bm-compare__name--link"
               onClick={() => goToIndustry && goToIndustry(sector.id)}
-              title={`View ${sector.name} in industry tab`}>
+              title={`View ${sector.name} in By Industry`}>
         <Icon name={sector.icon} size={14} />
         {sector.name}
       </button>
-      <div className="bm-compare__bar-wrap" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <div className="bm-compare__bar-wrap"
+           style={{ cursor: goToIndustry ? "pointer" : "default" }}
+           onMouseEnter={() => setHover(true)}
+           onMouseLeave={() => setHover(false)}
+           onClick={() => goToIndustry && goToIndustry(sector.id)}>
         <div className="bm-compare__bar-track" />
         <div className="bm-compare__bar-fill"
              style={{
                width: `${pct}%`,
                background: cmp.tone === "above" ? "var(--blue-primary)" : cmp.tone === "below" ? "var(--pampas-500)" : "var(--pampas-600)",
-               opacity: hover ? 1 : 0.95,
-               transition: "background 200ms"
+               opacity: hover ? 1 : 0.9,
+               transition: "opacity 150ms, background 200ms"
              }}
         />
+        {hover && (
+          <div className="bm-compare__bar-tooltip">
+            <strong>{formatValue(kpi, value)}</strong>
+            <span>{delta >= 0 ? "+" : ""}{formatDelta(kpi.id, delta)} vs avg</span>
+          </div>
+        )}
       </div>
       <div className="bm-compare__value">
         <span className="bm-compare__value-num">{formatValue(kpi, value)}</span>
-        <DeltaBadge delta={value - data.GLOBAL[kpi.id]} type={kpi.type} ptsLabel={t("pts")} />
+        <DeltaBadge delta={delta} type={kpi.type} ptsLabel={t("pts")} />
       </div>
     </div>
   );
