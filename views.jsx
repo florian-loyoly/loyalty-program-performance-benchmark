@@ -275,11 +275,10 @@ function ClientStrip({ sector }) {
         {sector.clients.map((c, i) => (
           <li key={i} className="bm-clients__item">
             <div className="bm-clients__logoWrap"
-                 style={{ background: c.color, display: "flex", alignItems: "center",
-                          justifyContent: "center", borderRadius: 8, width: 40, height: 40,
-                          fontSize: 11, fontWeight: 700, color: "#fff",
-                          letterSpacing: "0.04em", flexShrink: 0 }}>
-              {c.initials}
+                 style={{ display: "flex", alignItems: "center", justifyContent: "center",
+                          width: 80, height: 40, flexShrink: 0 }}>
+              <img src={c.logo} alt={c.name}
+                   style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
             </div>
             <div className="bm-clients__meta">
               <span className="bm-clients__name">{c.name}</span>
