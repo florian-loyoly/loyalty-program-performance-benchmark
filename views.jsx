@@ -273,24 +273,14 @@ function ClientStrip({ sector }) {
       </div>
       <ul className="bm-clients__list">
         {sector.clients.map((c, i) => (
-          <li key={i} className="bm-clients__item">
-            <div className="bm-clients__logoWrap"
-                 style={{ display: "flex", alignItems: "center", justifyContent: "center",
-                          width: 80, height: 40, flexShrink: 0 }}>
-              <img src={c.logo} alt={c.name}
-                   style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
-            </div>
-            <div className="bm-clients__meta">
-              <span className="bm-clients__name">{c.name}</span>
-              <a className="bm-clients__cta"
-                   href={c.url || "https://loyoly.io"}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   title="View loyalty program">
-                {t("iv_see_program")}
-                <Icon name="external" size={11} />
-              </a>
-            </div>
+          <li key={i}>
+            <a className="bm-clients__item"
+               href={c.url || "https://loyoly.io"}
+               target="_blank" rel="noopener noreferrer"
+               title={c.name}>
+              <img src={c.logo} alt={c.name} className="bm-clients__logo" />
+              <span className="bm-clients__hint"><Icon name="external" size={10} /></span>
+            </a>
           </li>
         ))}
       </ul>
