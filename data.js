@@ -302,10 +302,12 @@
       brands: 58,
       intro: "Petcare stands out for the strongest referral conversion of any sector, driven by the emotional bond between pet owners that naturally fuels word-of-mouth. Members are highly motivated and show strong brand loyalty, but program engagement depends on how well brands activate that community energy through missions and shared experiences. Pet parents talk to other pet parents: referral is the growth lever to prioritize.",
       clients: [
-        { name: "Pawhouse",     initials: "PH", color: "#FEC229" },
-        { name: "Tales & Co",   initials: "TC", color: "#917F65" },
-        { name: "Nuzzle",       initials: "NZ", color: "#F74F9E" },
-        { name: "Bowl",         initials: "BO", color: "#2965FE" }
+        { name: "Pro-Nutrition",          logo: "assets/logos/pro-nutrition.webp",           url: "https://www.pro-nutrition.fr/pages/fidelite-parrainage" },
+        { name: "Dexter & Mango",         logo: "assets/logos/dexter-et-mango.webp",         url: "https://dexter-et-mango.fr/pages/fidelite-parrainage" },
+        { name: "France Croquettes",      logo: "assets/logos/france-croquettes.avif",       url: "https://francecroquettes.com/pages/club-fidelite" },
+        { name: "Nourrir Comme la Nature",logo: "assets/logos/nourrir-comme-la-nature.webp", url: "https://www.nourrircommelanature.com/pages/fidelite" },
+        { name: "Bande de Canailles",     logo: "assets/logos/bande-de-canailles.webp",      url: "https://bande-de-canailles.com/pages/page_fidelite" },
+        { name: "Toutou Vert",            logo: "assets/logos/toutou-vert.png",              url: "https://toutouvert.com/pages/fidelite" }
       ],
       kpis: {
         activation_rate: 3.7, points_usage_rate: 8.3, redemption_rate: 49.5, referral_conversion: 46.3, new_customer_rate: 0.8, participation_rate: 2,
