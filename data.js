@@ -260,10 +260,12 @@
       brands: 76,
       intro: "Health & Supplements records the strongest LTV uplift of any sector, driven by subscription-compatible purchase patterns and a high degree of trust between brands and customers. Members reactivate quickly through win-back missions, and referral plays a structurally larger role than in other categories. The lever to activate is converting product satisfaction into active word-of-mouth, supported by a strong referral program.",
       clients: [
-        { name: "Vital",        initials: "VI", color: "#10A370" },
-        { name: "Pure Source",  initials: "PS", color: "#2965FE" },
-        { name: "Daily Ritual", initials: "DR", color: "#FEC229" },
-        { name: "Nourish",      initials: "NO", color: "#52473C" }
+        { name: "Epycure",      logo: "assets/logos/epycure.png",        url: "https://epycure.com/pages/fidelite-parrainage" },
+        { name: "The Smilist",  logo: "assets/logos/thesmilist.webp",    url: "https://thesmilist.co/pages/rewards" },
+        { name: "Dijo",         logo: "assets/logos/dijo.png",           url: "https://www.dijo.fr/pages/fid_loyoly" },
+        { name: "Nutri&Co",     logo: "assets/logos/nutrico.png",        url: "https://nutriandco.com/fr/fidelite-et-parrainage" },
+        { name: "Hydratis",     logo: "assets/logos/Hydratis logo.png",  url: "https://www.hydratis.co/pages/fidelite-parrainage" },
+        { name: "Novoma",       logo: "assets/logos/novoma.webp",        url: "https://novoma.com/pages/club-fidelite-novoma" }
       ],
       kpis: {
         activation_rate: 4, points_usage_rate: 7.6, redemption_rate: 47, referral_conversion: 38.5, new_customer_rate: 0.6, participation_rate: 2,
