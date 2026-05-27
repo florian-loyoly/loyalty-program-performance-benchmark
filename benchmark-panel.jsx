@@ -69,7 +69,7 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
             </div>
             <h3 className="bm-h3" style={{ fontSize: 20 }}>{t("bp_title")}</h3>
             <p style={{ fontSize: 12, color: "var(--fg-faint)", margin: "4px 0 0" }}>
-              {t("bp_step_of", { n: step })} — {step === 1 ? t("bp_step_1") : step === 2 ? t("bp_step_2") : t("bp_step_3")}
+              {t("bp_step_of", { n: step })}: {step === 1 ? t("bp_step_1") : step === 2 ? t("bp_step_2") : t("bp_step_3")}
             </p>
           </div>
           <button className="bm-panel__close" onClick={onClose} aria-label="Close">
@@ -150,7 +150,7 @@ function Step1({ sector, sectorId, setSectorId }) {
       </div>
       <div style={{ background: "var(--pampas-100)", borderRadius: 8, padding: 14,
                     fontSize: 12, color: "var(--fg-muted)", lineHeight: 1.5 }}>
-        <strong style={{ color: "var(--fg)" }}>{sector.name}</strong> — {sector.intro}
+        <strong style={{ color: "var(--fg)" }}>{sector.name}</strong>: {sector.intro}
       </div>
     </div>
   );

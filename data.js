@@ -21,7 +21,7 @@
       type: "rate",
       defaultViz: "ring",
       unit: "%",
-      definition: "Activation rate measures how quickly your loyalty program turns sign-ups into engaged members. It captures the share of opted-in customers who complete at least one earning or redeeming action within their first 30 days. A strong activation rate is the foundation of every metric downstream — members who never activate cannot earn, redeem, or refer.",
+      definition: "Activation rate tracks how quickly new enrollees make their first meaningful interaction with your program. It is the first signal of program health: a low rate means members sign up but never engage, wasting acquisition budget. Improving activation compounds across all downstream KPIs, since only activated members can redeem, refer, or complete missions.",
       formula: "Active members (30d) ÷ Enrolled members",
       formulaParts: { num: "Active members (30d)", denom: "Enrolled members" },
       tips: [
@@ -38,7 +38,7 @@
       type: "rate",
       defaultViz: "gauge",
       unit: "%",
-      definition: "Points usage rate reveals whether the points you award actually translate into behaviour change. It compares points spent against points issued over a rolling 12-month window. Low usage signals a hidden liability on your balance sheet — and unspent points mean members don't see enough value in the rewards catalog.",
+      definition: "Points usage rate measures the share of issued points that members actually redeem, revealing whether your reward currency is perceived as valuable. It is a direct indicator of reward relevance: low usage often signals thresholds that are too high or rewards too generic to motivate action. Closing the gap between points earned and points spent is one of the fastest levers to lift member engagement.",
       formula: "Points redeemed ÷ Points issued",
       formulaParts: { num: "Points redeemed", denom: "Points issued" },
       tips: [
@@ -55,7 +55,7 @@
       type: "rate",
       defaultViz: "arc",
       unit: "%",
-      definition: "Reward redemption rate is the moment of truth for any loyalty program — when an earned benefit becomes a real-world action. It tracks the share of active members who claim at least one reward over a 90-day window. High redemption correlates strongly with retention; the act of redeeming itself reinforces a member's identification with the brand.",
+      definition: "Reward redemption rate measures the share of active members who cash in at least one reward within a 90-day window. It is the clearest proof that your program creates real perceived value, not just theoretical point accumulation. High redemption drives both satisfaction and repeat purchase, making it a leading indicator of LTV growth.",
       formula: "Members with a redemption (90d) ÷ Active members",
       formulaParts: { num: "Members with redemption (90d)", denom: "Active members" },
       tips: [
@@ -72,7 +72,7 @@
       type: "rate",
       defaultViz: "gauge",
       unit: "%",
-      definition: "Referral conversion rate captures the efficiency of your word-of-mouth engine. It measures how many of the referral links members share end up converting into a paying first-time customer. A healthy referral CVR is one of the cheapest acquisition channels available — every conversion comes with an implicit endorsement and a built-in retention boost.",
+      definition: "Referral CVR measures how many of the shares made by your members result in a completed order. It is the efficiency metric for your word-of-mouth strategy: a low CVR means you generate sharing activity but fail to convert it into revenue. Optimizing the referral landing experience and the incentive structure on both sides directly moves this number.",
       formula: "Referred orders ÷ Referral shares",
       formulaParts: { num: "Referred orders", denom: "Referral shares" },
       tips: [
@@ -89,7 +89,7 @@
       type: "rate",
       defaultViz: "arc",
       unit: "%",
-      definition: "This indicator shows how much of your new-customer acquisition comes from existing members, versus paid and organic channels. It is a direct measure of program-driven growth, and one of the strongest predictors of long-term unit economics: referred customers tend to have higher LTV and lower churn than the average new buyer.",
+      definition: "New from referral measures the share of all new customers in a period who were brought in by loyalty program members. It quantifies your member base as an acquisition channel, sitting alongside paid and organic. Brands with a high new-from-referral rate reduce paid acquisition costs and improve new-customer quality, since referred customers convert faster and retain longer.",
       formula: "Referred new customers ÷ Total new customers",
       formulaParts: { num: "Referred new customers", denom: "Total new customers" },
       tips: [
@@ -106,7 +106,7 @@
       type: "rate",
       defaultViz: "ring",
       unit: "%",
-      definition: "Participation rate measures the depth of engagement — the share of members who complete at least one optional mission per quarter. Where activation captures the first action, participation captures the loop. A high participation rate signals a program that lives beyond points and discounts: a place where customers come back for the experience itself.",
+      definition: "Participation rate tracks the share of members who go beyond points accumulation to complete at least one optional mission per quarter. It is the strongest predictor of long-term retention: members who engage with missions build a habit loop that makes them significantly harder to churn. A rising participation rate signals that your program has moved from transactional to genuinely relational.",
       formula: "Members completing ≥1 mission ÷ Total members",
       formulaParts: { num: "Members with ≥1 mission", denom: "Total members" },
       tips: [
@@ -123,7 +123,7 @@
       type: "growth",
       defaultViz: "bar",
       unit: "%",
-      definition: "LTV growth quantifies how much more a loyalty member is worth over 12 months versus a comparable non-member cohort. It is the single most important indicator of program health because it ties every action — earning, redeeming, missions, referrals — back to a concrete revenue outcome. Strong LTV growth pays for the entire program many times over.",
+      definition: "LTV growth measures the revenue delta between loyalty members and a matched cohort of non-members over 12 months. It is the foundational proof of loyalty ROI: the difference between a program that drives real incremental value and one that simply rewards customers who would have bought anyway. Tracking LTV growth by cohort controls for selection bias and reveals the true causal impact of program membership.",
       formula: "(LTV_members − LTV_non-members) ÷ LTV_non-members",
       formulaParts: { num: "LTV(members) − LTV(non-members)", denom: "LTV(non-members)" },
       tips: [
@@ -140,7 +140,7 @@
       type: "growth",
       defaultViz: "bar",
       unit: "%",
-      definition: "AOV growth tracks the basket-size uplift when a member redeems points at checkout, versus their own non-redemption baskets. It captures the program's ability to push members up a basket tier without eroding margin. A strong AOV growth signal validates the reward thresholds you've designed and the bundles offered in the catalogue.",
+      definition: "AOV growth measures how much larger a member's basket is on orders where they apply a reward, compared to their own non-redemption orders. It is the most direct measure of checkout-level impact: a high AOV growth rate means your rewards pull forward spend, not just reward spend that was already committed. Setting a minimum cart threshold for reward redemption is the primary structural lever to drive this metric.",
       formula: "(AOV_with_redemption − AOV_without) ÷ AOV_without",
       formulaParts: { num: "AOV(with redemption) − AOV(without)", denom: "AOV(without)" },
       tips: [
@@ -157,7 +157,7 @@
       type: "growth",
       defaultViz: "bar",
       unit: "%",
-      definition: "Orders growth measures the increase in purchase frequency among members versus a comparable non-member cohort over 12 months. It reveals whether the program closes the time gap between purchases — through reminders, missions and tier incentives that pull a member back into the funnel before they would have returned naturally. It is the most direct frequency-side counterpart to AOV growth.",
+      definition: "Orders growth tracks how much more frequently loyalty members purchase compared to a matched non-member cohort over 12 months. It is the purest indicator of whether loyalty membership changes actual buying behaviour, independent of basket size. Combined with LTV growth, it lets brands decompose their program's revenue impact into a frequency component and an AOV component.",
       formula: "(Orders_per_member − Orders_per_non-member) ÷ Orders_per_non-member",
       formulaParts: { num: "Orders/member − Orders/non-member", denom: "Orders/non-member" },
       tips: [
@@ -174,7 +174,7 @@
       type: "roi",
       defaultViz: "number",
       unit: "×",
-      definition: "ROI measures the direct profitability of the loyalty program. It is the ultimate indicator for assessing the economic performance of a relationship strategy: it reflects the program's ability to convert customer engagement into measurable revenue. A good ROI demonstrates that, beyond the connection created with the community, the program generates profitable and sustainable growth.",
+      definition: "ROI measures the net revenue generated by the loyalty program relative to its total cost. It is the definitive business case metric: it tells leadership whether the program creates incremental value or simply subsidizes existing customer behaviour. A program with a strong ROI converts member engagement into sustainable, measurable revenue growth.",
       formula: "(Incremental revenue − Program cost) ÷ Program cost",
       formulaParts: { num: "Incremental revenue − Program cost", denom: "Program cost" },
       tips: [
@@ -194,8 +194,8 @@
       name: "Fashion & Apparel",
       short: "Fashion",
       icon: "shirt",
-      brands: 112,
-      intro: "Fashion brands lean on tiered loyalty to drive repeat purchases between seasonal drops. Members redeem early-access perks and VIP previews more than discounts — making participation high, but redemption value modest.",
+      brands: 130,
+      intro: "Fashion & Apparel brands use loyalty to bridge the gaps between seasonal cycles and maintain purchase intent between drops. Members respond more to early access and VIP experiences than to discounts, generating strong participation but modest redemption value. The main challenge is keeping members engaged during off-peak periods through continuous program activity and exclusive pre-launch experiences.",
       clients: [
         { name: "Maison Lune",  initials: "ML", color: "#2B251F" },
         { name: "Atelier 14",   initials: "A14", color: "#917F65" },
@@ -215,8 +215,8 @@
       name: "Beauty & Wellness",
       short: "Beauty",
       icon: "sparkles",
-      brands: 98,
-      intro: "Beauty has the most mature loyalty playbooks. Members are highly engaged, redemption is frequent, and UGC missions (reviews, before/after) carry as much weight as point earning.",
+      brands: 118,
+      intro: "Beauty & Wellness stands out for its naturally high purchase frequency and the emotional connection brands build with their customers. Loyalty programs in this sector activate fast and generate strong transactional engagement. The real lever lies in sustaining that momentum: turning engaged members into consistent repeat buyers through continuous program activity and personalized post-purchase experiences.",
       clients: [
         { name: "Glow Studio",  initials: "GS", color: "#F74F9E" },
         { name: "Pure Botanics", initials: "PB", color: "#10A370" },
@@ -236,8 +236,8 @@
       name: "Food & Beverage",
       short: "Food",
       icon: "coffee",
-      brands: 71,
-      intro: "High-frequency category — small baskets, fast repurchase. Activation and points usage are excellent, but redemption value caps AOV uplift compared to other sectors.",
+      brands: 84,
+      intro: "Food & Beverage benefits from the highest natural purchase frequency across all sectors, driving fast activation and strong points usage. Small basket sizes limit AOV uplift, but the volume of transactions makes loyalty programs highly efficient at building durable purchase habits. The opportunity lies in using that frequency as a lever to deepen engagement through missions and content.",
       clients: [
         { name: "Tartine",      initials: "TA", color: "#917F65" },
         { name: "Maison Café",  initials: "MC", color: "#52473C" },
@@ -256,8 +256,8 @@
       name: "Health & Supplements",
       short: "Health",
       icon: "leaf",
-      brands: 64,
-      intro: "Subscription-friendly category with the strongest LTV uplift. Members reactivate quickly via win-back missions; referral plays a bigger role than category average.",
+      brands: 76,
+      intro: "Health & Supplements records the strongest LTV uplift of any sector, driven by subscription-compatible purchase patterns and a high degree of trust between brands and customers. Members reactivate quickly through win-back missions, and referral plays a structurally larger role than in other categories. The lever to activate is converting product satisfaction into active word-of-mouth, supported by a strong referral program.",
       clients: [
         { name: "Vital",        initials: "VI", color: "#10A370" },
         { name: "Pure Source",  initials: "PS", color: "#2965FE" },
@@ -276,8 +276,8 @@
       name: "Home & Decoration",
       short: "Home",
       icon: "home",
-      brands: 58,
-      intro: "Long purchase cycles change the loyalty math. AOV growth is strong but participation and redemption lag — members forget the program between purchases, so re-engagement missions are critical.",
+      brands: 68,
+      intro: "Home & Decoration operates on long purchase cycles that fundamentally reshape the loyalty dynamic. AOV growth at redemption is strong, but low transaction frequency causes members to disengage between purchases, pulling down participation and redemption rates. Re-engagement missions are the primary mechanism to keep the program alive between buying moments.",
       clients: [
         { name: "Atelier Lin",  initials: "AL", color: "#917F65" },
         { name: "Maison Quai",  initials: "MQ", color: "#2B251F" },
@@ -296,8 +296,8 @@
       name: "Petcare",
       short: "Petcare",
       icon: "pawprint",
-      brands: 49,
-      intro: "Petcare members are emotionally invested and convert friends fastest of any sector. Referral CVR is the strongest signal — pet parents talk to other pet parents.",
+      brands: 58,
+      intro: "Petcare stands out for the strongest referral conversion of any sector, driven by the emotional bond between pet owners that naturally fuels word-of-mouth. Members are highly motivated and show strong brand loyalty, but program engagement depends on how well brands activate that community energy through missions and shared experiences. Pet parents talk to other pet parents: referral is the growth lever to prioritize.",
       clients: [
         { name: "Pawhouse",     initials: "PH", color: "#FEC229" },
         { name: "Tales & Co",   initials: "TC", color: "#917F65" },
@@ -316,8 +316,8 @@
       name: "Sports & Fitness",
       short: "Sports",
       icon: "dumbbell",
-      brands: 52,
-      intro: "Highly community-driven. Participation in mission-based programs is the highest of any sector, but margin compression keeps ROI behind beauty and health.",
+      brands: 66,
+      intro: "Sports & Fitness generates the highest mission participation of any sector, reflecting a community-oriented audience that responds naturally to challenges and collective goals. Loyalty programs work best here when built around identity and shared progress rather than purely transactional rewards. Margin pressure limits ROI relative to other sectors, but the depth of engagement creates a strong foundation for long-term retention.",
       clients: [
         { name: "Track Lab",    initials: "TL", color: "#2B251F" },
         { name: "Outdoor 360",  initials: "O3", color: "#1F52D8" },

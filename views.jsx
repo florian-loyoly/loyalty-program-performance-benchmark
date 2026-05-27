@@ -314,7 +314,7 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
             <span className="yr">2026</span>
           </div>
           <h1 className="bm-h1">
-            {t("hero_h1_pre")}<br/>{t("hero_h1_mid")} <span style={{ color: "var(--blue-primary)" }}>{KPIS.length} {t("hero_h1_post")}</span>.
+            {t("hero_h1_pre")}<br/><span style={{ color: "var(--blue-primary)" }}>{t("hero_h1_post")}</span>
           </h1>
           <p className="bm-lead" style={{ marginTop: 20, fontSize: 17 }}>{t("hero_lead", { n: TOTAL_BRANDS })}</p>
           <div style={{ display: "flex", gap: 10, marginTop: 26 }}>
