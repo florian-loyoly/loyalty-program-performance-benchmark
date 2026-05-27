@@ -323,10 +323,12 @@
       brands: 66,
       intro: "Sports & Fitness generates the highest mission participation of any sector, reflecting a community-oriented audience that responds naturally to challenges and collective goals. Loyalty programs work best here when built around identity and shared progress rather than purely transactional rewards. Margin pressure limits ROI relative to other sectors, but the depth of engagement creates a strong foundation for long-term retention.",
       clients: [
-        { name: "Track Lab",    initials: "TL", color: "#2B251F" },
-        { name: "Outdoor 360",  initials: "O3", color: "#1F52D8" },
-        { name: "Pulse",        initials: "PU", color: "#10A370" },
-        { name: "Set & Co",     initials: "SC", color: "#FEC229" }
+        { name: "Venum",          logo: "assets/logos/venum.svg",        url: "https://fr.venum.com/pages/venum-club" },
+        { name: "Un Bon Maillot", logo: "assets/logos/unbonmaillot.png", url: "https://unbonmaillot.com/pages/ubm-football-club" },
+        { name: "Ritmic",         logo: "assets/logos/ritmic.png",       url: "https://www.ritmic.co/pages/programme-de-fidelite" },
+        { name: "PowerGym",       logo: "assets/logos/powergym.png",     url: "https://www.powergym.fr/pages/fidelite-parrainage" },
+        { name: "SmartWorkout",   logo: "assets/logos/smartworkout.png", url: "https://smartworkout-pro.com/pages/parrainage" },
+        { name: "Ohlala",         logo: "assets/logos/ohlala.webp",      url: "https://ohlala-equestrian.com/fr/pages/programme-de-fidelite-ohlala" }
       ],
       kpis: {
         activation_rate: 4.8, points_usage_rate: 9.8, redemption_rate: 43.9, referral_conversion: 37.1, new_customer_rate: 0.7, participation_rate: 2,
