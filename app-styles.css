@@ -716,7 +716,8 @@ body {
 .bm-clients__item {
   position: relative;
   display: flex; align-items: center; justify-content: center;
-  padding: 14px 12px; border-radius: 6px;
+  height: 56px;
+  padding: 0 12px; border-radius: 6px;
   background: var(--bg);
   border: 1px solid var(--border-subtle);
   text-decoration: none;
