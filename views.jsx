@@ -25,6 +25,15 @@ function Icon({ name, size = 16 }) {
     case "home":     return <svg {...common}><path d="M3 11l9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></svg>;
     case "pawprint": return <svg {...common}><circle cx="6" cy="11" r="2"/><circle cx="10" cy="6" r="2"/><circle cx="14" cy="6" r="2"/><circle cx="18" cy="11" r="2"/><path d="M8 18c0-2.5 2-4 4-4s4 1.5 4 4-1.5 3-4 3-4-.5-4-3z"/></svg>;
     case "dumbbell": return <svg {...common}><path d="M3 9v6M5 7v10M9 6v12M15 6v12M19 7v10M21 9v6"/><path d="M9 12h6"/></svg>;
+    case "zap":        return <svg {...common}><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>;
+    case "coins":      return <svg {...common}><circle cx="8" cy="14" r="5"/><path d="M10.3 9A5 5 0 1 1 16 14.7"/><circle cx="16" cy="10" r="5"/></svg>;
+    case "gift":       return <svg {...common}><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>;
+    case "share-2":    return <svg {...common}><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>;
+    case "user-plus":  return <svg {...common}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>;
+    case "users":      return <svg {...common}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>;
+    case "trending-up": return <svg {...common}><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>;
+    case "shopping-cart": return <svg {...common}><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>;
+    case "package":    return <svg {...common}><path d="m16.5 9.4-9-5.19"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>;
     case "arrow-right": return <svg {...common}><path d="M5 12h14M13 6l6 6-6 6"/></svg>;
     case "arrow-up-right": return <svg {...common}><path d="M7 17 17 7M8 7h9v9"/></svg>;
     case "download": return <svg {...common}><path d="M12 4v12M7 11l5 5 5-5M4 20h16"/></svg>;
@@ -38,6 +47,19 @@ function Icon({ name, size = 16 }) {
     default: return <svg {...common}><circle cx="12" cy="12" r="9"/></svg>;
   }
 }
+
+const KPI_ICONS = {
+  activation_rate:    "zap",
+  points_usage_rate:  "coins",
+  redemption_rate:    "gift",
+  referral_cvr:       "share-2",
+  new_from_referral:  "user-plus",
+  participation_rate: "users",
+  ltv_growth:         "trending-up",
+  aov_growth:         "shopping-cart",
+  orders_growth:      "package",
+  roi:                "target",
+};
 
 // resolve which viz to render for a KPI given the user's variant choice
 function resolveViz(kpi, override) {
@@ -588,7 +610,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                           className="bm-rail__btn"
                           aria-current={k.id === kpi.id}
                           onClick={() => setKpiId(k.id)}>
-                    <Icon name={k.type === "roi" ? "target" : k.type === "growth" ? "chart" : "grid"} size={14} />
+                    <Icon name={KPI_ICONS[k.id] || "grid"} size={14} />
                     <span>{k.short || k.name}</span>
                     <span className="vmini">{formatValue(k, GLOBAL[k.id])}</span>
                   </button>
