@@ -1300,7 +1300,38 @@ body.bm-locked { overflow: hidden; }
 .bm-result-add-link:hover { gap: 7px; }
 .bm-app[data-theme="dark"] .bm-result-add-link { color: var(--blue-secondary); }
 
-/* ── Step 3 post-results expert CTA ── */
+/* ── Panel pinned expert CTA (Step 3, between scroll body and footer) ── */
+.bm-panel__expert-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--blue-primary) 6%, var(--bg-raised));
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 180ms;
+}
+.bm-panel__expert-cta:hover {
+  background: color-mix(in srgb, var(--blue-primary) 11%, var(--bg-raised));
+}
+.bm-panel__expert-cta strong {
+  display: block; font-size: 13px; font-weight: 600; color: var(--fg);
+  margin-bottom: 1px;
+}
+.bm-panel__expert-cta span {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 600; color: var(--blue-primary);
+  transition: gap 150ms;
+}
+.bm-panel__expert-cta:hover span { gap: 7px; }
+.bm-app[data-theme="dark"] .bm-panel__expert-cta {
+  border-top-color: rgba(255,255,255,0.08);
+  background: rgba(41,101,254,0.10);
+}
+.bm-app[data-theme="dark"] .bm-panel__expert-cta:hover { background: rgba(41,101,254,0.16); }
+.bm-app[data-theme="dark"] .bm-panel__expert-cta strong { color: #fff; }
+.bm-app[data-theme="dark"] .bm-panel__expert-cta span { color: var(--blue-secondary); }
+
+/* ── Step 3 post-results expert CTA (old — kept for reference, now unused) ── */
 .bm-bp-expert-cta {
   display: block; margin-top: 20px; padding: 14px 16px; border-radius: 8px;
   background: color-mix(in srgb, var(--blue-primary) 7%, var(--bg-raised));

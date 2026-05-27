@@ -87,6 +87,16 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
           {step === 3 && <Step3 sector={sector} values={values} dark={dark} goToKpi={goToKpi} onEditKpi={() => setStep(2)} />}
         </div>
 
+        {step === 3 && (
+          <a className="bm-panel__expert-cta"
+             href="https://loyoly.io/demo"
+             target="_blank"
+             rel="noopener noreferrer">
+            <strong>Want help closing the gap?</strong>
+            <span>Talk to a Loyoly expert <Icon name="arrow-right" size={11} /></span>
+          </a>
+        )}
+
         <div className="bm-panel__foot">
           {step > 1
             ? <button className="bm-btn bm-btn--ghost" onClick={() => setStep(step - 1)}>{t("bp_back")}</button>
@@ -262,14 +272,6 @@ function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
         );
       })}
 
-      <a className="bm-bp-expert-cta"
-         href="https://loyoly.io/demo"
-         target="_blank"
-         rel="noopener noreferrer">
-        <strong>Want help closing the gap?</strong>
-        See how brands like yours improve these KPIs with Loyoly's loyalty engine.
-        <span>Talk to an expert <Icon name="arrow-right" size={11} /></span>
-      </a>
     </div>
   );
 }
