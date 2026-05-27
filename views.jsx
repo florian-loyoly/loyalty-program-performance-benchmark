@@ -274,17 +274,20 @@ function ClientStrip({ sector }) {
       <ul className="bm-clients__list">
         {sector.clients.map((c, i) => (
           <li key={i} className="bm-clients__item">
-            <div className="bm-clients__logoWrap">
-              {/* Placeholder: real Loyoly logo, filtered to match the design system */}
-              <img src="assets/logo-loyoly.svg" alt={c.name} className="bm-clients__logo" />
+            <div className="bm-clients__logoWrap"
+                 style={{ background: c.color, display: "flex", alignItems: "center",
+                          justifyContent: "center", borderRadius: 8, width: 40, height: 40,
+                          fontSize: 11, fontWeight: 700, color: "#fff",
+                          letterSpacing: "0.04em", flexShrink: 0 }}>
+              {c.initials}
             </div>
             <div className="bm-clients__meta">
               <span className="bm-clients__name">{c.name}</span>
               <a className="bm-clients__cta"
-                   href="https://loyoly.io"
+                   href={c.url || "https://loyoly.io"}
                    target="_blank"
                    rel="noopener noreferrer"
-                   title="View on loyoly.io">
+                   title="View loyalty program">
                 {t("iv_see_program")}
                 <Icon name="external" size={11} />
               </a>

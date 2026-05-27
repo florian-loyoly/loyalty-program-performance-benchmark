@@ -197,11 +197,12 @@
       brands: 130,
       intro: "Fashion & Apparel brands use loyalty to bridge the gaps between seasonal cycles and maintain purchase intent between drops. Members respond more to early access and VIP experiences than to discounts, generating strong participation but modest redemption value. The main challenge is keeping members engaged during off-peak periods through continuous program activity and exclusive pre-launch experiences.",
       clients: [
-        { name: "Maison Lune",  initials: "ML", color: "#2B251F" },
-        { name: "Atelier 14",   initials: "A14", color: "#917F65" },
-        { name: "North Wool",   initials: "NW", color: "#1F52D8" },
-        { name: "Rive Gauche",  initials: "RG", color: "#0F0F0F" },
-        { name: "Bloom & Co.",  initials: "BC", color: "#F74F9E" }
+        { name: "We Are Jolies",   initials: "WAJ", color: "#E8C4D4", url: "https://wearejolies.com/pages/programme-de-fidelite" },
+        { name: "SAAJ",            initials: "SAJ", color: "#1A1A1A", url: "https://saajparis.fr/pages/le-club-saaj" },
+        { name: "Make My Lemonade",initials: "MML", color: "#FFD600", url: "https://www.makemylemonade.com/pages/fidelite" },
+        { name: "Pétrone",         initials: "PET", color: "#2B4B8C", url: "https://petroneparis.fr/pages/fidelite-parrainage" },
+        { name: "Serge Blanco",    initials: "SB",  color: "#0A2240", url: "https://sergeblanco.com/pages/fidelite-parrainage" },
+        { name: "PXP",             initials: "PXP", color: "#FF3B1E", url: "https://www.projectxparis.com/pages/fidelite-et-parrainage" }
       ],
       kpis: {
         activation_rate: 4.8, points_usage_rate: 8.4, redemption_rate: 44.5, referral_conversion: 35.2, new_customer_rate: 0.6, participation_rate: 2.1,
