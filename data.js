@@ -218,11 +218,12 @@
       brands: 118,
       intro: "Beauty & Wellness stands out for its naturally high purchase frequency and the emotional connection brands build with their customers. Loyalty programs in this sector activate fast and generate strong transactional engagement. The real lever lies in sustaining that momentum: turning engaged members into consistent repeat buyers through continuous program activity and personalized post-purchase experiences.",
       clients: [
-        { name: "Glow Studio",  initials: "GS", color: "#F74F9E" },
-        { name: "Pure Botanics", initials: "PB", color: "#10A370" },
-        { name: "Velvet & Co",  initials: "VC", color: "#2B251F" },
-        { name: "Aurora Skin",  initials: "AS", color: "#FEC229" },
-        { name: "Onde",         initials: "ON", color: "#2965FE" }
+        { name: "La Belle Boucle", logo: "assets/logos/la-belle-boucle.webp", url: "https://labelleboucle.fr/pages/programme-fideliboucles" },
+        { name: "Aime",            logo: "assets/logos/aime.png",             url: "https://aime.co/pages/programme-fidelite" },
+        { name: "Pomponne",        logo: "assets/logos/pomponne.avif",        url: "https://www.pomponne-makeup.com/pages/fidelite-parrainage" },
+        { name: "La Crème Libre",  logo: "assets/logos/lacremelibre.webp",   url: "https://lacremelibre.com/pages/fidelite-parrainage" },
+        { name: "Demain Beauty",   logo: "assets/logos/demain-beauty.webp",  url: "https://demainbeauty.com/pages/fidelite-parrainage" },
+        { name: "Nubiance",        logo: "assets/logos/nubiance.png",         url: "https://nubiance.fr/pages/programme-de-fidelite-parrainage" }
       ],
       kpis: {
         activation_rate: 5.7, points_usage_rate: 10, redemption_rate: 48.5, referral_conversion: 35.8, new_customer_rate: 0.6, participation_rate: 2,
