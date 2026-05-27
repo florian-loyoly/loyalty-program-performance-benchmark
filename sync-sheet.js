@@ -11,7 +11,8 @@ const path  = require("path");
 // ── Config ────────────────────────────────────────────────────────────────────
 const SHEET_ID = "1vQfsPx-gR_dEMkdXTR_3iKRG5b0Jzrg48oK7EhtGmvQ";
 const API_KEY  = "AIzaSyBMDRhZmWKSerBuuyxTSf65lFA9_9dM1j0";
-const TAB_NAME = "Tableau croisé dynamique 1";
+const TAB_SECTORS = "Tableau croisé dynamique 1";
+const TAB_GLOBAL  = "Tableau croisé dynamique 2";
 
 // Sheet sector names → data.js sector IDs
 const SECTOR_MAP = {
@@ -119,28 +120,60 @@ function updateDataJs(sectorKpis) {
   return updatedCount;
 }
 
+// ── Update GLOBAL in data.js ──────────────────────────────────────────────────
+function updateGlobal(globalKpis) {
+  const filePath = path.join(__dirname, "data.js");
+  let content = fs.readFileSync(filePath, "utf8");
+
+  const ids1 = ["activation_rate","points_usage_rate","redemption_rate","referral_conversion","new_customer_rate","participation_rate"];
+  const ids2 = ["aov_growth","orders_growth","ltv_growth","roi"];
+  const line1 = ids1.map(k => `${k}: ${globalKpis[k] ?? "?"}`).join(", ");
+  const line2 = ids2.map(k => `${k}: ${globalKpis[k] ?? "?"}`).join(", ");
+  const newBlock = `  // ---- Global cross-sector averages (sourced from Google Sheet pivot table) --\n  const GLOBAL = {\n    ${line1},\n    ${line2}\n  };`;
+
+  const pattern = /  \/\/ ---- Global cross-sector averages[\s\S]*?const GLOBAL = \{[\s\S]*?\};/m;
+  const updated = content.replace(pattern, newBlock);
+
+  if (updated === content) { console.warn("  ⚠ Could not update GLOBAL"); return false; }
+  fs.writeFileSync(filePath, updated, "utf8");
+  return true;
+}
+
+// ── Parse pivot 2 (global averages, one row per KPI) ─────────────────────────
+function parseGlobal(rows) {
+  const result = {};
+  for (const row of rows) {
+    const label = (row[0] || "").trim();
+    const value = (row[1] || "").trim();
+    if (KPI_MAP[label] && value) {
+      result[KPI_MAP[label]] = parseFloat_fr(value);
+    }
+  }
+  return result;
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
-  console.log(`Fetching: ${TAB_NAME}…`);
-  const sheet = await fetchSheet(TAB_NAME);
-  const rows  = sheet.values || [];
-
-  console.log(`Parsing ${rows.length} rows…`);
-  const sectorKpis = parsePivot(rows);
-
+  // Sector KPIs
+  console.log(`Fetching: ${TAB_SECTORS}…`);
+  const sheet1 = await fetchSheet(TAB_SECTORS);
+  const sectorKpis = parsePivot(sheet1.values || []);
   const sectors = Object.keys(sectorKpis);
   console.log(`Found data for: ${sectors.join(", ")}`);
 
-  // Print preview
-  for (const [sector, kpis] of Object.entries(sectorKpis)) {
-    const vals = Object.entries(kpis).map(([k, v]) => `${k}=${v}`).join("  ");
-    console.log(`  ${sector}: ${vals}`);
-  }
+  // Global averages
+  console.log(`Fetching: ${TAB_GLOBAL}…`);
+  const sheet2 = await fetchSheet(TAB_GLOBAL);
+  const globalKpis = parseGlobal(sheet2.values || []);
+  console.log(`Global KPIs: ${Object.entries(globalKpis).map(([k,v])=>`${k}=${v}`).join("  ")}`);
 
   console.log("\nUpdating data.js…");
   const count = updateDataJs(sectorKpis);
-  console.log(`✓ Updated ${count}/${sectors.length} sectors in data.js`);
-  console.log("\nNext step: review the changes with `git diff data.js`, then push to GitHub.");
+  console.log(`✓ Updated ${count}/${sectors.length} sectors`);
+  const ok = updateGlobal(globalKpis);
+  console.log(ok ? "✓ Updated GLOBAL averages" : "✗ GLOBAL update failed");
+
+  console.log("\nNext step: review with `git diff data.js`, then push to GitHub.");
 }
 
 main().catch(err => { console.error("Error:", err.message); process.exit(1); });

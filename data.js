@@ -334,15 +334,11 @@
     { id: "Business",      label: "Business impact", blurb: "What the program does to revenue." }
   ];
 
-  // ---- Global cross-sector averages ---------------------------------------
-  const GLOBAL = (() => {
-    const out = {};
-    KPIS.forEach(k => {
-      const vals = SECTORS.map(s => s.kpis[k.id]).filter(v => typeof v === "number");
-      out[k.id] = +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1);
-    });
-    return out;
-  })();
+  // ---- Global cross-sector averages (sourced from Google Sheet pivot table) --
+  const GLOBAL = {
+    activation_rate: 4.8, points_usage_rate: 9.8, redemption_rate: 43.9, referral_conversion: 37.1, new_customer_rate: 0.7, participation_rate: 2,
+    aov_growth: 10, orders_growth: 10.9, ltv_growth: 11.1, roi: 20.1
+  };
 
   const TOTAL_BRANDS = SECTORS.reduce((sum, s) => sum + s.brands, 0);
 
