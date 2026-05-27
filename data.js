@@ -204,9 +204,8 @@
         { name: "Bloom & Co.",  initials: "BC", color: "#F74F9E" }
       ],
       kpis: {
-        activation_rate: 42.1, points_usage_rate: 27.4, redemption_rate: 21.8,
-        referral_conversion: 10.6, new_customer_rate: 7.9, participation_rate: 36.2,
-        ltv_growth: 24.8, aov_growth: 13.1, orders_growth: 14.2, roi: 4.9
+        activation_rate: 4.8, points_usage_rate: 8.4, redemption_rate: 44.5, referral_conversion: 35.2, new_customer_rate: 0.6, participation_rate: 2.1,
+        aov_growth: 9.9, orders_growth: 15.9, ltv_growth: 17.5, roi: 21
       },
       mission_impact: { aov: [78, 86, 94, 108, 121], ltv: [100, 132, 168, 211, 248], orders: [100, 118, 141, 172, 198] }
     },
@@ -225,9 +224,8 @@
         { name: "Onde",         initials: "ON", color: "#2965FE" }
       ],
       kpis: {
-        activation_rate: 48.6, points_usage_rate: 31.9, redemption_rate: 26.4,
-        referral_conversion: 13.8, new_customer_rate: 9.7, participation_rate: 41.5,
-        ltv_growth: 28.3, aov_growth: 14.6, orders_growth: 18.4, roi: 5.8
+        activation_rate: 5.7, points_usage_rate: 10, redemption_rate: 48.5, referral_conversion: 35.8, new_customer_rate: 0.6, participation_rate: 2,
+        aov_growth: 10, orders_growth: 10, ltv_growth: 10, roi: 13.3
       },
       mission_impact: { aov: [62, 71, 82, 96, 112], ltv: [100, 148, 194, 256, 312], orders: [100, 124, 152, 188, 224] }
     },
@@ -245,9 +243,8 @@
         { name: "Sip & Co.",    initials: "SC", color: "#FEC229" }
       ],
       kpis: {
-        activation_rate: 44.3, points_usage_rate: 34.7, redemption_rate: 22.9,
-        referral_conversion: 11.2, new_customer_rate: 8.1, participation_rate: 33.8,
-        ltv_growth: 19.7, aov_growth: 7.4, orders_growth: 22.6, roi: 4.1
+        activation_rate: 5.5, points_usage_rate: 19.6, redemption_rate: 44.2, referral_conversion: 35.1, new_customer_rate: 0.6, participation_rate: 2,
+        aov_growth: 10, orders_growth: 10, ltv_growth: 10, roi: 11.9
       },
       mission_impact: { aov: [22, 24, 26, 29, 32], ltv: [100, 138, 172, 214, 252], orders: [100, 132, 168, 211, 256] }
     },
@@ -265,9 +262,8 @@
         { name: "Nourish",      initials: "NO", color: "#52473C" }
       ],
       kpis: {
-        activation_rate: 39.7, points_usage_rate: 22.1, redemption_rate: 16.4,
-        referral_conversion: 14.9, new_customer_rate: 11.2, participation_rate: 28.6,
-        ltv_growth: 31.4, aov_growth: 12.8, orders_growth: 16.9, roi: 5.3
+        activation_rate: 4, points_usage_rate: 7.6, redemption_rate: 47, referral_conversion: 38.5, new_customer_rate: 0.6, participation_rate: 2,
+        aov_growth: 10, orders_growth: 10, ltv_growth: 10, roi: 19.1
       },
       mission_impact: { aov: [54, 59, 66, 74, 83], ltv: [100, 162, 224, 298, 372], orders: [100, 119, 142, 168, 194] }
     },
@@ -285,9 +281,8 @@
         { name: "Habitat 9",    initials: "H9", color: "#1F52D8" }
       ],
       kpis: {
-        activation_rate: 31.2, points_usage_rate: 18.6, redemption_rate: 12.7,
-        referral_conversion: 9.4, new_customer_rate: 6.8, participation_rate: 22.1,
-        ltv_growth: 17.9, aov_growth: 18.2, orders_growth: 8.7, roi: 3.8
+        activation_rate: 4.7, points_usage_rate: 9, redemption_rate: 38.8, referral_conversion: 44.1, new_customer_rate: 0.9, participation_rate: 2,
+        aov_growth: 10, orders_growth: 10, ltv_growth: 10, roi: 25.8
       },
       mission_impact: { aov: [145, 168, 198, 234, 276], ltv: [100, 121, 144, 169, 196], orders: [100, 112, 128, 146, 164] }
     },
@@ -305,9 +300,8 @@
         { name: "Bowl",         initials: "BO", color: "#2965FE" }
       ],
       kpis: {
-        activation_rate: 41.8, points_usage_rate: 26.3, redemption_rate: 19.4,
-        referral_conversion: 17.2, new_customer_rate: 12.6, participation_rate: 34.7,
-        ltv_growth: 25.6, aov_growth: 10.9, orders_growth: 17.3, roi: 5.1
+        activation_rate: 3.7, points_usage_rate: 8.3, redemption_rate: 49.5, referral_conversion: 46.3, new_customer_rate: 0.8, participation_rate: 2,
+        aov_growth: 10, orders_growth: 10, ltv_growth: 10, roi: 28.1
       },
       mission_impact: { aov: [38, 42, 47, 53, 59], ltv: [100, 142, 188, 246, 304], orders: [100, 126, 156, 192, 228] }
     },
@@ -325,9 +319,8 @@
         { name: "Set & Co",     initials: "SC", color: "#FEC229" }
       ],
       kpis: {
-        activation_rate: 37.4, points_usage_rate: 23.8, redemption_rate: 17.2,
-        referral_conversion: 11.8, new_customer_rate: 8.3, participation_rate: 38.4,
-        ltv_growth: 21.6, aov_growth: 9.7, orders_growth: 11.4, roi: 3.6
+        activation_rate: 4.8, points_usage_rate: 9.8, redemption_rate: 43.9, referral_conversion: 37.1, new_customer_rate: 0.7, participation_rate: 2,
+        aov_growth: 10, orders_growth: 10.9, ltv_growth: 11.1, roi: 20.1
       },
       mission_impact: { aov: [68, 74, 82, 92, 103], ltv: [100, 128, 158, 192, 224], orders: [100, 122, 148, 178, 208] }
     }
