@@ -133,7 +133,7 @@ function Step1({ sector, sectorId, setSectorId }) {
   return (
     <div>
       <p style={{ fontSize: 14, color: "var(--fg-muted)", margin: "0 0 16px", lineHeight: 1.55 }}>
-        {t("bp_step1_lead", { n: sector.brands })}
+        {t("bp_step1_lead")}
       </p>
       <div className="bm-sector-grid">
         {SECTORS.map(s => (
@@ -141,10 +141,7 @@ function Step1({ sector, sectorId, setSectorId }) {
                   aria-pressed={s.id === sectorId}
                   onClick={() => setSectorId(s.id)}>
             <Icon name={s.icon} size={14} />
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.25 }}>
-              <span style={{ fontWeight: 500 }}>{s.short}</span>
-              <small style={{ fontSize: 11, opacity: 0.7 }}>{s.brands} {t("bp_step1_brands")}</small>
-            </div>
+            <span style={{ fontWeight: 500 }}>{s.short}</span>
           </button>
         ))}
       </div>
