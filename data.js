@@ -239,10 +239,12 @@
       brands: 84,
       intro: "Food & Beverage benefits from the highest natural purchase frequency across all sectors, driving fast activation and strong points usage. Small basket sizes limit AOV uplift, but the volume of transactions makes loyalty programs highly efficient at building durable purchase habits. The opportunity lies in using that frequency as a lever to deepen engagement through missions and content.",
       clients: [
-        { name: "Tartine",      initials: "TA", color: "#917F65" },
-        { name: "Maison Café",  initials: "MC", color: "#52473C" },
-        { name: "Le Tasting",   initials: "LT", color: "#2B251F" },
-        { name: "Sip & Co.",    initials: "SC", color: "#FEC229" }
+        { name: "Capsme",      logo: "assets/logos/capsme.avif",      url: "https://www.capsme.fr/pages/fidelite-parrainage" },
+        { name: "Hydrology",   logo: "assets/logos/hydrology.png",    url: "https://hydrology.fr/pages/programme-de-fidelite" },
+        { name: "Irasshai",    logo: "assets/logos/iRASSHAi.webp",    url: "https://irasshai.co/pages/programme-de-fidelite-irasshai" },
+        { name: "Archie",      logo: "assets/logos/myarchie.webp",    url: "https://myarchie.co/pages/communaute" },
+        { name: "Ma Tchatcha", logo: "assets/logos/ma-tchatcha.webp", url: "https://ma-tchatcha.com/pages/fidelite-et-parrainage" },
+        { name: "Féroce",      logo: "assets/logos/feroce.webp",      url: "https://feroce.food/pages/fidelite-parrainage-1" }
       ],
       kpis: {
         activation_rate: 5.5, points_usage_rate: 19.6, redemption_rate: 44.2, referral_conversion: 35.1, new_customer_rate: 0.6, participation_rate: 2,
