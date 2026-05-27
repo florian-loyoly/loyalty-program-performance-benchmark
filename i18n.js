@@ -75,6 +75,7 @@ window.LOYOLY_I18N = {
 
       iv_eyebrow:         "VUE PAR INDUSTRIE",
       iv_title:           "Benchmark par secteur.",
+      iv_sector_overview: "Sector Overview",
       iv_clients_eyebrow: "MARQUES SONDÉES",
       iv_clients_body:    "Quelques programmes représentatifs de ce secteur (panel anonymisé).",
       iv_kpi_count:       "{n} KPI",
@@ -338,6 +339,7 @@ window.LOYOLY_I18N = {
 
       iv_eyebrow:         "VISTA POR INDUSTRIA",
       iv_title:           "Benchmark por sector.",
+      iv_sector_overview: "Sector Overview",
       iv_clients_eyebrow: "MARCAS ANALIZADAS",
       iv_clients_body:    "Algunos programas representativos de este sector (panel anonimizado).",
       iv_kpi_count:       "{n} KPI",
@@ -603,6 +605,7 @@ window.LOYOLY_I18N = {
 
       iv_eyebrow:         "INDUSTRY VIEW",
       iv_title:           "Benchmark by sector.",
+      iv_sector_overview: "Sector Overview",
       iv_clients_eyebrow: "BRANDS SAMPLED",
       iv_clients_body:    "A few representative programs from this sector (anonymised panel).",
       iv_kpi_count:       "{n} KPI",

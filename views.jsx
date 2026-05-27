@@ -508,7 +508,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
                             padding: "5px 10px", borderRadius: 999,
                             background: dark ? "rgba(41,101,254,0.18)" : "var(--blue-tertiary)",
                             color: "var(--blue-primary)", fontSize: 12, fontWeight: 600, marginBottom: 12 }}>
-                <Icon name={sector.icon} size={14} /> {sector.name}
+                <Icon name={sector.icon} size={14} /> {t("iv_sector_overview")}
               </div>
               <h2 className="bm-h2" style={{ fontSize: 28 }}>{sector.name}</h2>
               <p>{sector.intro}</p>
