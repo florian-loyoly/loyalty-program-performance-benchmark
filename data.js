@@ -28,7 +28,7 @@
         { title: "Guided welcome mission",   body: "Trigger a guided welcome mission within the first 48 hours post-signup." },
         { title: "Reward the first action",   body: "Reward the very first action (review, follow, profile completion) with bonus points." },
         { title: "Show tier proximity",       body: "Use a progress bar showing tier proximity to nudge a second action." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -46,7 +46,7 @@
         { title: "Soft expiration policy",       body: "Set a soft 12-month expiration with a 30-day reminder email." },
         { title: "Low-threshold micro-rewards",   body: "Offer instant micro-rewards (free shipping, sample) at low point thresholds." },
         { title: "Surface balance in the cart",   body: "Surface the points balance in the cart, not only in the account page." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -64,7 +64,7 @@
         { title: "Lower the first threshold",     body: "Lower the entry-level reward threshold so first-time redemption feels reachable." },
         { title: "Diversify the catalogue",        body: "Add reward variety: discounts, products, donations, exclusive drops." },
         { title: "'Reward ready' push",            body: "Send a personalised 'reward ready' push when a member crosses a threshold." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -82,7 +82,7 @@
         { title: "Double-sided rewards",        body: "Double-sided rewards (referrer + referee) outperform one-sided by ~2×." },
         { title: "Pre-populate share messages",  body: "Pre-populate share messages — friction kills referral conversion." },
         { title: "Add social proof",             body: "Show social proof (\"127 friends joined this month\") on the share screen." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -100,7 +100,7 @@
         { title: "Promote post-purchase",   body: "Promote referral inside post-purchase emails — that's when intent peaks." },
         { title: "Layer onto VIP tiers",    body: "Layer referral on top of VIP tiers: higher tier → higher reward." },
         { title: "A/B test the reward type",body: "A/B test reward type (% off vs. fixed {currency} vs. points) per cohort." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -118,7 +118,7 @@
         { title: "Rotate missions monthly",  body: "Rotate missions monthly — novelty drives a +18% lift in participation." },
         { title: "Mix mission types",        body: "Mix social, content, and purchase missions so every persona has a path." },
         { title: "'Wrapped' recap email",    body: "Recap completed missions in a 'wrapped' email to reinforce identity." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -136,7 +136,7 @@
         { title: "Cap point-discount value",     body: "Cap point-discount value so redemption pushes members up a basket tier." },
         { title: "Bonus mission above median",   body: "Offer a bonus-point mission on baskets above the AOV median." },
         { title: "Bundle rewards beat flat",     body: "Bundle rewards (e.g. free gift over {currency}X) outperform flat discounts." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -154,7 +154,7 @@
         { title: "Anniversary missions",       body: "Birthday and anniversary missions create natural re-purchase triggers." },
         { title: "Tier expiration timers",     body: "Tier expiration timers (\"keep your VIP status\") accelerate the next order." },
         { title: "Cross-sell mission rewards", body: "Cross-sell mission rewards tied to a complementary product category." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -172,7 +172,7 @@
         { title: "Experiential VIP tiers",      body: "VIP tiers with experiential rewards beat pure-discount tiers on retention." },
         { title: "Personalised next mission",   body: "Trigger a personalised 'next best mission' after each purchase." },
         { title: "Win-back at 60 / 90 / 120 days", body: "Win-back missions at 60 / 90 / 120 days catch the lapse before it sets." }
-      ]
+      ],
       insights: ""
     },
     {
@@ -190,7 +190,7 @@
         { title: "Attribute incrementally",      body: "Attribute incrementally — exclude organic repeat buyers from the numerator." },
         { title: "Shift to mission rewards",     body: "Shift budget from blanket discounts to mission rewards (10× higher ROI)." },
         { title: "Measure quarterly",            body: "Measure quarterly — most programs hit positive ROI by month 5." }
-      ]
+      ],
       insights: ""
     }
   ];
