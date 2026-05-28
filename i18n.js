@@ -98,6 +98,7 @@ window.LOYOLY_I18N = {
       kv_legend_sector:   "Valeur secteur",
       kv_legend_avg:      "Moyenne inter-secteurs",
       kv_avg_short:       "Moyenne",
+      kv_insights_eyebrow: "Les insights à retenir",
       kv_tips_eyebrow:    "Comment l'améliorer",
       kv_tips_title:      "Trois actions qui font bouger {kpi}.",
 
@@ -369,6 +370,7 @@ window.LOYOLY_I18N = {
       kv_legend_sector:   "Valor del sector",
       kv_legend_avg:      "Promedio entre sectores",
       kv_avg_short:       "Promedio",
+      kv_insights_eyebrow: "Insights clave",
       kv_tips_eyebrow:    "Cómo mejorarlo",
       kv_tips_title:      "Tres acciones que mueven {kpi}.",
 
@@ -642,6 +644,7 @@ window.LOYOLY_I18N = {
       kv_legend_sector:   "Sector value",
       kv_legend_avg:      "Cross-sector average",
       kv_avg_short:       "Average",
+      kv_insights_eyebrow: "Key insights",
       kv_tips_eyebrow:    "How to improve it",
       kv_tips_title:      "Three actions that move {kpi}.",
 

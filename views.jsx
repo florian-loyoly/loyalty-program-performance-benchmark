@@ -673,7 +673,14 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
           </div>
 
           {/* TIPS */}
-          <div className="bm-section-head" style={{ borderTop: "none", paddingTop: 24 }}>
+          {kpi.insights && (
+            <div style={{ borderTop: "1px solid var(--border)", paddingTop: 24, marginBottom: 24 }}>
+              <div className="bm-eyebrow" style={{ marginBottom: 10 }}>{t("kv_insights_eyebrow")}</div>
+              <p style={{ fontSize: 13, color: "var(--fg-muted)", lineHeight: 1.65, margin: 0 }}>{kpi.insights}</p>
+            </div>
+          )}
+
+          <div className="bm-section-head" style={{ borderTop: "1px solid var(--border)", paddingTop: 24 }}>
             <div className="bm-section-head__left">
               <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_tips_eyebrow")}</div>
               <h3 className="bm-h3">{t("kv_tips_title", { kpi: kpi.short || kpi.name })}</h3>
