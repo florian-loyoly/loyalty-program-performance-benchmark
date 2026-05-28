@@ -24,13 +24,13 @@ window.LOYOLY_I18N = {
       nav_kpi_label:      "Par KPI",
       nav_kpi_sub:        "Classer sur une métrique",
       nav_updated:        "Mis à jour en mai 2026",
-      nav_subtitle:       "Benchmark Loyauté 2026",
+      nav_subtitle:       "Benchmark Fidélité 2026",
       benchmark_cta:      "Comparer votre marque",
 
       footer_caption:     "Source : Loyoly Loyalty Benchmark 2026 - loyoly.io",
       footer_meta:        "600+ marques · 7 secteurs · 10 KPI · Méthodologie disponible sur demande",
 
-      hero_pill:          "Intelligence loyauté",
+      hero_pill:          "Intelligence fidélité",
       hero_h1_pre:        "Benchmark 2026 des",
       hero_h1_mid:        "",
       hero_h1_post:       "programmes de fidélité",

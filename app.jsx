@@ -166,28 +166,25 @@ function Nav({ view, setView, dark, lang, setLang }) {
   ];
   return (
     <nav className="bm-nav" aria-label="Primary">
-      <div className="bm-nav__logo">
-        <img src={dark ? "assets/logo-loyoly-white.svg" : "assets/logo-loyoly.svg"} alt="Loyoly" />
-        <span className="bm-nav__title">{tT("nav_subtitle")}</span>
+      <div className="bm-nav__inner">
+        <div className="bm-nav__logo">
+          <img src={dark ? "assets/logo-loyoly-white.svg" : "assets/logo-loyoly.svg"} alt="Loyoly" />
+          <span className="bm-nav__title">{tT("nav_subtitle")}</span>
+        </div>
+        <div className="bm-nav__tabs">
+          {tabs.map(tab => (
+            <button key={tab.id}
+                    className="bm-nav__tab"
+                    aria-current={view === tab.id}
+                    onClick={() => setView(tab.id)}>
+              <span className="bm-nav__tab-label">{tab.label}</span>
+              <span className="bm-nav__tab-sub">{tab.sub}</span>
+            </button>
+          ))}
+        </div>
+        <div className="bm-nav__spacer" />
+        <LangSwitcher lang={lang} setLang={setLang} />
       </div>
-      <div className="bm-nav__tabs">
-        {tabs.map(tab => (
-          <button key={tab.id}
-                  className="bm-nav__tab"
-                  aria-current={view === tab.id}
-                  onClick={() => setView(tab.id)}>
-            <span className="bm-nav__tab-label">{tab.label}</span>
-            <span className="bm-nav__tab-sub">{tab.sub}</span>
-          </button>
-        ))}
-      </div>
-      <div className="bm-nav__spacer" />
-      <span className="bm-nav__updated">
-        <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: 999,
-                       background: "#10A370", marginRight: 6, verticalAlign: "middle" }}></span>
-        {tT("nav_updated")}
-      </span>
-      <LangSwitcher lang={lang} setLang={setLang} />
     </nav>
   );
 }
@@ -215,11 +212,17 @@ function Footer() {
   const tT = ctx ? ctx.t : (k) => k;
   return (
     <footer className="bm-footer">
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-        <img src="assets/logo-loyoly.svg" alt="Loyoly" />
-        <span>{tT("footer_caption")}</span>
+      <div className="bm-footer__inner">
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <img src="assets/logo-loyoly.svg" alt="Loyoly" />
+          <span>{tT("footer_caption")}</span>
+        </div>
+        <span className="bm-nav__updated">
+          <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: 999,
+                         background: "#10A370", marginRight: 6, verticalAlign: "middle" }}></span>
+          {tT("nav_updated")}
+        </span>
       </div>
-      <div>{tT("footer_meta")}</div>
     </footer>
   );
 }
