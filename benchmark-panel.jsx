@@ -5,8 +5,10 @@
    ============================================================ */
 const { useState: bpUseState, useEffect: bpUseEffect } = React;
 
+const STEP2_KPI_IDS = ["activation_rate", "points_usage_rate", "redemption_rate", "referral_conversion", "new_customer_rate"];
+
 function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) {
-  const { t, data, classify, formatValue, formatDelta } = useLang();
+  const { t, data, classify, formatValue, formatDelta, lang } = useLang();
   const { KPIS, SECTORS } = data;
   const [step, setStep]   = bpUseState(1);
   const [sectorId, setSectorId] = bpUseState(initialSector || (SECTORS[0] && SECTORS[0].id));
@@ -42,7 +44,6 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
     }
   }, [open]);
 
-  const STEP2_KPI_IDS = ["activation_rate", "points_usage_rate", "redemption_rate", "referral_conversion", "new_customer_rate"];
   const step2Kpis = KPIS.filter(k => STEP2_KPI_IDS.includes(k.id));
 
   bpUseEffect(() => {
@@ -92,11 +93,11 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
 
         {step === 3 && (
           <a className="bm-panel__expert-cta"
-             href="https://loyoly.io/demo"
+             href={lang === "fr" ? "https://www.loyoly.io/fr/demo" : lang === "es" ? "https://www.loyoly.io/es/demo" : "https://www.loyoly.io/demo"}
              target="_blank"
              rel="noopener noreferrer">
-            <strong>Want help closing the gap?</strong>
-            <span>Talk to a Loyoly expert <Icon name="arrow-right" size={11} /></span>
+            <strong>{t("bp_expert_cta_title")}</strong>
+            <span>{t("bp_expert_cta_body")} <Icon name="arrow-right" size={11} /></span>
           </a>
         )}
 
@@ -108,7 +109,7 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
           {step === 1 && <button className="bm-btn bm-btn--primary" onClick={() => setStep(2)}>{t("bp_continue")} <Icon name="arrow-right" size={12} /></button>}
           {step === 2 && (
             <button className="bm-btn bm-btn--primary" disabled={!canCompute}
-                    style={{ opacity: canCompute ? 1 : 0.5, cursor: canCompute ? "pointer" : "not-allowed" }}
+                    style={{ cursor: canCompute ? "pointer" : "not-allowed", background: !canCompute ? "var(--pampas-400)" : undefined, color: !canCompute ? "var(--pampas-700)" : undefined }}
                     onClick={() => setStep(3)}>
               {t("bp_see_results")} <Icon name="arrow-right" size={12} />
             </button>
@@ -194,7 +195,7 @@ function Step2({ sector, values, setValues, filledCount, total, kpis }) {
 
 // ── Step 3 ───────────────────────────────────────────────────────────
 function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
-  const { t, data, formatValue } = useLang();
+  const { t, data, formatValue, lang } = useLang();
   const { KPIS } = data;
   const filled = KPIS.filter(k => values[k.id] != null && values[k.id] !== "");
   const above  = filled.filter(k => values[k.id] > sector.kpis[k.id]).length;
@@ -232,12 +233,14 @@ function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
           return (
             <div key={k.id} className="bm-result-row" style={{ opacity: 0.55 }}>
               <div className="bm-result-row__name">
-                {k.short || k.name}
+                {k.type === "rate" ? t("kpi_nav_" + k.id) : (k.short || k.name)}
                 <small>
-                  {t("bp_not_entered")} —{" "}
-                  <button className="bm-result-add-link" onClick={() => onEditKpi && onEditKpi(k.id)}>
-                    Add this KPI <Icon name="arrow-right" size={10} />
-                  </button>
+                  {t("bp_not_entered")}
+                  {STEP2_KPI_IDS.includes(k.id) && (
+                    <>{" — "}<button className="bm-result-add-link" onClick={() => onEditKpi && onEditKpi(k.id)}>
+                      {t("bp_add_kpi")} <Icon name="arrow-right" size={10} />
+                    </button></>
+                  )}
                 </small>
               </div>
               <div style={{ fontSize: 12, color: "var(--fg-faint)" }}>—</div>
@@ -252,7 +255,7 @@ function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
           <div key={k.id} className="bm-result-row">
             <div className="bm-result-row__name">
               <button className="bm-result-kpi-link" onClick={() => goToKpi && goToKpi(k.id)}>
-                {k.short || k.name}
+                {k.type === "rate" ? t("kpi_nav_" + k.id) : (k.short || k.name)}
                 <Icon name="arrow-right" size={10} />
               </button>
               <small>{t("bp_you_vs_avg", { you: formatValue(k, v), avg: formatValue(k, bench) })}</small>

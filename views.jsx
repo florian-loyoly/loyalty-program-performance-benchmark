@@ -340,7 +340,7 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
           tone="yellow"
           eyebrow={t("entry_a_eyebrow")}
           title={t("entry_a_title")}
-          body={t("entry_a_body", { n: SECTORS.length })}
+          body={t("entry_a_body", { n: SECTORS.filter(s => s.id !== "other").length })}
           cta={t("entry_a_open")}
           chips={SECTORS.map(s => ({ icon: s.icon, label: s.short }))}
           onClick={() => goTo("industry")}
@@ -371,14 +371,6 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
           <span className="bm-chip">{t("chip_roi")}</span>
         </div>
       </div>
-      <div className="bm-kpi-grid">
-        {KPIS.map((k, i) => (
-          <KpiCard key={k.id} kpi={k} value={GLOBAL[k.id]} benchmark={null}
-                   showDelta={false} index={i} vizOverride={vizOverride} formulaStyle={formulaStyle} dark={dark}
-                   onClick={() => goToKpi(k.id)} />
-        ))}
-      </div>
-
       {/* BENCHMARK BANNER */}
       <div className="bm-banner">
         <div>
@@ -395,6 +387,14 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
             {t("benchmark_cta")}<Icon name="arrow-right" size={14} />
           </button>
         </div>
+      </div>
+
+      <div className="bm-kpi-grid">
+        {KPIS.map((k, i) => (
+          <KpiCard key={k.id} kpi={k} value={GLOBAL[k.id]} benchmark={null}
+                   showDelta={false} index={i} vizOverride={vizOverride} formulaStyle={formulaStyle} dark={dark}
+                   onClick={() => goToKpi(k.id)} />
+        ))}
       </div>
 
       <Methodology />
@@ -453,7 +453,7 @@ function Methodology() {
             <p dangerouslySetInnerHTML={{ __html: t("meth_smp_body") }} />
           </div>
         </div>
-        <p style={{ marginTop: 16, fontSize: 13, color: "var(--fg-faint)" }}>{t("meth_footer")}</p>
+        <p style={{ marginTop: 16, fontSize: 13, color: "var(--fg-muted)" }}>{t("meth_footer")}</p>
       </div>
     </section>
   );
@@ -710,7 +710,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                   {obj.title && <h3 className="bm-tip__title">{obj.title}</h3>}
                   <p>{obj.body}</p>
                   <a className="bm-tip__cta" href="https://loyoly.io" target="_blank" rel="noopener noreferrer">
-                    See how Loyoly handles this <Icon name="arrow-right" size={11} />
+                    {t("kv_tip_cta")} <Icon name="arrow-right" size={11} />
                   </a>
                 </article>
               );

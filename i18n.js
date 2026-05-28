@@ -145,7 +145,11 @@ window.LOYOLY_I18N = {
       bp_step3_bad:       "Un fort potentiel à activer.",
       bp_step3_bad_body:  "La plupart de vos KPI sont inférieurs à la moyenne du secteur {sector}. Des gains modestes se cumulent rapidement. Consultez la vue KPI pour identifier vos leviers prioritaires.",
       bp_you_vs_avg:      "vous {you} vs. moy. {avg}",
-      bp_not_entered:     "non renseigné"
+      bp_not_entered:     "non renseigné",
+      bp_add_kpi:         "Ajouter ce KPI",
+      bp_expert_cta_title:"Besoin d'aide pour combler l'écart ?",
+      bp_expert_cta_body: "Parler à un expert Loyoly",
+      kv_tip_cta:         "Comment Loyoly gère ça"
     },
     kpis: {
       activation_rate: {
@@ -430,7 +434,11 @@ window.LOYOLY_I18N = {
       bp_step3_bad:       "Gran potencial por activar.",
       bp_step3_bad_body:  "La mayoría de tus KPIs están por debajo de la media del sector {sector}. Incluso mejoras pequeñas se acumulan rápidamente. Usa la vista de KPI para identificar tus movimientos de mayor impacto.",
       bp_you_vs_avg:      "tú {you} vs. media {avg}",
-      bp_not_entered:     "no introducido"
+      bp_not_entered:     "no introducido",
+      bp_add_kpi:         "Añadir este KPI",
+      bp_expert_cta_title:"¿Necesitas ayuda para cerrar la brecha?",
+      bp_expert_cta_body: "Hablar con un experto de Loyoly",
+      kv_tip_cta:         "Cómo lo gestiona Loyoly"
     },
     kpis: {
       activation_rate: {
@@ -717,7 +725,11 @@ window.LOYOLY_I18N = {
       bp_step3_bad:       "Real upside to unlock.",
       bp_step3_bad_body:  "Most of your KPIs sit below the {sector} sector average. Even small improvements compound quickly. Use the KPI view to identify your highest-leverage moves.",
       bp_you_vs_avg:      "you {you} vs. avg {avg}",
-      bp_not_entered:     "not entered"
+      bp_not_entered:     "not entered",
+      bp_add_kpi:         "Add this KPI",
+      bp_expert_cta_title:"Want help closing the gap?",
+      bp_expert_cta_body: "Talk to a Loyoly expert",
+      kv_tip_cta:         "See how Loyoly handles this"
     }
   }
 };

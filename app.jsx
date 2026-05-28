@@ -210,13 +210,16 @@ function LangSwitcher({ lang, setLang }) {
 function Footer() {
   const ctx = React.useContext(LangContext);
   const tT = ctx ? ctx.t : (k) => k;
+  const lang = ctx ? ctx.lang : "en";
+  const siteUrl = lang === "fr" ? "https://loyoly.io/fr" : lang === "es" ? "https://loyoly.io/es" : "https://loyoly.io";
   return (
     <footer className="bm-footer">
       <div className="bm-footer__inner">
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <a href={siteUrl} target="_blank" rel="noopener noreferrer"
+           style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", color: "inherit" }}>
           <img src="assets/logo-loyoly.svg" alt="Loyoly" />
           <span>{tT("footer_caption")}</span>
-        </div>
+        </a>
         <span className="bm-nav__updated">
           <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: 999,
                          background: "#10A370", marginRight: 6, verticalAlign: "middle" }}></span>
