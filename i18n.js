@@ -158,7 +158,8 @@ window.LOYOLY_I18N = {
           { title: "Construisez une gamme de récompenses variée", body: "Construisez une gamme de récompenses variée, adaptée à plusieurs profils clients (bons d'achat, accès exclusifs, dons solidaires...)." },
           { title: "Simplifiez l'accès aux premiers paliers", body: "Simplifiez l'accès aux premiers paliers pour déclencher rapidement la première activation et créer un réflexe d'usage." },
           { title: "Rendez le programme omniprésent", body: "Rendez le programme omniprésent dans votre écosystème : page d'accueil, compte client, email post-achat, réseaux sociaux, checkout." }
-        ]
+        ],
+        insights: "Les secteurs Beauté & Bien-être (5,7%) et Animalerie (5,5%) se distinguent en tête du classement. Ce sont des catégories où l'attachement émotionnel au produit est fort : les clients sont naturellement prédisposés à s'engager avec un programme qui prolonge leur relation à la marque. Le passage à l'activation est facilité par une relation déjà chargée de sens.\nÀ l'inverse, le secteur Santé & Compléments affiche le taux le plus faible (4,0%) malgré un taux de participation très élevé (18,8%). Ce décalage révèle un profil d'adhérent qui s'inscrit sans franchir le pas de l'engagement transactionnel, souvent parce que le programme est perçu comme un avantage administratif plutôt qu'une expérience désirable."
       },
       points_usage_rate: {
         name: "Taux d'utilisation des points",
@@ -170,7 +171,8 @@ window.LOYOLY_I18N = {
           { title: "Rendez vos 1ères récompenses atteignables", body: "Rendez vos 1ères récompenses atteignables dès les premiers achats pour créer un réflexe d'utilisation immédiat." },
           { title: "Mettez en place des rappels automatisés", body: "Mettez en place des rappels automatisés du solde de points via email, SMS ou WhatsApp pour maintenir l'attention des membres." },
           { title: "Créez un effet d'urgence maîtrisé", body: "Créez un effet d'urgence maîtrisé avec des bonus à durée limitée, afin de stimuler la dépense." }
-        ]
+        ],
+        insights: "Les secteurs Alimentation & Boissons (17,4%) et Animalerie (15,1%) écrasent la moyenne de plus de 5 points. La fréquence d'achat élevée dans ces deux catégories crée un cycle naturel d'accumulation et de dépense : les clients voient régulièrement leur solde augmenter, ce qui maintient la pertinence du programme entre deux visites et génère une forte envie de convertir.\nLe secteur Santé & Compléments (7,6%) peine malgré un fort taux de participation. Le problème est structurel : dans une catégorie où l'achat est rationnel et planifié, les points s'accumulent lentement et les occasions de les utiliser ne se présentent pas assez souvent pour entretenir l'habitude. Le programme risque alors de devenir invisible dans la routine du client."
       },
       redemption_rate: {
         name: "Taux d'utilisation des récompenses",
@@ -182,7 +184,8 @@ window.LOYOLY_I18N = {
           { title: "Automatisez des rappels multicanaux", body: "Automatisez des rappels multicanaux (email, SMS, WhatsApp, push) pour encourager vos clients à utiliser leurs récompenses avant expiration." },
           { title: "Fluidifiez les conditions d'utilisation", body: "Fluidifiez les conditions d'utilisation : moins de contraintes = plus d'activation." },
           { title: "Positionnez les récompenses dans les moments clés", body: "Positionnez les récompenses dans les moments clés du parcours d'achat : dans les emails, le compte client ou au checkout." }
-        ]
+        ],
+        insights: "C'est le KPI le plus homogène du benchmark, avec un écart de seulement 9,7 points entre le premier (Beauté & Bien-être, 48,5%) et le dernier (Maison & Décoration, 38,8%). Ce resserrement indique que le taux de rachat est davantage piloté par la qualité du catalogue de récompenses que par la nature du secteur. Une fois le membre actif, la mécanique de rachat suit une logique similaire quelle que soit la catégorie.\nLe secteur Maison & Décoration reste en retrait (-5,1 pts). Avec des cycles d'achat longs et peu de visites en boutique ou sur le site, les membres ont moins d'occasions de voir et d'utiliser leurs récompenses. L'enjeu n'est pas tant d'augmenter la valeur des rewards que de créer des points de contact réguliers pour rappeler que ces récompenses existent."
       },
       referral_conversion: {
         name: "Taux de conversion du parrainage",
@@ -195,7 +198,8 @@ window.LOYOLY_I18N = {
           { title: "Intégrez le parrainage dans vos scénarios CRM", body: "Intégrez le parrainage dans vos scénarios CRM : emails post-achat, espace client, thank you page... pour multiplier les points d'entrée naturels." },
           { title: "Relancez les filleuls inactifs", body: "Relancez les filleuls inactifs via une séquence automatisée (email, SMS ou WhatsApp) avant expiration du code pour maximiser la conversion." },
           { title: "Testez différentes incitations", body: "Testez différentes incitations (bon d'achat, réduction, points de fidélité) pour identifier le levier le plus performant selon votre AOV." }
-        ]
+        ],
+        insights: "Le secteur Maison & Décoration réalise ici une performance inattendue en tête du classement (44,1%, +7 pts). Dans une catégorie à fort ticket moyen, la recommandation d'un proche a un poids décisif. L'acheteur potentiel est déjà en phase de réflexion avancée : un parrainage valide son choix plutôt que de le susciter, ce qui explique un taux de conversion nettement supérieur à la moyenne.\nLe secteur Mode & Prêt-à-porter ferme le classement (35,0%). La catégorie génère pourtant beaucoup de conversation sociale autour des achats, mais la conversion est freinée par la dimension personnelle du choix vestimentaire. La recommandation déclenche l'exploration, rarement la décision d'achat directe. Travailler la mécanique d'incentive côté filleul, plutôt que côté parrain, peut débloquer ce levier."
       },
       new_customer_rate: {
         name: "Taux de nouveaux clients (issus du parrainage)",
@@ -207,7 +211,8 @@ window.LOYOLY_I18N = {
           { title: "Personnalisez le message de parrainage", body: "Personnalisez le message de parrainage : un ton authentique, venant du parrain, génère plus de confiance qu'une communication purement promotionnelle." },
           { title: "Facilitez le partage", body: "Facilitez le partage (liens à copier-coller, email, SMS...) pour lever les freins à la recommandation spontanée." },
           { title: "Animez régulièrement votre programme", body: "Animez régulièrement votre programme avec des campagnes de double bonus, des challenges communautaires ou des activations saisonnières pour maintenir la viralité." }
-        ]
+        ],
+        insights: "Les chiffres sont faibles et très serrés sur l'ensemble du benchmark (de 0,6% à 0,9%). Ce KPI mesure la contribution nette du parrainage à l'acquisition totale, et son niveau modeste rappelle que le referral ne remplace pas les autres canaux d'acquisition mais vient les compléter. Les secteurs Maison & Décoration (0,9%) et Animalerie (0,8%) tirent leur épingle du jeu grâce à la combinaison d'un taux de conversion élevé et d'une base de membres actifs engagés.\nPour la majorité des secteurs bloqués à 0,6%, le plafond est moins lié à la volonté des clients de parrainer qu'à la visibilité du mécanisme dans le parcours post-achat. Un parrainage qui n'est pas promu au bon moment, avec la bonne offre, reste statistiquement invisible."
       },
       participation_rate: {
         name: "Taux de participation",
@@ -220,9 +225,11 @@ window.LOYOLY_I18N = {
           { title: "Animez autour des temps forts", body: "Animez régulièrement votre programme autour de temps forts (nouveautés, événements, campagnes saisonnières) pour renouveler l'intérêt." },
           { title: "Rendez les mécaniques visibles", body: "Rendez les mécaniques d'engagement visibles et accessibles tout au long du parcours client : dans les emails, le compte fidélité, etc." },
           { title: "Gamifiez l'expérience", body: "Gamifiez l'expérience avec des récompenses symboliques ou des bonus temporaires pour dynamiser la participation dans la durée." }
-        ]
+        ],
+        insights: "Les secteurs Santé & Compléments (+9 pts au-dessus de la moyenne, à 18,8%) et Beauté & Bien-être (13,3%) dominent largement. Ces catégories partagent une dimension aspirationnelle forte : les clients s'identifient à un style de vie, pas seulement à un produit. Les missions et défis de fidélité s'inscrivent naturellement dans cette logique de progression personnelle, ce qui décuple l'envie de participer.\nLe secteur Maison & Décoration est en dernière position avec 1,7%, soit -8,1 pts sous la moyenne. La participation aux challenges suppose une régularité d'interaction que le comportement d'achat maison ne permet tout simplement pas. Dans cette catégorie, le programme de fidélité doit être pensé sur des cycles longs et des événements clés (déménagement, rénovation, saisonnalité) plutôt que sur une dynamique d'engagement hebdomadaire."
       },
       ltv_growth: {
+        insights: "Le secteur Maison & Décoration réalise une performance exceptionnelle (+263,5%, +88 pts). Cette catégorie cumule deux effets favorables : une forte croissance de l'AOV (+34%) et un très bon taux de réachat (+143,4%). Les membres fidèles de ce secteur dépensent plus à chaque visite et reviennent plus souvent, ce qui démultiplie la valeur vie client par rapport aux non-membres.\nLe secteur Animalerie (+134,7%) est en queue de peloton malgré son excellent ROI global. L'explication est mécanique : dans une catégorie où l'AOV est faible et peu extensible, la croissance du LTV est plafonnée par l'équation panier x fréquence. Le programme crée de la rétention mais ne peut pas corriger structurellement un panier moyen faible. C'est une catégorie où la valeur du programme réside davantage dans la réduction du churn que dans l'expansion du revenu par client.",
         name: "Croissance LTV",
         short: "Croissance LTV",
         definition: "La croissance LTV mesure le delta de revenus entre les membres du programme de fidélité et une cohorte comparable de non-membres sur 12 mois. C'est la preuve fondamentale du ROI de la fidélité : la différence entre un programme qui génère une valeur incrémentale réelle et un autre qui récompense simplement des clients qui auraient acheté de toute façon. Suivre la croissance LTV par cohorte contrôle le biais de sélection et révèle l'impact causal réel de l'adhésion au programme.",
@@ -235,6 +242,7 @@ window.LOYOLY_I18N = {
         ]
       },
       aov_growth: {
+        insights: "Les secteurs Maison & Décoration (+34%) et Santé & Compléments (+28,7%) enregistrent les progressions les plus marquées. Dans des catégories à panier élevé, le programme de fidélité donne au client une raison concrète de franchir un palier de dépense supplémentaire : passer à une gamme supérieure, ajouter un produit complémentaire, ou profiter d'un seuil de récompense. L'effet levier sur l'AOV est d'autant plus fort que le client est en phase de réflexion.\nLe secteur Animalerie (+8,7%) est à contre-courant. La catégorie génère pourtant un excellent ROI (34,3x) grâce au volume et à la fréquence, mais l'AOV progresse peu car les achats sont essentiellement récurrents et fonctionnels. Les clients rachètent les mêmes références sans être incités à monter en gamme ou à élargir leur panier. Travailler les cross-sell et les montées en gamme via la mécanique de fidélité reste un levier sous-exploité dans cette catégorie.",
         name: "Croissance AOV",
         short: "Croissance AOV",
         definition: "La croissance AOV mesure combien le panier d'un membre est plus élevé sur les commandes où il utilise une récompense, par rapport à ses propres commandes sans utilisation. C'est la mesure la plus directe de l'impact au moment du paiement : un fort taux de croissance AOV signifie que vos récompenses tirent la dépense vers le haut, et ne récompensent pas simplement une dépense déjà engagée. Fixer un seuil de panier minimum pour l'utilisation des récompenses est le principal levier structurel pour faire progresser cette métrique.",
@@ -247,6 +255,7 @@ window.LOYOLY_I18N = {
         ]
       },
       orders_growth: {
+        insights: "Les secteurs Mode & Prêt-à-porter (+147,2%) et Maison & Décoration (+143,4%) affichent les progressions les plus élevées. La mode est portée par une dynamique de réachat émotionnel intense : les collections, les tendances et les nouveautés créent des occasions d'achat répétées que le programme vient amplifier. Pour le secteur Maison & Décoration, la croissance des commandes confirme que le programme parvient à transformer des acheteurs occasionnels en clients réguliers sur des projets successifs.\nLe secteur Santé & Compléments ferme le classement (+87,6%, -33,9 pts), ce qui peut sembler paradoxal pour une catégorie à forte participation. Le problème est la nature de la demande : l'achat est conditionné par le besoin réel, et la fidélité ne peut pas créer une fréquence artificielle dans une catégorie où le client rachète quand son stock est épuisé. Le programme augmente la rétention mais ne compresse pas les intervalles d'achat.",
         name: "Croissance des commandes",
         short: "Croissance commandes",
         definition: "La croissance des commandes mesure à quelle fréquence les membres du programme achètent davantage par rapport à une cohorte comparable de non-membres sur 12 mois. C'est l'indicateur le plus pur pour savoir si l'adhésion au programme de fidélité modifie réellement le comportement d'achat, indépendamment de la taille du panier. Combinée avec la croissance LTV, elle permet aux marques de décomposer l'impact revenus de leur programme en une composante fréquence et une composante AOV.",
@@ -259,6 +268,7 @@ window.LOYOLY_I18N = {
         ]
       },
       roi: {
+        insights: "Les secteurs Animalerie (34,3x) et Maison & Décoration (25,8x) mènent le classement. Leur domination s'explique par des mécaniques différentes mais complémentaires : le secteur Animalerie tire sa performance d'un fort volume de transactions récurrentes avec un coût de récompenses maîtrisé, tandis que le secteur Maison & Décoration capitalise sur un ticket moyen élevé qui démultiplie le revenu additionnel généré par chaque membre actif.\nLe secteur Alimentation & Boissons (8,9x) arrive en dernière position. Le paradoxe de cette catégorie est visible dans les données : malgré le meilleur taux d'utilisation des points (17,4%) et une forte fréquence d'achat, le ROI reste en deçà de la moyenne. La combinaison d'un ticket moyen structurellement faible et d'un coût des récompenses proportionnellement élevé comprime les marges. La fidélité génère de l'engagement, mais la rentabilité nette du programme est plus difficile à construire.",
         name: "ROI",
         short: "ROI",
         definition: "Le ROI mesure la rentabilité directe du programme de fidélité. C'est l'indicateur ultime pour évaluer la performance économique d'une stratégie relationnelle : il traduit la capacité du programme à convertir l'engagement client en revenu mesurable. Un bon ROI démontre qu'au-delà du lien créé avec la communauté, le programme génère une croissance rentable et durable.",
@@ -433,7 +443,8 @@ window.LOYOLY_I18N = {
           { title: "Construye una gama de recompensas variada", body: "Construye una gama de recompensas variada, adaptada a diferentes perfiles de clientes (vales, accesos exclusivos, donaciones solidarias...)." },
           { title: "Simplifica el acceso a los primeros niveles", body: "Simplifica el acceso a los primeros niveles para desencadenar rápidamente la primera activación y crear un reflejo de uso." },
           { title: "Haz el programa omnipresente", body: "Haz que el programa esté omnipresente en tu ecosistema: página de inicio, cuenta de cliente, email post-compra, redes sociales, checkout." }
-        ]
+        ],
+        insights: "Los sectores Belleza & Wellness (5,7%) y Mascotas (5,5%) se distinguen a la cabeza del ranking. Son categorías con un fuerte apego emocional al producto: los clientes están naturalmente predispuestos a comprometerse con un programa que prolonga su relación con la marca. El paso a la activación se ve facilitado por una relación ya cargada de significado.\nPor el contrario, el sector Salud & Suplementos registra la tasa más baja (4,0%) a pesar de una tasa de participación muy elevada (18,8%). Esta brecha revela un perfil de miembro que se inscribe sin dar el paso al compromiso transaccional, a menudo porque el programa se percibe como un beneficio administrativo más que como una experiencia deseable."
       },
       points_usage_rate: {
         name: "Tasa de uso de puntos",
@@ -445,7 +456,8 @@ window.LOYOLY_I18N = {
           { title: "Haz alcanzables las primeras recompensas", body: "Haz que tus primeras recompensas sean alcanzables desde las primeras compras para crear un reflejo de uso inmediato." },
           { title: "Configura recordatorios automatizados", body: "Configura recordatorios automatizados del saldo de puntos por email, SMS o WhatsApp para mantener la atención de los miembros." },
           { title: "Crea un efecto de urgencia controlado", body: "Crea un efecto de urgencia controlado con bonificaciones de tiempo limitado para estimular el gasto." }
-        ]
+        ],
+        insights: "Los sectores Alimentación & Bebidas (17,4%) y Mascotas (15,1%) superan la media en más de 5 puntos. La alta frecuencia de compra en ambas categorías crea un ciclo natural de acumulación y gasto: los clientes ven regularmente cómo crece su saldo, lo que mantiene la relevancia del programa entre visitas y genera un fuerte deseo de convertir.\nEl sector Salud & Suplementos (7,6%) tiene dificultades a pesar de una alta tasa de participación. El problema es estructural: en una categoría donde la compra es racional y planificada, los puntos se acumulan lentamente y las ocasiones de usarlos no se presentan con suficiente frecuencia para mantener el hábito. El programa corre entonces el riesgo de volverse invisible en la rutina del cliente."
       },
       redemption_rate: {
         name: "Tasa de utilización de recompensas",
@@ -457,7 +469,8 @@ window.LOYOLY_I18N = {
           { title: "Automatiza recordatorios multicanal", body: "Automatiza recordatorios multicanal (email, SMS, WhatsApp, push) para animar a tus clientes a usar sus recompensas antes de que expiren." },
           { title: "Simplifica las condiciones de uso", body: "Simplifica las condiciones de uso: menos restricciones = más activación." },
           { title: "Posiciona las recompensas en momentos clave", body: "Posiciona las recompensas en los momentos clave del recorrido de compra: en emails, la cuenta de cliente o en el checkout." }
-        ]
+        ],
+        insights: "Este es el KPI más homogéneo del benchmark, con una diferencia de solo 9,7 puntos entre el primero (Belleza & Wellness, 48,5%) y el último (Hogar & Decoración, 38,8%). Este acercamiento indica que la tasa de canje está más impulsada por la calidad del catálogo de recompensas que por la naturaleza del sector. Una vez que el miembro está activo, la mecánica de canje sigue una lógica similar independientemente de la categoría.\nEl sector Hogar & Decoración se mantiene rezagado (-5,1 pts). Con ciclos de compra largos y pocas visitas a la tienda o al sitio web, los miembros tienen menos ocasiones de ver y utilizar sus recompensas. El reto no es tanto aumentar el valor de las recompensas como crear puntos de contacto regulares para recordar a los miembros que estas recompensas existen."
       },
       referral_conversion: {
         name: "Tasa de conversión de referidos",
@@ -470,7 +483,8 @@ window.LOYOLY_I18N = {
           { title: "Integra el referido en tus flujos CRM", body: "Integra el referido en tus flujos CRM: emails post-compra, área de cliente, thank you page... para multiplicar los puntos de entrada naturales." },
           { title: "Reactiva a los referidos inactivos", body: "Reactiva a los referidos inactivos mediante una secuencia automatizada (email, SMS o WhatsApp) antes de que expire el código para maximizar la conversión." },
           { title: "Prueba diferentes incentivos", body: "Prueba diferentes incentivos (vale de compra, descuento, puntos de fidelización) para identificar el lever más eficaz según tu AOV." }
-        ]
+        ],
+        insights: "El sector Hogar & Decoración logra aquí un rendimiento inesperadamente líder (44,1%, +7 pts). En una categoría con un ticket medio elevado, la recomendación de un conocido tiene un peso decisivo. El potencial comprador ya está en una fase de reflexión avanzada: un referido valida su elección más que suscitarla, lo que explica una tasa de conversión claramente superior a la media.\nEl sector Moda & Confección cierra el ranking (35,0%). La categoría genera mucha conversación social en torno a las compras, pero la conversión se ve frenada por la dimensión personal de la elección de ropa. La recomendación desencadena la exploración, raramente la decisión de compra directa. Trabajar la mecánica de incentivo del lado del referido, en lugar del lado del referente, puede desbloquear este lever."
       },
       new_customer_rate: {
         name: "Tasa de nuevos clientes (desde referidos)",
@@ -482,7 +496,8 @@ window.LOYOLY_I18N = {
           { title: "Personaliza el mensaje de referido", body: "Personaliza el mensaje de referido: un tono auténtico, proveniente del referente, genera más confianza que una comunicación puramente promocional." },
           { title: "Facilita el sharing", body: "Facilita el sharing (enlaces para copiar y pegar, email, SMS...) para eliminar las barreras a la recomendación espontánea." },
           { title: "Anima regularmente tu programa", body: "Anima regularmente tu programa con campañas de doble bonificación, retos comunitarios o activaciones estacionales para mantener la viralidad." }
-        ]
+        ],
+        insights: "Las cifras son bajas y muy ajustadas en todo el benchmark (de 0,6% a 0,9%). Este KPI mide la contribución neta del referido a la adquisición total, y su nivel modesto recuerda que el referido no reemplaza otros canales de adquisición sino que los complementa. Los sectores Hogar & Decoración (0,9%) y Mascotas (0,8%) destacan gracias a la combinación de una alta tasa de conversión y una base de miembros activos comprometidos.\nPara la mayoría de los sectores bloqueados en el 0,6%, el techo está menos relacionado con la voluntad de los clientes de referir que con la visibilidad del mecanismo en el recorrido post-compra. Un programa de referidos que no se promueve en el momento adecuado, con la oferta correcta, permanece estadísticamente invisible."
       },
       participation_rate: {
         name: "Tasa de participación",
@@ -495,9 +510,11 @@ window.LOYOLY_I18N = {
           { title: "Anima el programa en momentos clave", body: "Anima regularmente tu programa en torno a momentos clave (novedades, eventos, campañas estacionales) para renovar el interés." },
           { title: "Haz las mecánicas visibles y accesibles", body: "Haz las mecánicas de engagement visibles y accesibles a lo largo del recorrido del cliente: en emails, la cuenta de fidelización, etc." },
           { title: "Gamifica la experiencia", body: "Gamifica la experiencia con recompensas simbólicas o bonificaciones temporales para dinamizar la participación a largo plazo." }
-        ]
+        ],
+        insights: "Los sectores Salud & Suplementos (+9 pts por encima de la media, en 18,8%) y Belleza & Wellness (13,3%) dominan ampliamente. Estas categorías comparten una fuerte dimensión aspiracional: los clientes se identifican con un estilo de vida, no solo con un producto. Las misiones y los desafíos de fidelización encajan naturalmente en esta lógica de progresión personal, lo que multiplica el deseo de participar.\nEl sector Hogar & Decoración ocupa el último lugar con 1,7%, -8,1 pts por debajo de la media. La participación en los retos requiere una regularidad de interacción que el comportamiento de compra del hogar simplemente no permite. En esta categoría, el programa de fidelización debe pensarse en ciclos largos y eventos clave (mudanza, renovación, estacionalidad) en lugar de una dinámica de engagement semanal."
       },
       ltv_growth: {
+        insights: "El sector Hogar & Decoración logra un rendimiento excepcional (+263,5%, +88 pts). Esta categoría acumula dos efectos favorables: un fuerte crecimiento del AOV (+34%) y una muy buena tasa de recompra (+143,4%). Los miembros fieles de este sector gastan más en cada visita y regresan con más frecuencia, lo que multiplica el valor de vida del cliente frente a los no miembros.\nEl sector Mascotas (+134,7%) se sitúa en la cola del pelotón a pesar de su excelente ROI global. La explicación es mecánica: en una categoría donde el AOV es bajo y poco extensible, el crecimiento del LTV está limitado por la ecuación cesta × frecuencia. El programa crea retención pero no puede corregir estructuralmente una cesta media baja. Es una categoría donde el valor del programa reside más en la reducción del churn que en la expansión del ingreso por cliente.",
         name: "Crecimiento de LTV",
         short: "Crecimiento LTV",
         definition: "El crecimiento de LTV mide el delta de ingresos entre los miembros del programa de lealtad y una cohorte comparable de no miembros en 12 meses. Es la prueba fundamental del ROI de la fidelización: la diferencia entre un programa que genera valor incremental real y uno que simplemente recompensa a clientes que habrían comprado de todas formas. Seguir el crecimiento de LTV por cohorte controla el sesgo de selección y revela el impacto causal real de la membresía en el programa.",
@@ -510,6 +527,7 @@ window.LOYOLY_I18N = {
         ]
       },
       aov_growth: {
+        insights: "Los sectores Hogar & Decoración (+34%) y Salud & Suplementos (+28,7%) registran los crecimientos más marcados. En categorías con cesta alta, el programa de fidelización da al cliente una razón concreta para superar un umbral de gasto adicional: pasar a una gama superior, añadir un producto complementario o aprovechar un nivel de recompensa. El efecto palanca sobre el AOV es tanto más fuerte cuanto más avanzada es la fase de reflexión del cliente.\nEl sector Mascotas (+8,7%) va a contracorriente. La categoría genera sin embargo un excelente ROI (34,3x) gracias al volumen y la frecuencia, pero el AOV crece poco porque las compras son esencialmente recurrentes y funcionales. Los clientes recompran las mismas referencias sin ser incentivados a subir de gama o ampliar su cesta. Trabajar el cross-sell y las subidas de gama a través de la mecánica de fidelización sigue siendo un lever infrautilizado en esta categoría.",
         name: "Crecimiento de AOV",
         short: "Crecimiento AOV",
         definition: "El crecimiento de AOV mide cuánto mayor es el carrito de un miembro en los pedidos donde aplica una recompensa, comparado con sus propios pedidos sin canje. Es la medida más directa del impacto en el momento de pago: una tasa de crecimiento de AOV alta significa que tus recompensas impulsan el gasto hacia arriba, no solo recompensan un gasto ya comprometido. Establecer un umbral mínimo de carrito para el canje de recompensas es la palanca estructural principal para mejorar esta métrica.",
@@ -522,6 +540,7 @@ window.LOYOLY_I18N = {
         ]
       },
       orders_growth: {
+        insights: "Los sectores Moda & Confección (+147,2%) y Hogar & Decoración (+143,4%) muestran los crecimientos más elevados. La moda está impulsada por una intensa dinámica de recompra emocional: las colecciones, las tendencias y las novedades crean ocasiones de compra repetidas que el programa amplifica. Para el sector Hogar & Decoración, el crecimiento de los pedidos confirma que el programa logra transformar compradores ocasionales en clientes regulares en proyectos sucesivos.\nEl sector Salud & Suplementos cierra el ranking (+87,6%, -33,9 pts), lo que puede parecer paradójico para una categoría de alta participación. El problema es la naturaleza de la demanda: la compra está condicionada por la necesidad real, y la fidelización no puede crear una frecuencia artificial en una categoría donde el cliente recompra cuando su stock se agota. El programa aumenta la retención pero no comprime los intervalos de compra.",
         name: "Crecimiento de pedidos",
         short: "Crecimiento pedidos",
         definition: "El crecimiento de pedidos mide con qué frecuencia compran más los miembros del programa de lealtad en comparación con una cohorte comparable de no miembros en 12 meses. Es el indicador más puro de si la membresía en el programa cambia el comportamiento de compra real, independientemente del valor del carrito. Combinado con el crecimiento de LTV, permite a las marcas descomponer el impacto en ingresos de su programa en un componente de frecuencia y un componente de AOV.",
@@ -534,6 +553,7 @@ window.LOYOLY_I18N = {
         ]
       },
       roi: {
+        insights: "Los sectores Mascotas (34,3x) y Hogar & Decoración (25,8x) lideran el ranking. Su dominio se explica por mecánicas diferentes pero complementarias: el sector Mascotas extrae su rendimiento de un alto volumen de transacciones recurrentes con un coste de recompensas controlado, mientras que el sector Hogar & Decoración capitaliza sobre un ticket medio elevado que multiplica el ingreso adicional generado por cada miembro activo.\nEl sector Alimentación & Bebidas (8,9x) llega en última posición. La paradoja de esta categoría es visible en los datos: a pesar de la mejor tasa de uso de puntos (17,4%) y una alta frecuencia de compra, el ROI se mantiene por debajo de la media. La combinación de un ticket medio estructuralmente bajo y un coste de recompensas proporcionalmente elevado comprime los márgenes. La fidelización genera engagement, pero la rentabilidad neta del programa es más difícil de construir.",
         name: "ROI",
         short: "ROI",
         definition: "El ROI mide la rentabilidad directa del programa de fidelización. Es el indicador definitivo para evaluar el rendimiento económico de una estrategia relacional: refleja la capacidad del programa para convertir el engagement del cliente en ingresos medibles. Un buen ROI demuestra que, más allá del vínculo creado con la comunidad, el programa genera un crecimiento rentable y sostenible.",

@@ -686,7 +686,9 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                 border: "1px solid var(--border)",
                 borderRadius: 0, padding: "14px 16px", marginBottom: 24
               }}>
-                <p style={{ fontSize: 13, color: "var(--fg-muted)", lineHeight: 1.65, margin: 0 }}>{kpi.insights}</p>
+                {kpi.insights.split("\n").map((para, i) => (
+                  <p key={i} style={{ fontSize: 13, color: "var(--fg-muted)", lineHeight: 1.65, margin: i > 0 ? "10px 0 0" : 0 }}>{para}</p>
+                ))}
               </div>
             </React.Fragment>
           )}

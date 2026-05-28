@@ -29,7 +29,7 @@
         { title: "Simplify access to first tiers",    body: "Simplify access to the first tiers to quickly trigger initial activation and create a reflex to use the program." },
         { title: "Make the program omnipresent",      body: "Make the program omnipresent in your ecosystem: home page, customer account, post-purchase email, social media, checkout." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Beauty & Wellness (5.7%) and Petcare (5.5%) lead the ranking. These are categories with strong emotional attachment to the product: customers are naturally predisposed to engage with a programme that extends their relationship with the brand. The move to activation is made easier by a relationship already full of meaning.\nBy contrast, Health & Supplements records the lowest rate (4.0%) despite a very high participation rate (18.8%). This gap reveals a member profile that signs up without making the move to transactional engagement, often because the programme is perceived as an administrative benefit rather than a desirable experience."
     },
     {
       id: "points_usage_rate",
@@ -47,7 +47,7 @@
         { title: "Set up automated reminders",          body: "Set up automated reminders of points balances via email, text message or WhatsApp to keep members engaged." },
         { title: "Create a controlled sense of urgency", body: "Create a controlled sense of urgency with limited-time bonuses to stimulate spending." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Food & Beverage (17.4%) and Petcare (15.1%) crush the average by more than 5 points. High purchase frequency in both categories creates a natural accumulation and spending cycle: customers regularly see their balance grow, which keeps the programme relevant between visits and generates a strong desire to convert.\nHealth & Supplements (7.6%) struggles despite a high participation rate. The problem is structural: in a category where purchasing is rational and planned, points accumulate slowly and opportunities to use them do not arise often enough to sustain the habit. The programme then risks becoming invisible in the customer's routine."
     },
     {
       id: "redemption_rate",
@@ -65,7 +65,7 @@
         { title: "Simplify terms and conditions",    body: "Simplify the terms and conditions of use: fewer restrictions = more activation." },
         { title: "Position rewards at key moments",  body: "Position rewards at key moments in the purchase journey: in emails, customer accounts or at checkout." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "This is the most homogeneous KPI in the benchmark, with a gap of only 9.7 points between the top (Beauty & Wellness, 48.5%) and the bottom (Home & Decoration, 38.8%). This tightening indicates that the redemption rate is driven more by the quality of the rewards catalogue than by the nature of the sector. Once a member is active, the redemption mechanism follows a similar logic regardless of the category.\nHome & Decoration remains at the back (-5.1 pts). With long purchase cycles and few visits to the shop or site, members have fewer opportunities to see and use their rewards. The challenge is less about increasing the value of rewards than about creating regular touchpoints to remind members that these rewards exist."
     },
     {
       id: "referral_conversion",
@@ -84,7 +84,7 @@
         { title: "Reach out to inactive referrals",      body: "Reach out to inactive referrals via an automated sequence (email, SMS or WhatsApp) before the code expires to maximise conversion." },
         { title: "Test different incentives",            body: "Test different incentives (vouchers, discounts, loyalty points) to identify the most effective lever based on your average order value." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Home & Decoration achieves an unexpected top-ranking performance (44.1%, +7 pts). In a high average order value category, a personal recommendation carries decisive weight. The potential buyer is already in an advanced consideration phase: a referral validates their choice rather than triggering it, which explains a conversion rate well above average.\nFashion & Apparel closes the ranking (35.0%). The category generates a lot of social conversation around purchases, but conversion is held back by the personal dimension of clothing choices. A recommendation triggers exploration, rarely a direct purchase decision. Working on the incentive mechanism on the referee side, rather than the referrer side, can unlock this lever."
     },
     {
       id: "new_customer_rate",
@@ -102,7 +102,7 @@
         { title: "Make sharing easy",                body: "Make sharing easy (copy-and-paste links, email, SMS, etc.) to remove barriers to spontaneous recommendations." },
         { title: "Regularly promote your program",   body: "Regularly promote your program with double bonus campaigns, community challenges or seasonal activations to maintain virality." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Figures are low and very tight across the entire benchmark (from 0.6% to 0.9%). This KPI measures the net contribution of referral to total acquisition, and its modest level is a reminder that referral does not replace other acquisition channels but complements them. Home & Decoration (0.9%) and Petcare (0.8%) stand out thanks to the combination of a high conversion rate and an engaged active member base.\nFor the majority of sectors stuck at 0.6%, the ceiling is less related to customers' willingness to refer than to the visibility of the mechanism in the post-purchase journey. A referral programme that is not promoted at the right moment, with the right offer, remains statistically invisible."
     },
     {
       id: "participation_rate",
@@ -121,7 +121,7 @@
         { title: "Gamify the experience",               body: "Gamify the experience with symbolic rewards or temporary bonuses to boost long-term participation." },
         { title: "Regularly promote your program",      body: "Regularly promote your program around key events (new products, events, seasonal campaigns) to renew interest." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Health & Supplements (+9 pts above average, at 18.8%) and Beauty & Wellness (13.3%) dominate by a wide margin. These categories share a strong aspirational dimension: customers identify with a lifestyle, not just a product. Loyalty missions and challenges fit naturally into this logic of personal progression, which multiplies the desire to participate.\nHome & Decoration sits last with 1.7%, -8.1 pts below average. Participation in challenges requires a regularity of interaction that home purchasing behaviour simply does not allow. In this category, the loyalty programme must be designed around long cycles and key events (moving home, renovation, seasonality) rather than a weekly engagement dynamic."
     },
     {
       id: "aov_growth",
@@ -139,7 +139,7 @@
         { title: "Bonus mission above median",   body: "Offer a bonus-point mission on baskets above the AOV median." },
         { title: "Bundle rewards beat flat",     body: "Bundle rewards (e.g. free gift over {currency}X) outperform flat discounts." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Home & Decoration (+34%) and Health & Supplements (+28.7%) record the most significant growth. In high-basket categories, the loyalty programme gives customers a concrete reason to cross an additional spending threshold: moving to a higher range, adding a complementary product, or taking advantage of a reward tier. The leverage effect on AOV is all the stronger when the customer is in a consideration phase.\nPetcare (+8.7%) bucks the trend. The category nonetheless generates an excellent ROI (34.3×) through volume and frequency, but AOV grows little because purchases are essentially recurring and functional. Customers repurchase the same references without being encouraged to trade up or expand their basket. Working cross-sell and upsell through the loyalty mechanism remains an underexploited lever in this category."
     },
     {
       id: "orders_growth",
@@ -157,7 +157,7 @@
         { title: "Tier expiration timers",     body: "Tier expiration timers (\"keep your VIP status\") accelerate the next order." },
         { title: "Cross-sell mission rewards", body: "Cross-sell mission rewards tied to a complementary product category." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Fashion & Apparel (+147.2%) and Home & Decoration (+143.4%) show the highest growth. Fashion is driven by intense emotional repurchase dynamics: collections, trends and new arrivals create repeated purchase opportunities that the programme amplifies. For Home & Decoration, orders growth confirms that the programme succeeds in turning occasional buyers into regular customers across successive projects.\nHealth & Supplements closes the ranking (+87.6%, -33.9 pts), which may seem paradoxical for a high-participation category. The problem is the nature of demand: purchasing is conditioned by actual need, and loyalty cannot create artificial frequency in a category where the customer repurchases when their stock runs out. The programme increases retention but does not compress purchase intervals."
     },
     {
       id: "ltv_growth",
@@ -175,7 +175,7 @@
         { title: "Personalised next mission",   body: "Trigger a personalised 'next best mission' after each purchase." },
         { title: "Win-back at 60 / 90 / 120 days", body: "Win-back missions at 60 / 90 / 120 days catch the lapse before it sets." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Home & Decoration delivers an exceptional performance (+263.5%, +88 pts). This category combines two favourable effects: strong AOV growth (+34%) and a very good repurchase rate (+143.4%). Loyal members in this sector spend more on each visit and return more often, which multiplies customer lifetime value compared to non-members.\nPetcare (+134.7%) is at the back of the pack despite its excellent overall ROI. The explanation is mechanical: in a category where AOV is low and hard to extend, LTV growth is capped by the basket × frequency equation. The programme creates retention but cannot structurally correct a low average basket. This is a category where the value of the programme lies more in reducing churn than in expanding revenue per customer."
     },
     {
       id: "roi",
@@ -193,7 +193,7 @@
         { title: "Segment your promotional efforts",   body: "Segment your promotional efforts: focus incentives on your highest-potential segments (top spenders, VIPs, dormant customers to reactivate)." },
         { title: "Use data to drive your campaigns",   body: "Use data to drive your campaigns: use engagement signals (unused points, unconsumed rewards, thresholds almost reached) to trigger targeted and profitable reminders." }
       ],
-      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      insights: "Petcare (34.3×) and Home & Decoration (25.8×) lead the ranking. Their dominance is explained by different but complementary mechanics: Petcare draws its performance from a high volume of recurring transactions with controlled reward costs, while Home & Decoration capitalises on a high average order value that multiplies the additional revenue generated by each active member.\nFood & Beverage (8.9×) comes last. The paradox of this category is visible in the data: despite the best points usage rate (17.4%) and high purchase frequency, ROI remains below average. The combination of a structurally low average basket and proportionally high reward costs compresses margins. Loyalty generates engagement, but the net profitability of the programme is harder to build."
     }
   ];
 
@@ -426,7 +426,8 @@
         definition: overlay.definition || k.definition,
         formula:    overlay.formula    || k.formula,
         formulaParts,
-        tips
+        tips,
+        insights:   overlay.insights   || k.insights
       };
     };
     const localizeSector = (s) => {
