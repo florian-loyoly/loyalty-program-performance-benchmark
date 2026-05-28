@@ -130,7 +130,7 @@ function KpiCard({ kpi, value, benchmark, vizOverride, formulaStyle = "visual", 
          tabIndex={clickable ? 0 : undefined}
          onKeyDown={clickable ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(); } } : undefined}>
       <div className="bm-card__head">
-        <div className="bm-card__title">{kpi.short || kpi.name}</div>
+        <div className="bm-card__title">{kpi.type === "rate" ? t("kpi_nav_" + kpi.id) : (kpi.short || kpi.name)}</div>
         {showDelta && cmp && (
           <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
             <span style={{ fontSize: 10, color: "var(--fg-faint)", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>vs. {t("card_avg_prefix")}</span>
