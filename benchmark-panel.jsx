@@ -42,10 +42,13 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
     }
   }, [open]);
 
+  const STEP2_KPI_IDS = ["activation_rate", "points_usage_rate", "redemption_rate", "referral_conversion", "new_customer_rate"];
+  const step2Kpis = KPIS.filter(k => STEP2_KPI_IDS.includes(k.id));
+
   bpUseEffect(() => {
     if (step === 2) {
       const next = {};
-      KPIS.forEach(k => {
+      step2Kpis.forEach(k => {
         next[k.id] = values[k.id] != null ? values[k.id] : "";
       });
       setValues(next);
@@ -53,7 +56,7 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
   }, [step, sectorId]);
 
   const sector = SECTORS.find(s => s.id === sectorId) || SECTORS[0];
-  const filledCount = KPIS.filter(k => values[k.id] !== "" && values[k.id] != null).length;
+  const filledCount = step2Kpis.filter(k => values[k.id] !== "" && values[k.id] != null).length;
   const canCompute  = filledCount >= 3;
 
   return (
@@ -83,7 +86,7 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
 
         <div className="bm-panel__body">
           {step === 1 && <Step1 sector={sector} sectorId={sectorId} setSectorId={setSectorId} />}
-          {step === 2 && <Step2 sector={sector} values={values} setValues={setValues} filledCount={filledCount} total={KPIS.length} />}
+          {step === 2 && <Step2 sector={sector} values={values} setValues={setValues} filledCount={filledCount} total={step2Kpis.length} kpis={step2Kpis} />}
           {step === 3 && <Step3 sector={sector} values={values} dark={dark} goToKpi={goToKpi} onEditKpi={() => setStep(2)} />}
         </div>
 
@@ -154,9 +157,9 @@ function Step1({ sector, sectorId, setSectorId }) {
 }
 
 // ── Step 2 ───────────────────────────────────────────────────────────
-function Step2({ sector, values, setValues, filledCount, total }) {
-  const { t, data } = useLang();
-  const { KPIS } = data;
+function Step2({ sector, values, setValues, filledCount, total, kpis }) {
+  const { t } = useLang();
+  const KPIS = kpis;
   const minReached = filledCount >= 3;
   return (
     <div>
