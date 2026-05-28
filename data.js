@@ -49,7 +49,7 @@
     },
     {
       id: "redemption_rate",
-      name: "Reward redemption rate",
+      name: "Rewards redemption rate",
       short: "Redemption",
       category: "Transactional",
       type: "rate",
