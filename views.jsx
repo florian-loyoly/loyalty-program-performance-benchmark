@@ -565,10 +565,11 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
   };
   const kpi = KPIS.find(k => k.id === kpiId) || KPIS[0];
   const avg = GLOBAL[kpi.id];
-  const allVals = SECTORS.map(s => s.kpis[kpi.id]).concat([avg]).filter(v => typeof v === "number");
+  const rankingSectors = SECTORS.filter(s => s.id !== "other");
+  const allVals = rankingSectors.map(s => s.kpis[kpi.id]).concat([avg]).filter(v => typeof v === "number");
   const max = Math.max(...allVals);
   const axisMax = (kpi.type === "roi") ? Math.ceil(max + 1) : Math.ceil(max / 5) * 5 + 5;
-  const sorted = [...SECTORS].sort((a, b) => (b.kpis[kpi.id] || 0) - (a.kpis[kpi.id] || 0));
+  const sorted = [...rankingSectors].sort((a, b) => (b.kpis[kpi.id] || 0) - (a.kpis[kpi.id] || 0));
   const avgPct = (avg / axisMax) * 100;
 
   return (
