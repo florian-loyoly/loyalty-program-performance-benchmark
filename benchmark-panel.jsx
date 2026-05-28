@@ -172,7 +172,7 @@ function Step2({ sector, values, setValues, filledCount, total }) {
       {KPIS.map(k => (
         <div key={k.id} className="bm-input-row">
           <label>
-            {k.short || k.name}
+            {k.type === "rate" ? t("kpi_nav_" + k.id) : (k.short || k.name)}
             <small>{k.definition.split(".")[0]}.</small>
           </label>
           <input
