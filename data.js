@@ -29,7 +29,7 @@
         { title: "Reward the first action",   body: "Reward the very first action (review, follow, profile completion) with bonus points." },
         { title: "Show tier proximity",       body: "Use a progress bar showing tier proximity to nudge a second action." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "points_usage_rate",
@@ -47,7 +47,7 @@
         { title: "Low-threshold micro-rewards",   body: "Offer instant micro-rewards (free shipping, sample) at low point thresholds." },
         { title: "Surface balance in the cart",   body: "Surface the points balance in the cart, not only in the account page." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "redemption_rate",
@@ -65,7 +65,7 @@
         { title: "Diversify the catalogue",        body: "Add reward variety: discounts, products, donations, exclusive drops." },
         { title: "'Reward ready' push",            body: "Send a personalised 'reward ready' push when a member crosses a threshold." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "referral_conversion",
@@ -83,7 +83,7 @@
         { title: "Pre-populate share messages",  body: "Pre-populate share messages — friction kills referral conversion." },
         { title: "Add social proof",             body: "Show social proof (\"127 friends joined this month\") on the share screen." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "new_customer_rate",
@@ -101,7 +101,7 @@
         { title: "Layer onto VIP tiers",    body: "Layer referral on top of VIP tiers: higher tier → higher reward." },
         { title: "A/B test the reward type",body: "A/B test reward type (% off vs. fixed {currency} vs. points) per cohort." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "participation_rate",
@@ -119,7 +119,7 @@
         { title: "Mix mission types",        body: "Mix social, content, and purchase missions so every persona has a path." },
         { title: "'Wrapped' recap email",    body: "Recap completed missions in a 'wrapped' email to reinforce identity." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "aov_growth",
@@ -137,7 +137,7 @@
         { title: "Bonus mission above median",   body: "Offer a bonus-point mission on baskets above the AOV median." },
         { title: "Bundle rewards beat flat",     body: "Bundle rewards (e.g. free gift over {currency}X) outperform flat discounts." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "orders_growth",
@@ -155,7 +155,7 @@
         { title: "Tier expiration timers",     body: "Tier expiration timers (\"keep your VIP status\") accelerate the next order." },
         { title: "Cross-sell mission rewards", body: "Cross-sell mission rewards tied to a complementary product category." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "ltv_growth",
@@ -173,7 +173,7 @@
         { title: "Personalised next mission",   body: "Trigger a personalised 'next best mission' after each purchase." },
         { title: "Win-back at 60 / 90 / 120 days", body: "Win-back missions at 60 / 90 / 120 days catch the lapse before it sets." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: "roi",
@@ -191,7 +191,7 @@
         { title: "Shift to mission rewards",     body: "Shift budget from blanket discounts to mission rewards (10× higher ROI)." },
         { title: "Measure quarterly",            body: "Measure quarterly — most programs hit positive ROI by month 5." }
       ],
-      insights: ""
+      insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   ];
 
