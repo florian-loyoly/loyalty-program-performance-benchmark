@@ -675,11 +675,10 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
           {/* TIPS */}
           {kpi.insights && (
             <React.Fragment>
-              <div className="bm-section-head" style={{ borderTop: "1px solid var(--border)", paddingTop: 24, marginBottom: 14 }}>
-                <div className="bm-section-head__left">
-                  <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_insights_eyebrow")}</div>
-                  <h3 className="bm-h3">{t("kv_insights_title", { kpi: kpi.short || kpi.name })}</h3>
-                </div>
+              <hr style={{ border: "none", borderTop: "1px solid var(--border)", margin: "0 0 24px" }} />
+              <div style={{ marginBottom: 14 }}>
+                <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_insights_eyebrow")}</div>
+                <h3 className="bm-h3">{t("kv_insights_title", { kpi: kpi.short || kpi.name })}</h3>
               </div>
               <div style={{
                 background: "color-mix(in srgb, #10A370 8%, var(--bg-raised))",
