@@ -131,7 +131,12 @@ function KpiCard({ kpi, value, benchmark, vizOverride, formulaStyle = "visual", 
          onKeyDown={clickable ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(); } } : undefined}>
       <div className="bm-card__head">
         <div className="bm-card__title">{kpi.short || kpi.name}</div>
-        {showDelta && cmp && <DeltaBadge delta={cmp.delta} type={kpi.type} ptsLabel={t("pts")} />}
+        {showDelta && cmp && (
+          <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+            <span style={{ fontSize: 10, color: "var(--fg-faint)", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>vs. {t("card_avg_prefix")}</span>
+            <DeltaBadge delta={cmp.delta} type={kpi.type} ptsLabel={t("pts")} />
+          </div>
+        )}
       </div>
       <p className="bm-card__def">{kpi.definition.split(". ")[0] + "."}</p>
       <div className="bm-card__body">{body}</div>
