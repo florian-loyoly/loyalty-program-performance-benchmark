@@ -537,11 +537,6 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
                       <KpiCard key={k.id} kpi={k} value={sector.kpis[k.id]} benchmark={GLOBAL[k.id]}
                                index={i} vizOverride={vizOverride} formulaStyle={formulaStyle} dark={dark} />
                     ))}
-                    {cat.id === "Relational" && (
-                      <div className="bm-iv__cat-chart">
-                        <MissionImpactChart data={sector.mission_impact} dark={dark} />
-                      </div>
-                    )}
                   </div>
                 </section>
               );
