@@ -292,10 +292,10 @@ window.LOYOLY_I18N = {
       other:   { name: "Autres", short: "Autres", intro: "Aucun secteur ne correspond précisément à votre modèle. Votre marque sera comparée aux moyennes inter-secteurs, calculées sur l'ensemble des 600+ marques du panel. C'est le point de référence le plus neutre disponible." }
     },
     categories: {
-      Transactional: { label: "Transactionnel", blurb: "Comment les membres gagnent et utilisent dans votre programme." },
-      Referral:      { label: "Parrainage",     blurb: "Comment les membres attirent de nouveaux clients." },
-      Relational:    { label: "Engagement",    blurb: "Quelle est la profondeur de la boucle d'engagement." },
-      Business:      { label: "Impact business", blurb: "Ce que le programme fait au chiffre d'affaires." }
+      Transactional: { label: "Transactionnel", blurb: "Ce que les membres font de leurs points et récompenses." },
+      Referral:      { label: "Parrainage",     blurb: "La capacité du programme à générer de l'acquisition." },
+      Relational:    { label: "Engagement",    blurb: "À quel point vos membres s'impliquent au-delà de l'achat." },
+      Business:      { label: "Impact business", blurb: "L'effet mesurable du programme sur votre revenus." }
     }
   },
 
@@ -577,10 +577,10 @@ window.LOYOLY_I18N = {
       other:   { name: "Otros", short: "Otros", intro: "Ningún sector corresponde exactamente a tu modelo. Tu marca se comparará con los promedios intersectoriales, calculados sobre las 600+ marcas del panel. Es el punto de referencia más neutro disponible." }
     },
     categories: {
-      Transactional: { label: "Transaccional", blurb: "Cómo los miembros ganan y gastan en tu programa." },
-      Referral:      { label: "Referidos",     blurb: "Cómo los miembros atraen nuevos clientes." },
-      Relational:    { label: "Engagement",    blurb: "Qué tan profunda es la dinámica de engagement." },
-      Business:      { label: "Impacto en el negocio", blurb: "Qué hace el programa en los ingresos." }
+      Transactional: { label: "Transaccional", blurb: "Lo que los miembros hacen con sus puntos y recompensas." },
+      Referral:      { label: "Referidos",     blurb: "La capacidad del programa para generar adquisición." },
+      Relational:    { label: "Engagement",    blurb: "Hasta qué punto tus miembros se implican más allá de la compra." },
+      Business:      { label: "Impacto en el negocio", blurb: "El efecto medible del programa en tus ingresos." }
     }
   },
 
