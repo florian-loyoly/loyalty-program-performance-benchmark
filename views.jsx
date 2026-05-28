@@ -511,7 +511,9 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
                 <Icon name={sector.icon} size={14} /> {t("iv_sector_overview")}
               </div>
               <h2 className="bm-h2" style={{ fontSize: 28 }}>{sector.name}</h2>
-              <p>{sector.intro}</p>
+              {sector.intro.split("\n").map((para, i) => (
+                <p key={i} style={{ marginTop: i > 0 ? 10 : 0 }}>{para}</p>
+              ))}
             </div>
             {sector.clients && sector.clients.length > 0 && <ClientStrip sector={sector} />}
           </div>

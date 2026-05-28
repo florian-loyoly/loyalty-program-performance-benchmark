@@ -207,7 +207,7 @@
       short: "Fashion",
       icon: "shirt",
       brands: 130,
-      intro: "Fashion & Apparel brands use loyalty to bridge the gaps between seasonal cycles and maintain purchase intent between drops. Members respond more to early access and VIP experiences than to discounts, generating strong participation but modest redemption value. The main challenge is keeping members engaged during off-peak periods through continuous program activity and exclusive pre-launch experiences.",
+      intro: "The Fashion & Apparel sector records the benchmark's best orders growth (+147.2%) and an LTV progression well above average (+195%). The programme is a particularly effective purchase frequency driver, including between seasonal cycles and drops.\nThe growth potential lies in deepening engagement: activating mission and referral mechanics more actively would transform an already transactionally strong loyalty into genuine brand belonging.",
       clients: [
         { name: "We Are Jolies",   logo: "assets/logos/wearejolies.webp",       url: "https://wearejolies.com/pages/programme-de-fidelite" },
         { name: "SAAJ",            logo: "assets/logos/saaj.png",               url: "https://saajparis.fr/pages/le-club-saaj" },
@@ -228,7 +228,7 @@
       short: "Beauty",
       icon: "sparkles",
       brands: 118,
-      intro: "Beauty & Wellness stands out for its naturally high purchase frequency and the emotional connection brands build with their customers. Loyalty programs in this sector activate fast and generate strong transactional engagement. The real lever lies in sustaining that momentum: turning engaged members into consistent repeat buyers through continuous program activity and personalized post-purchase experiences.",
+      intro: "The Beauty & Wellness sector stands out for a particularly strong engagement profile: activation rate (5.7%), participation (13.3%) and rewards redemption rate (48.5%) are all above the cross-sector average. The strong emotional bond between customers and their beauty brands drives natural and regular programme adoption.\nThe real lever lies in the long term: using this high engagement to grow basket sizes and LTV, through continuous programme activity and personalised post-purchase experiences that encourage members to come back more often and spend more.",
       clients: [
         { name: "La Belle Boucle", logo: "assets/logos/la-belle-boucle.webp", url: "https://labelleboucle.fr/pages/programme-fideliboucles" },
         { name: "Aime",            logo: "assets/logos/aime.png",             url: "https://aime.co/pages/programme-fidelite" },
@@ -249,7 +249,7 @@
       short: "Food",
       icon: "coffee",
       brands: 84,
-      intro: "Food & Beverage benefits from the highest natural purchase frequency across all sectors, driving fast activation and strong points usage. Small basket sizes limit AOV uplift, but the volume of transactions makes loyalty programs highly efficient at building durable purchase habits. The opportunity lies in using that frequency as a lever to deepen engagement through missions and content.",
+      intro: "The Food & Beverage sector benefits from the highest natural purchase frequency in the entire benchmark, resulting in an exceptional points usage rate (17.4%, first across all categories). The transactional mechanism works on its own, driven by the regularity of visits.\nThis transaction volume forms an ideal foundation for deepening engagement through missions and content, thereby strengthening the programme's overall profitability as the customer relationship consolidates.",
       clients: [
         { name: "Capsme",      logo: "assets/logos/capsme.avif",      url: "https://www.capsme.fr/pages/fidelite-parrainage" },
         { name: "Hydrology",   logo: "assets/logos/hydrology.png",    url: "https://hydrology.fr/pages/programme-de-fidelite" },
@@ -270,7 +270,7 @@
       short: "Health",
       icon: "leaf",
       brands: 76,
-      intro: "Health & Supplements records the strongest LTV uplift of any sector, driven by subscription-compatible purchase patterns and a high degree of trust between brands and customers. Members reactivate quickly through win-back missions, and referral plays a structurally larger role than in other categories. The lever to activate is converting product satisfaction into active word-of-mouth, supported by a strong referral program.",
+      intro: "The Health & Supplements sector records the benchmark's highest participation rate (18.8%) and solid AOV growth (+28.7%). Customers engage strongly with engagement mechanics, driven by a high level of trust in their brands and a well-established aspirational dimension.\nThe lever to activate is referral: with a conversion rate of 38.5% above average, satisfied customers are naturally inclined to recommend. Structuring this existing word-of-mouth into an active referral programme represents a direct growth opportunity.",
       clients: [
         { name: "Epycure",      logo: "assets/logos/epycure.png",        url: "https://epycure.com/pages/fidelite-parrainage" },
         { name: "The Smilist",  logo: "assets/logos/thesmilist.webp",    url: "https://thesmilist.co/pages/rewards" },
@@ -291,7 +291,7 @@
       short: "Home",
       icon: "home",
       brands: 68,
-      intro: "Home & Decoration operates on long purchase cycles that fundamentally reshape the loyalty dynamic. AOV growth at redemption is strong, but low transaction frequency causes members to disengage between purchases, pulling down participation and redemption rates. Re-engagement missions are the primary mechanism to keep the program alive between buying moments.",
+      intro: "The Home & Decoration sector delivers the benchmark's most impressive business results: best LTV growth (+263.5%), best referral conversion rate (44.1%) and best AOV progression (+34%). When a customer engages with their loyalty programme, the revenue impact is massive.\nIn a sector where purchase cycles are naturally long, re-engagement mechanics between two projects are the primary lever for keeping the programme alive and capturing opportunities as soon as they arise.",
       clients: [
         { name: "Atma",               logo: "assets/logos/atma.webp",                url: "https://atmakitchenware.fr/pages/la-brigade-du-kiff" },
         { name: "Ma Petite Chaise",   logo: "assets/logos/ma-petite-chaise.webp",    url: "https://www.mapetitechaise.com/content/111-Fidelite" },
@@ -312,7 +312,7 @@
       short: "Petcare",
       icon: "pawprint",
       brands: 58,
-      intro: "Petcare stands out for the strongest referral conversion of any sector, driven by the emotional bond between pet owners that naturally fuels word-of-mouth. Members are highly motivated and show strong brand loyalty, but program engagement depends on how well brands activate that community energy through missions and shared experiences. Pet parents talk to other pet parents: referral is the growth lever to prioritize.",
+      intro: "The Petcare sector records the benchmark's best ROI (34.3×) and above-average performance across all transactional and referral KPIs. The high purchase frequency combined with pet owners' emotional attachment to their animals creates ideal conditions for a high-performing and profitable loyalty programme.\nThe natural strength of word-of-mouth in this community is confirmed by a referral conversion rate of 42.2%. Amplifying these recommendation mechanics, while working on basket upsell, represents the main growth lever.",
       clients: [
         { name: "Pro-Nutrition",          logo: "assets/logos/pro-nutrition.webp",           url: "https://www.pro-nutrition.fr/pages/fidelite-parrainage" },
         { name: "Dexter & Mango",         logo: "assets/logos/dexter-et-mango.webp",         url: "https://dexter-et-mango.fr/pages/fidelite-parrainage" },
@@ -333,7 +333,7 @@
       short: "Sports",
       icon: "dumbbell",
       brands: 66,
-      intro: "Sports & Fitness generates the highest mission participation of any sector, reflecting a community-oriented audience that responds naturally to challenges and collective goals. Loyalty programs work best here when built around identity and shared progress rather than purely transactional rewards. Margin pressure limits ROI relative to other sectors, but the depth of engagement creates a strong foundation for long-term retention.",
+      intro: "The Sports & Fitness sector shows a balanced profile across all benchmark indicators, driven by an audience naturally oriented towards collective challenges and progression goals. Programmes here generate solid loyalty and good long-term retention.\nThe challenge for this sector is to capitalise on its customers' strong community identity: building the programme around shared progress and exclusive experiences rather than purely transactional rewards allows this engagement potential to be fully activated.",
       clients: [
         { name: "Venum",          logo: "assets/logos/venum.svg",        url: "https://fr.venum.com/pages/venum-club" },
         { name: "Un Bon Maillot", logo: "assets/logos/unbonmaillot.png", url: "https://unbonmaillot.com/pages/ubm-football-club" },
