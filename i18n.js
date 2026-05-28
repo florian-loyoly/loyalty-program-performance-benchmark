@@ -279,7 +279,7 @@ window.LOYOLY_I18N = {
     categories: {
       Transactional: { label: "Transactionnel", blurb: "Comment les membres gagnent et utilisent dans votre programme." },
       Referral:      { label: "Parrainage",     blurb: "Comment les membres attirent de nouveaux clients." },
-      Relational:    { label: "Relationnel",    blurb: "Quelle est la profondeur de la boucle d'engagement." },
+      Relational:    { label: "Engagement",    blurb: "Quelle est la profondeur de la boucle d'engagement." },
       Business:      { label: "Impact business", blurb: "Ce que le programme fait au chiffre d'affaires." }
     }
   },
@@ -549,7 +549,7 @@ window.LOYOLY_I18N = {
     categories: {
       Transactional: { label: "Transaccional", blurb: "Cómo los miembros ganan y gastan en tu programa." },
       Referral:      { label: "Referidos",     blurb: "Cómo los miembros atraen nuevos clientes." },
-      Relational:    { label: "Relacional",    blurb: "Qué tan profunda es la dinámica de engagement." },
+      Relational:    { label: "Engagement",    blurb: "Qué tan profunda es la dinámica de engagement." },
       Business:      { label: "Impacto en el negocio", blurb: "Qué hace el programa en los ingresos." }
     }
   },

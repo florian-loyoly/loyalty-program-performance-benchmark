@@ -342,7 +342,7 @@
   const CATEGORIES = [
     { id: "Transactional", label: "Transactional", blurb: "How members earn and spend in your program." },
     { id: "Referral",      label: "Referral",      blurb: "How members bring in new customers." },
-    { id: "Relational",    label: "Relational",    blurb: "How deep the engagement loop runs." },
+    { id: "Relational",    label: "Engagement",    blurb: "How deep the engagement loop runs." },
     { id: "Business",      label: "Business impact", blurb: "What the program does to revenue." }
   ];
 
