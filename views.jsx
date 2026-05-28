@@ -680,7 +680,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
               <div style={{
                 background: "color-mix(in srgb, #10A370 8%, var(--bg-raised))",
                 border: "1px solid color-mix(in srgb, #10A370 22%, transparent)",
-                borderRadius: 8, padding: "14px 16px"
+                borderRadius: 0, padding: "14px 16px"
               }}>
                 <p style={{ fontSize: 13, color: "var(--fg-muted)", lineHeight: 1.65, margin: 0 }}>{kpi.insights}</p>
               </div>
