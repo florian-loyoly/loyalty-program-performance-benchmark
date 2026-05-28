@@ -151,73 +151,75 @@ window.LOYOLY_I18N = {
       activation_rate: {
         name: "Taux d'activation",
         short: "Activation",
-        definition: "Le taux d'activation mesure la vitesse à laquelle les nouveaux inscrits ont leur première interaction significative avec votre programme. C'est le premier signal de santé du programme : un taux faible signifie que les membres s'inscrivent sans jamais s'engager, gaspillant le budget d'acquisition. Améliorer l'activation a un effet multiplicateur sur tous les KPI aval, car seuls les membres activés peuvent utiliser des récompenses, parrainer ou compléter des missions.",
-        formula: "Membres actifs (30j) ÷ Membres inscrits",
-        formulaParts: { num: "Membres actifs (30j)", denom: "Membres inscrits" },
+        definition: "Le taux d'activation mesure la part des commandes incluant une récompense issue du programme. C'est l'indicateur de référence pour évaluer l'adoption réelle du programme de fidélité par vos clients. Un bon taux traduit une perception claire de la valeur du programme : vos membres comprennent les avantages, les utilisent et les intègrent naturellement dans leur parcours post-achat.",
+        formula: "(Commandes avec récompense utilisée / Volume total de commandes) × 100",
+        formulaParts: { num: "Commandes avec récompense utilisée", denom: "Volume total de commandes" },
         tips: [
-          { title: "Mission de bienvenue guidée", body: "Déclenchez une mission de bienvenue guidée dans les 48 premières heures." },
-          { title: "Récompenser la première action", body: "Récompensez la toute première action (avis, suivi, profil complété) par des points bonus." },
-          { title: "Afficher la proximité du palier", body: "Affichez une barre de progression vers le palier supérieur pour pousser à une deuxième action." }
+          { title: "Construisez une gamme de récompenses variée", body: "Construisez une gamme de récompenses variée, adaptée à plusieurs profils clients (bons d'achat, accès exclusifs, dons solidaires...)." },
+          { title: "Simplifiez l'accès aux premiers paliers", body: "Simplifiez l'accès aux premiers paliers pour déclencher rapidement la première activation et créer un réflexe d'usage." },
+          { title: "Rendez le programme omniprésent", body: "Rendez le programme omniprésent dans votre écosystème : page d'accueil, compte client, email post-achat, réseaux sociaux, checkout." }
         ]
       },
       points_usage_rate: {
         name: "Taux d'utilisation des points",
         short: "Utilisation des points",
-        definition: "Le taux d'utilisation des points mesure la part des points émis que les membres utilisent réellement, révélant si votre monnaie de récompense est perçue comme précieuse. C'est un indicateur direct de pertinence des récompenses : une faible utilisation signale souvent des seuils trop élevés ou des récompenses trop génériques pour motiver l'action. Réduire l'écart entre les points gagnés et les points dépensés est l'un des leviers les plus rapides pour augmenter l'engagement.",
-        formula: "Points utilisés ÷ Points émis",
-        formulaParts: { num: "Points utilisés", denom: "Points émis" },
+        definition: "Le taux d'utilisation des points mesure la part des points crédités qui sont effectivement dépensés par vos clients. C'est un indicateur clé de la liquidité de votre programme et de la valeur perçue de vos récompenses. Un bon taux traduit un parcours fluide et des avantages suffisamment attractifs pour inciter vos membres à passer à l'action. Un véritable baromètre de l'efficacité de votre mécanique d'engagement.",
+        formula: "(Points utilisés / Points gagnés) × 100",
+        formulaParts: { num: "Points utilisés", denom: "Points gagnés" },
         tips: [
-          { title: "Expiration douce des points", body: "Mettez une expiration douce à 12 mois avec un rappel email 30 jours avant." },
-          { title: "Micro-récompenses à bas seuil", body: "Proposez des micro-récompenses instantanées (livraison gratuite, échantillon) à bas seuils." },
-          { title: "Solde de points dans le panier", body: "Affichez le solde de points dans le panier, pas seulement dans le compte client." }
+          { title: "Rendez vos 1ères récompenses atteignables", body: "Rendez vos 1ères récompenses atteignables dès les premiers achats pour créer un réflexe d'utilisation immédiat." },
+          { title: "Mettez en place des rappels automatisés", body: "Mettez en place des rappels automatisés du solde de points via email, SMS ou WhatsApp pour maintenir l'attention des membres." },
+          { title: "Créez un effet d'urgence maîtrisé", body: "Créez un effet d'urgence maîtrisé avec des bonus à durée limitée, afin de stimuler la dépense." }
         ]
       },
       redemption_rate: {
         name: "Taux d'utilisation des récompenses",
         short: "Utilisation",
-        definition: "Le taux d'utilisation des récompenses mesure la part des membres actifs qui utilisent au moins une récompense sur une fenêtre de 90 jours. C'est la preuve la plus claire que votre programme crée une valeur perçue réelle, et pas seulement une accumulation théorique de points. Une forte utilisation stimule à la fois la satisfaction et le réachat, en faisant un indicateur avancé de la croissance LTV.",
-        formula: "Membres ayant utilisé une récompense (90j) ÷ Membres actifs",
-        formulaParts: { num: "Membres avec utilisation (90j)", denom: "Membres actifs" },
+        definition: "Le taux d'utilisation des récompenses mesure la part des avantages réclamés qui sont effectivement utilisés par les clients. C'est un indicateur clé de l'activation réelle du programme et de la valeur perçue des bénéfices proposés. Un bon taux traduit une expérience fluide, compréhensible et incitative, tandis qu'un faible taux signale souvent un manque de clarté, de visibilité ou des conditions d'usage trop restrictives.",
+        formula: "(Récompenses utilisées / Récompenses réclamées) × 100",
+        formulaParts: { num: "Récompenses utilisées", denom: "Récompenses réclamées" },
         tips: [
-          { title: "Abaisser le premier seuil", body: "Abaissez le seuil de la première récompense pour rendre le premier usage atteignable." },
-          { title: "Diversifier le catalogue", body: "Diversifiez les récompenses : remises, produits, dons, drops exclusifs." },
-          { title: "Push « récompense prête »", body: "Envoyez une notification personnalisée « récompense prête » quand un seuil est franchi." }
+          { title: "Automatisez des rappels multicanaux", body: "Automatisez des rappels multicanaux (email, SMS, WhatsApp, push) pour encourager vos clients à utiliser leurs récompenses avant expiration." },
+          { title: "Fluidifiez les conditions d'utilisation", body: "Fluidifiez les conditions d'utilisation : moins de contraintes = plus d'activation." },
+          { title: "Positionnez les récompenses dans les moments clés", body: "Positionnez les récompenses dans les moments clés du parcours d'achat : dans les emails, le compte client ou au checkout." }
         ]
       },
       referral_conversion: {
         name: "Taux de conversion du parrainage",
         short: "Conversion parrainage",
-        definition: "Le taux de conversion du parrainage mesure combien des partages effectués par vos membres se traduisent par une commande passée. C'est la métrique d'efficacité de votre stratégie de bouche-à-oreille : un faible CVR signifie que vous générez de l'activité de partage sans la convertir en chiffre d'affaires. Optimiser l'expérience de landing du parrainage et la structure d'incitation des deux côtés fait directement progresser ce chiffre.",
-        formula: "Commandes parrainées ÷ Partages de parrainage",
-        formulaParts: { num: "Commandes parrainées", denom: "Partages de parrainage" },
+        definition: "Le taux de conversion du parrainage mesure la part de filleuls qui réalisent un premier achat après avoir reçu une invitation ou un code de parrainage. Il évalue la capacité de votre marque à transformer une recommandation en acquisition effective. Un bon taux traduit une promesse claire, un avantage bien positionné et un parcours d'achat sans friction pour le filleul.",
+        formula: "(Nombre de filleuls ayant passé commande / Nombre total de filleuls invités) × 100",
+        formulaParts: { num: "Filleuls ayant passé commande", denom: "Total de filleuls invités" },
         tips: [
-          { title: "Récompenses bilatérales", body: "Les récompenses bilatérales (parrain + filleul) surperforment d'environ 2× les unilatérales." },
-          { title: "Pré-remplir les messages", body: "Pré-remplissez les messages de partage — la friction tue la conversion." },
-          { title: "Ajouter de la preuve sociale", body: "Affichez la preuve sociale (« 127 amis ont rejoint ce mois-ci ») sur l'écran de partage." }
+          { title: "Soignez l'expérience filleul", body: "Soignez l'expérience filleul : du clic sur le lien à l'achat, le parcours doit être fluide, mobile-first et exempt de toute friction." },
+          { title: "Intégrez le parrainage dans vos scénarios CRM", body: "Intégrez le parrainage dans vos scénarios CRM : emails post-achat, espace client, thank you page... pour multiplier les points d'entrée naturels." },
+          { title: "Relancez les filleuls inactifs", body: "Relancez les filleuls inactifs via une séquence automatisée (email, SMS ou WhatsApp) avant expiration du code pour maximiser la conversion." },
+          { title: "Testez différentes incitations", body: "Testez différentes incitations (bon d'achat, réduction, points de fidélité) pour identifier le levier le plus performant selon votre AOV." }
         ]
       },
       new_customer_rate: {
         name: "Taux de nouveaux clients (issus du parrainage)",
         short: "Nouveaux du parrainage",
-        definition: "Nouveaux via parrainage mesure la part de tous les nouveaux clients d'une période qui ont été amenés par des membres du programme de fidélité. Ce chiffre quantifie votre base de membres en tant que canal d'acquisition, au même titre que les canaux payants et organiques. Les marques avec un taux élevé réduisent leurs coûts d'acquisition payante et améliorent la qualité des nouveaux clients, car les filleuls convertissent plus vite et sont plus fidèles.",
-        formula: "Nouveaux clients parrainés ÷ Total nouveaux clients",
-        formulaParts: { num: "Nouveaux clients parrainés", denom: "Total nouveaux clients" },
+        definition: "Le taux de nouveaux clients mesure la part d'acheteurs acquis via le parrainage, par rapport à l'ensemble des nouveaux clients sur une période donnée. Il met en lumière la capacité du programme à générer de la croissance organique et à transformer vos clients satisfaits en véritables relais d'acquisition. Un bon taux traduit une communauté active, une expérience de recommandation bien intégrée et un coût d'acquisition marginal quasi nul, des atouts majeurs pour une stratégie de croissance rentable.",
+        formula: "(Nouveaux clients via parrainage / Total des nouveaux clients) × 100",
+        formulaParts: { num: "Nouveaux clients via parrainage", denom: "Total des nouveaux clients" },
         tips: [
-          { title: "Promouvoir en post-achat", body: "Promouvez le parrainage dans les emails post-achat — c'est le pic d'intention." },
-          { title: "Combiner aux tiers VIP", body: "Combinez parrainage et tiers VIP : tier plus élevé → récompense plus forte." },
-          { title: "A/B tester le type de récompense", body: "A/B testez le type de récompense (% off vs. {currency} fixe vs. points) par cohorte." }
+          { title: "Personnalisez le message de parrainage", body: "Personnalisez le message de parrainage : un ton authentique, venant du parrain, génère plus de confiance qu'une communication purement promotionnelle." },
+          { title: "Facilitez le partage", body: "Facilitez le partage (liens à copier-coller, email, SMS...) pour lever les freins à la recommandation spontanée." },
+          { title: "Animez régulièrement votre programme", body: "Animez régulièrement votre programme avec des campagnes de double bonus, des challenges communautaires ou des activations saisonnières pour maintenir la viralité." }
         ]
       },
       participation_rate: {
         name: "Taux de participation",
         short: "Participation",
-        definition: "Le taux de participation mesure la part des membres qui vont au-delà de l'accumulation de points pour compléter au moins une mission optionnelle par trimestre. C'est le meilleur prédicteur de la rétention à long terme : les membres qui s'engagent dans les missions créent une boucle d'habitude qui les rend bien plus difficiles à perdre. Un taux de participation en hausse signale que votre programme est passé du transactionnel au vraiment relationnel.",
-        formula: "Membres ayant complété ≥1 mission ÷ Total membres",
-        formulaParts: { num: "Membres avec ≥1 mission", denom: "Total membres" },
+        definition: "Le taux de participation correspond à la part de clients ayant complété au moins une mécanique d'engagement sur la période observée. Il reflète la vitalité relationnelle de votre programme et la capacité de votre marque à créer des interactions au-delà de l'achat. Un bon taux montre que vos clients ne se limitent pas à consommer : ils participent, partagent, donnent leur avis et contribuent à la visibilité organique de votre marque. Un véritable indicateur de performance communautaire.",
+        formula: "(Nombre de clients ayant complété une mission / Nombre total de clients actifs) × 100",
+        formulaParts: { num: "Clients ayant complété une mission", denom: "Total de clients actifs" },
         tips: [
-          { title: "Renouveler chaque mois", body: "Renouvelez les missions chaque mois — la nouveauté apporte +18 % de participation." },
-          { title: "Mixer les types de missions", body: "Mixez missions sociales, contenus et achat pour que chaque persona ait un chemin." },
-          { title: "Email « wrapped »", body: "Récapitulez les missions complétées dans un email « wrapped » pour renforcer l'identité." }
+          { title: "Diversifiez les mécaniques d'engagement", body: "Diversifiez les mécaniques d'engagement : opt-in, avis, UGC, interactions sociales, sondages..." },
+          { title: "Animez autour des temps forts", body: "Animez régulièrement votre programme autour de temps forts (nouveautés, événements, campagnes saisonnières) pour renouveler l'intérêt." },
+          { title: "Rendez les mécaniques visibles", body: "Rendez les mécaniques d'engagement visibles et accessibles tout au long du parcours client : dans les emails, le compte fidélité, etc." },
+          { title: "Gamifiez l'expérience", body: "Gamifiez l'expérience avec des récompenses symboliques ou des bonus temporaires pour dynamiser la participation dans la durée." }
         ]
       },
       ltv_growth: {
@@ -259,13 +261,13 @@ window.LOYOLY_I18N = {
       roi: {
         name: "ROI",
         short: "ROI",
-        definition: "Le ROI mesure les revenus nets générés par le programme de fidélité par rapport à son coût total. C'est la métrique de business case définitive : elle indique à la direction si le programme crée une valeur incrémentale ou subventionne simplement le comportement existant des clients. Un programme avec un ROI solide convertit l'engagement des membres en croissance de revenus durable et mesurable.",
-        formula: "(Revenu incrémental − Coût du programme) ÷ Coût du programme",
-        formulaParts: { num: "Revenu incrémental − Coût du programme", denom: "Coût du programme" },
+        definition: "Le ROI mesure la rentabilité directe du programme de fidélité. C'est l'indicateur ultime pour évaluer la performance économique d'une stratégie relationnelle : il traduit la capacité du programme à convertir l'engagement client en revenu mesurable. Un bon ROI démontre qu'au-delà du lien créé avec la communauté, le programme génère une croissance rentable et durable.",
+        formula: "(Revenus additionnels générés / Coût total du programme (outil + récompenses)) × 100",
+        formulaParts: { num: "Revenus additionnels générés", denom: "Coût total du programme (outil + récompenses)" },
         tips: [
-          { title: "Attribution incrémentale", body: "Attribuez l'incrémental — exclure les ré-acheteurs organiques du numérateur." },
-          { title: "Vers les missions, pas les remises", body: "Déplacez le budget des remises générales vers les récompenses de mission (10× plus de ROI)." },
-          { title: "Mesurer trimestriellement", body: "Mesurez trimestriellement — la plupart des programmes atteignent un ROI positif au mois 5." }
+          { title: "Optimisez le mix récompenses / marge", body: "Optimisez le mix récompenses / marge : privilégiez des avantages à forte valeur perçue et faible coût opérationnel (ex. accès exclusifs, SAV dédiée...)." },
+          { title: "Segmentez vos efforts promotionnels", body: "Segmentez vos efforts promotionnels : concentrez les incentives sur vos segments à plus fort potentiel (top spenders, VIP, clients dormants à réactiver)." },
+          { title: "Activez la data pour piloter vos campagnes", body: "Activez la data pour piloter vos campagnes : utilisez les signaux d'engagement (points non utilisés, récompense non consommée, seuil presque atteint) pour déclencher des relances ciblées et rentables." }
         ]
       }
     },
@@ -424,73 +426,75 @@ window.LOYOLY_I18N = {
       activation_rate: {
         name: "Tasa de activación",
         short: "Activación",
-        definition: "La tasa de activación mide con qué rapidez los nuevos inscritos tienen su primera interacción significativa con tu programa. Es la primera señal de salud del programa: una tasa baja significa que los miembros se registran pero nunca interactúan, desperdiciando presupuesto de adquisición. Mejorar la activación tiene efecto multiplicador sobre todos los KPIs posteriores, ya que solo los miembros activados pueden canjear, referir o completar misiones.",
-        formula: "Miembros activos (30d) ÷ Miembros inscritos",
-        formulaParts: { num: "Miembros activos (30d)", denom: "Miembros inscritos" },
+        definition: "La tasa de activación mide la proporción de pedidos que incluyen una recompensa obtenida a través del programa. Es el indicador de referencia para evaluar la adopción real del programa de fidelización por parte de tus clientes. Una buena tasa refleja una percepción clara del valor del programa: tus miembros comprenden los beneficios, los utilizan y los integran de forma natural en su recorrido post-compra.",
+        formula: "(Pedidos con recompensa utilizada / Volumen total de pedidos) × 100",
+        formulaParts: { num: "Pedidos con recompensa utilizada", denom: "Volumen total de pedidos" },
         tips: [
-          { title: "Misión de bienvenida guiada", body: "Activa una misión de bienvenida guiada en las primeras 48 horas." },
-          { title: "Recompensar la primera acción", body: "Recompensa la primera acción (reseña, follow, perfil completo) con puntos bonus." },
-          { title: "Mostrar la proximidad al tier", body: "Usa una barra de progreso hacia el próximo tier para empujar la segunda acción." }
+          { title: "Construye una gama de recompensas variada", body: "Construye una gama de recompensas variada, adaptada a diferentes perfiles de clientes (vales, accesos exclusivos, donaciones solidarias...)." },
+          { title: "Simplifica el acceso a los primeros niveles", body: "Simplifica el acceso a los primeros niveles para desencadenar rápidamente la primera activación y crear un reflejo de uso." },
+          { title: "Haz el programa omnipresente", body: "Haz que el programa esté omnipresente en tu ecosistema: página de inicio, cuenta de cliente, email post-compra, redes sociales, checkout." }
         ]
       },
       points_usage_rate: {
         name: "Tasa de uso de puntos",
         short: "Uso de puntos",
-        definition: "La tasa de uso de puntos mide el porcentaje de puntos emitidos que los miembros realmente canjean, revelando si tu moneda de recompensa se percibe como valiosa. Es un indicador directo de relevancia de las recompensas: un uso bajo suele señalar umbrales demasiado altos o recompensas demasiado genéricas para motivar la acción. Reducir la brecha entre puntos ganados y puntos gastados es uno de los leviers más rápidos para aumentar el engagement.",
-        formula: "Puntos canjeados ÷ Puntos emitidos",
-        formulaParts: { num: "Puntos canjeados", denom: "Puntos emitidos" },
+        definition: "La tasa de uso de puntos mide la proporción de puntos acreditados que son efectivamente gastados por tus clientes. Es un indicador clave de la liquidez de tu programa y del valor percibido de tus recompensas. Una buena tasa refleja un recorrido fluido y beneficios suficientemente atractivos para incitar a tus miembros a actuar. Un verdadero barómetro de la eficacia de tu mecánica de engagement.",
+        formula: "(Puntos utilizados / Puntos ganados) × 100",
+        formulaParts: { num: "Puntos utilizados", denom: "Puntos ganados" },
         tips: [
-          { title: "Expiración blanda de puntos", body: "Aplica una expiración blanda a 12 meses con un email recordatorio a 30 días." },
-          { title: "Micro-recompensas de bajo umbral", body: "Ofrece micro-recompensas instantáneas (envío gratis, muestra) en umbrales bajos." },
-          { title: "Saldo de puntos en el carrito", body: "Muestra el saldo de puntos en el carrito, no solo en la página de cuenta." }
+          { title: "Haz alcanzables las primeras recompensas", body: "Haz que tus primeras recompensas sean alcanzables desde las primeras compras para crear un reflejo de uso inmediato." },
+          { title: "Configura recordatorios automatizados", body: "Configura recordatorios automatizados del saldo de puntos por email, SMS o WhatsApp para mantener la atención de los miembros." },
+          { title: "Crea un efecto de urgencia controlado", body: "Crea un efecto de urgencia controlado con bonificaciones de tiempo limitado para estimular el gasto." }
         ]
       },
       redemption_rate: {
-        name: "Tasa de canje de recompensas",
-        short: "Canje",
-        definition: "La tasa de canje mide el porcentaje de miembros activos que utilizan al menos una recompensa en una ventana de 90 días. Es la prueba más clara de que tu programa crea valor percibido real, no solo acumulación teórica de puntos. Un canje elevado impulsa tanto la satisfacción como la recompra, convirtiéndolo en un indicador líder del crecimiento de LTV.",
-        formula: "Miembros con canje (90d) ÷ Miembros activos",
-        formulaParts: { num: "Miembros con canje (90d)", denom: "Miembros activos" },
+        name: "Tasa de utilización de recompensas",
+        short: "Utilización",
+        definition: "La tasa de utilización de recompensas mide la proporción de beneficios reclamados que son efectivamente utilizados por los clientes. Es un indicador clave de la activación real del programa y del valor percibido de los beneficios ofrecidos. Una buena tasa refleja una experiencia fluida, comprensible e incentivadora, mientras que una tasa baja suele señalar falta de claridad, visibilidad o condiciones de uso demasiado restrictivas.",
+        formula: "(Recompensas utilizadas / Recompensas reclamadas) × 100",
+        formulaParts: { num: "Recompensas utilizadas", denom: "Recompensas reclamadas" },
         tips: [
-          { title: "Bajar el primer umbral", body: "Baja el umbral de la recompensa de entrada para que el primer canje se sienta alcanzable." },
-          { title: "Diversificar el catálogo", body: "Añade variedad: descuentos, productos, donaciones, drops exclusivos." },
-          { title: "Push «recompensa lista»", body: "Envía un push personalizado «recompensa lista» cuando un miembro cruza un umbral." }
+          { title: "Automatiza recordatorios multicanal", body: "Automatiza recordatorios multicanal (email, SMS, WhatsApp, push) para animar a tus clientes a usar sus recompensas antes de que expiren." },
+          { title: "Simplifica las condiciones de uso", body: "Simplifica las condiciones de uso: menos restricciones = más activación." },
+          { title: "Posiciona las recompensas en momentos clave", body: "Posiciona las recompensas en los momentos clave del recorrido de compra: en emails, la cuenta de cliente o en el checkout." }
         ]
       },
       referral_conversion: {
         name: "Tasa de conversión de referidos",
         short: "CVR referidos",
-        definition: "El CVR de referidos mide cuántos de los compartidos realizados por tus miembros se convierten en un pedido completado. Es la métrica de eficiencia de tu estrategia de boca a boca: un CVR bajo significa que generas actividad de difusión pero no la conviertes en ingresos. Optimizar la experiencia de landing del referido y la estructura de incentivos en ambos lados mueve directamente este número.",
-        formula: "Pedidos referidos ÷ Compartidos de referidos",
-        formulaParts: { num: "Pedidos referidos", denom: "Compartidos de referidos" },
+        definition: "La tasa de conversión de referidos mide la proporción de referidos que realizan una primera compra tras recibir una invitación o un código de referido. Evalúa la capacidad de tu marca para convertir una recomendación en una adquisición efectiva. Una buena tasa refleja una promesa clara, un beneficio bien posicionado y un recorrido de compra sin fricciones para el referido.",
+        formula: "(Número de referidos que realizaron una compra / Número total de referidos invitados) × 100",
+        formulaParts: { num: "Referidos que realizaron una compra", denom: "Total de referidos invitados" },
         tips: [
-          { title: "Recompensas bilaterales", body: "Las recompensas bilaterales (referrer + referee) superan a las unilaterales ~2×." },
-          { title: "Pre-rellenar mensajes", body: "Pre-llena los mensajes de compartir — la fricción mata la conversión." },
-          { title: "Añadir prueba social", body: "Muestra prueba social («127 amigos se unieron este mes») en la pantalla de compartir." }
+          { title: "Cuida la experiencia del referido", body: "Cuida la experiencia del referido: desde el clic en el enlace hasta la compra, el recorrido debe ser fluido, mobile-first y sin ninguna fricción." },
+          { title: "Integra el referido en tus flujos CRM", body: "Integra el referido en tus flujos CRM: emails post-compra, área de cliente, thank you page... para multiplicar los puntos de entrada naturales." },
+          { title: "Reactiva a los referidos inactivos", body: "Reactiva a los referidos inactivos mediante una secuencia automatizada (email, SMS o WhatsApp) antes de que expire el código para maximizar la conversión." },
+          { title: "Prueba diferentes incentivos", body: "Prueba diferentes incentivos (vale de compra, descuento, puntos de fidelización) para identificar el lever más eficaz según tu AOV." }
         ]
       },
       new_customer_rate: {
         name: "Tasa de nuevos clientes (desde referidos)",
         short: "Nuevos por referido",
-        definition: "Nuevos por referido mide el porcentaje de todos los nuevos clientes de un período que fueron traídos por miembros del programa de lealtad. Cuantifica tu base de miembros como canal de adquisición, junto a los canales de pago y orgánicos. Las marcas con una tasa alta reducen sus costes de adquisición pagada y mejoran la calidad de los nuevos clientes, ya que los referidos convierten más rápido y retienen durante más tiempo.",
-        formula: "Nuevos clientes referidos ÷ Total nuevos clientes",
-        formulaParts: { num: "Nuevos clientes referidos", denom: "Total nuevos clientes" },
+        definition: "La tasa de nuevos clientes mide la proporción de compradores adquiridos a través del referido, en relación con el total de nuevos clientes en un período determinado. Pone de relieve la capacidad del programa para generar crecimiento orgánico y convertir a tus clientes satisfechos en verdaderos canales de adquisición. Una buena tasa refleja una comunidad activa, una experiencia de recomendación bien integrada y un coste de adquisición marginal casi nulo, activos fundamentales para una estrategia de crecimiento rentable.",
+        formula: "(Nuevos clientes vía referido / Total de nuevos clientes) × 100",
+        formulaParts: { num: "Nuevos clientes vía referido", denom: "Total de nuevos clientes" },
         tips: [
-          { title: "Promover en post-compra", body: "Promueve el referido en emails post-compra — ahí la intención llega al pico." },
-          { title: "Combinar con tiers VIP", body: "Combina referidos con tiers VIP: tier mayor → recompensa mayor." },
-          { title: "A/B testar el tipo de recompensa", body: "A/B testa el tipo de recompensa (% off vs. {currency} fijo vs. puntos) por cohorte." }
+          { title: "Personaliza el mensaje de referido", body: "Personaliza el mensaje de referido: un tono auténtico, proveniente del referente, genera más confianza que una comunicación puramente promocional." },
+          { title: "Facilita el sharing", body: "Facilita el sharing (enlaces para copiar y pegar, email, SMS...) para eliminar las barreras a la recomendación espontánea." },
+          { title: "Anima regularmente tu programa", body: "Anima regularmente tu programa con campañas de doble bonificación, retos comunitarios o activaciones estacionales para mantener la viralidad." }
         ]
       },
       participation_rate: {
         name: "Tasa de participación",
         short: "Participación",
-        definition: "La tasa de participación mide el porcentaje de miembros que van más allá de la acumulación de puntos para completar al menos una misión opcional por trimestre. Es el mejor predictor de la retención a largo plazo: los miembros que completan misiones crean un bucle de hábito que los hace mucho más difíciles de perder. Una tasa de participación en alza señala que tu programa ha pasado de transaccional a genuinamente relacional.",
-        formula: "Miembros con ≥1 misión ÷ Total miembros",
-        formulaParts: { num: "Miembros con ≥1 misión", denom: "Total miembros" },
+        definition: "La tasa de participación corresponde a la proporción de clientes que han completado al menos una mecánica de engagement en el período observado. Refleja la vitalidad relacional de tu programa y la capacidad de tu marca para crear interacciones más allá de la compra. Una buena tasa muestra que tus clientes no se limitan a consumir: participan, comparten, dan su opinión y contribuyen a la visibilidad orgánica de tu marca. Un verdadero indicador de rendimiento comunitario.",
+        formula: "(Número de clientes que completaron una misión / Número total de clientes activos) × 100",
+        formulaParts: { num: "Clientes que completaron una misión", denom: "Total de clientes activos" },
         tips: [
-          { title: "Rotar misiones cada mes", body: "Rota misiones cada mes — la novedad aporta +18 % de participación." },
-          { title: "Mezclar tipos de misiones", body: "Mezcla misiones sociales, de contenido y de compra para que cada persona tenga su camino." },
-          { title: "Email \"wrapped\"", body: "Recapitula misiones completadas en un email \"wrapped\" para reforzar la identidad." }
+          { title: "Diversifica las mecánicas de engagement", body: "Diversifica las mecánicas de engagement: opt-in, reseñas, UGC, interacciones sociales, encuestas..." },
+          { title: "Anima el programa en momentos clave", body: "Anima regularmente tu programa en torno a momentos clave (novedades, eventos, campañas estacionales) para renovar el interés." },
+          { title: "Haz las mecánicas visibles y accesibles", body: "Haz las mecánicas de engagement visibles y accesibles a lo largo del recorrido del cliente: en emails, la cuenta de fidelización, etc." },
+          { title: "Gamifica la experiencia", body: "Gamifica la experiencia con recompensas simbólicas o bonificaciones temporales para dinamizar la participación a largo plazo." }
         ]
       },
       ltv_growth: {
@@ -532,13 +536,13 @@ window.LOYOLY_I18N = {
       roi: {
         name: "ROI",
         short: "ROI",
-        definition: "El ROI mide los ingresos netos generados por el programa de lealtad en relación con su coste total. Es la métrica de business case definitiva: indica a la dirección si el programa crea valor incremental o simplemente subsidia el comportamiento existente de los clientes. Un programa con un ROI sólido convierte el engagement de los miembros en un crecimiento de ingresos sostenible y medible.",
-        formula: "(Ingresos incrementales − Coste del programa) ÷ Coste del programa",
-        formulaParts: { num: "Ingresos incrementales − Coste del programa", denom: "Coste del programa" },
+        definition: "El ROI mide la rentabilidad directa del programa de fidelización. Es el indicador definitivo para evaluar el rendimiento económico de una estrategia relacional: refleja la capacidad del programa para convertir el engagement del cliente en ingresos medibles. Un buen ROI demuestra que, más allá del vínculo creado con la comunidad, el programa genera un crecimiento rentable y sostenible.",
+        formula: "(Ingresos adicionales generados / Coste total del programa (herramienta + recompensas)) × 100",
+        formulaParts: { num: "Ingresos adicionales generados", denom: "Coste total del programa (herramienta + recompensas)" },
         tips: [
-          { title: "Atribución incremental", body: "Atribuye incrementalmente — excluye recompradores orgánicos del numerador." },
-          { title: "Hacia misiones, no descuentos", body: "Mueve presupuesto de descuentos planos a recompensas de misión (10× más ROI)." },
-          { title: "Medir trimestralmente", body: "Mide trimestralmente — la mayoría de programas alcanza ROI positivo al mes 5." }
+          { title: "Optimiza el mix recompensas / margen", body: "Optimiza el mix recompensas / margen: prioriza beneficios con alto valor percibido y bajo coste operativo (ej. accesos exclusivos, SAV dedicado...)." },
+          { title: "Segmenta tus esfuerzos promocionales", body: "Segmenta tus esfuerzos promocionales: concentra los incentivos en tus segmentos de mayor potencial (top spenders, VIPs, clientes dormantes a reactivar)." },
+          { title: "Activa los datos para gestionar tus campañas", body: "Activa los datos para gestionar tus campañas: utiliza las señales de engagement (puntos no utilizados, recompensa no consumida, umbral casi alcanzado) para desencadenar acciones específicas rentables." }
         ]
       }
     },

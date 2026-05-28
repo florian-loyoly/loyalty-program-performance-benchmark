@@ -21,13 +21,13 @@
       type: "rate",
       defaultViz: "ring",
       unit: "%",
-      definition: "Activation rate tracks how quickly new enrollees make their first meaningful interaction with your program. It is the first signal of program health: a low rate means members sign up but never engage, wasting acquisition budget. Improving activation compounds across all downstream KPIs, since only activated members can redeem, refer, or complete missions.",
-      formula: "Active members (30d) ÷ Enrolled members",
-      formulaParts: { num: "Active members (30d)", denom: "Enrolled members" },
+      definition: "The activation rate measures the proportion of orders that include a reward earned through the program. This is the benchmark indicator for assessing your customers' actual adoption of the loyalty program. A good rate reflects a clear perception of the programme's value: your members understand the benefits, use them and naturally integrate them into their post-purchase journey.",
+      formula: "(Orders with reward used / Total order volume) × 100",
+      formulaParts: { num: "Orders with reward used", denom: "Total order volume" },
       tips: [
-        { title: "Guided welcome mission",   body: "Trigger a guided welcome mission within the first 48 hours post-signup." },
-        { title: "Reward the first action",   body: "Reward the very first action (review, follow, profile completion) with bonus points." },
-        { title: "Show tier proximity",       body: "Use a progress bar showing tier proximity to nudge a second action." }
+        { title: "Build a varied range of rewards",   body: "Build a varied range of rewards, tailored to different customer profiles (vouchers, exclusive access, charitable donations, etc.)." },
+        { title: "Simplify access to first tiers",    body: "Simplify access to the first tiers to quickly trigger initial activation and create a reflex to use the program." },
+        { title: "Make the program omnipresent",      body: "Make the program omnipresent in your ecosystem: home page, customer account, post-purchase email, social media, checkout." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -39,13 +39,13 @@
       type: "rate",
       defaultViz: "gauge",
       unit: "%",
-      definition: "Points usage rate measures the share of issued points that members actually redeem, revealing whether your reward currency is perceived as valuable. It is a direct indicator of reward relevance: low usage often signals thresholds that are too high or rewards too generic to motivate action. Closing the gap between points earned and points spent is one of the fastest levers to lift member engagement.",
-      formula: "Points redeemed ÷ Points issued",
-      formulaParts: { num: "Points redeemed", denom: "Points issued" },
+      definition: "The points usage rate measures the proportion of credited points that are actually spent by your customers. This is a key indicator of your program's liquidity and the perceived value of your rewards. A good rate reflects a smooth journey and benefits that are attractive enough to encourage your members to take action. It is a true barometer of the effectiveness of your engagement mechanism.",
+      formula: "(Points used / Points earned) × 100",
+      formulaParts: { num: "Points used", denom: "Points earned" },
       tips: [
-        { title: "Soft expiration policy",       body: "Set a soft 12-month expiration with a 30-day reminder email." },
-        { title: "Low-threshold micro-rewards",   body: "Offer instant micro-rewards (free shipping, sample) at low point thresholds." },
-        { title: "Surface balance in the cart",   body: "Surface the points balance in the cart, not only in the account page." }
+        { title: "Make first rewards achievable",       body: "Make your first rewards achievable from the very first purchases to create an immediate reflex to use the programme." },
+        { title: "Set up automated reminders",          body: "Set up automated reminders of points balances via email, text message or WhatsApp to keep members engaged." },
+        { title: "Create a controlled sense of urgency", body: "Create a controlled sense of urgency with limited-time bonuses to stimulate spending." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -57,13 +57,13 @@
       type: "rate",
       defaultViz: "arc",
       unit: "%",
-      definition: "Reward redemption rate measures the share of active members who cash in at least one reward within a 90-day window. It is the clearest proof that your program creates real perceived value, not just theoretical point accumulation. High redemption drives both satisfaction and repeat purchase, making it a leading indicator of LTV growth.",
-      formula: "Members with a redemption (90d) ÷ Active members",
-      formulaParts: { num: "Members with redemption (90d)", denom: "Active members" },
+      definition: "The reward redemption rate measures the proportion of claimed benefits that are actually used by customers. This is a key indicator of the actual activation of the program and the perceived value of the benefits offered. A good rate reflects a smooth, understandable and motivating experience, while a low rate often signals a lack of clarity, visibility or overly restrictive terms of use.",
+      formula: "(Used rewards / Claimed rewards) × 100",
+      formulaParts: { num: "Used rewards", denom: "Claimed rewards" },
       tips: [
-        { title: "Lower the first threshold",     body: "Lower the entry-level reward threshold so first-time redemption feels reachable." },
-        { title: "Diversify the catalogue",        body: "Add reward variety: discounts, products, donations, exclusive drops." },
-        { title: "'Reward ready' push",            body: "Send a personalised 'reward ready' push when a member crosses a threshold." }
+        { title: "Automate multi-channel reminders", body: "Automate multi-channel reminders (email, SMS, WhatsApp, push notifications) to encourage your customers to use their rewards before they expire." },
+        { title: "Simplify terms and conditions",    body: "Simplify the terms and conditions of use: fewer restrictions = more activation." },
+        { title: "Position rewards at key moments",  body: "Position rewards at key moments in the purchase journey: in emails, customer accounts or at checkout." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -75,13 +75,14 @@
       type: "rate",
       defaultViz: "gauge",
       unit: "%",
-      definition: "Referral CVR measures how many of the shares made by your members result in a completed order. It is the efficiency metric for your word-of-mouth strategy: a low CVR means you generate sharing activity but fail to convert it into revenue. Optimizing the referral landing experience and the incentive structure on both sides directly moves this number.",
-      formula: "Referred orders ÷ Referral shares",
-      formulaParts: { num: "Referred orders", denom: "Referral shares" },
+      definition: "The referral conversion rate measures the proportion of referrals who make a first purchase after receiving an invitation or referral code. It assesses your brand's ability to convert a referral into an actual acquisition. A good rate reflects a clear promise, a well-positioned advantage and a frictionless purchasing journey for the referred customer.",
+      formula: "(Number of referrals who made a purchase / Total number of referrals invited) × 100",
+      formulaParts: { num: "Referrals who made a purchase", denom: "Total referrals invited" },
       tips: [
-        { title: "Double-sided rewards",        body: "Double-sided rewards (referrer + referee) outperform one-sided by ~2×." },
-        { title: "Pre-populate share messages",  body: "Pre-populate share messages — friction kills referral conversion." },
-        { title: "Add social proof",             body: "Show social proof (\"127 friends joined this month\") on the share screen." }
+        { title: "Take care of the referral experience", body: "Take care of the referral experience: from clicking on the link to making a purchase, the journey must be smooth, mobile-first and friction-free." },
+        { title: "Integrate referrals into CRM flows",   body: "Integrate referrals into your CRM flows: post-purchase emails, customer area, thank you page, etc. to multiply natural entry points." },
+        { title: "Reach out to inactive referrals",      body: "Reach out to inactive referrals via an automated sequence (email, SMS or WhatsApp) before the code expires to maximise conversion." },
+        { title: "Test different incentives",            body: "Test different incentives (vouchers, discounts, loyalty points) to identify the most effective lever based on your average order value." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -93,13 +94,13 @@
       type: "rate",
       defaultViz: "arc",
       unit: "%",
-      definition: "New from referral measures the share of all new customers in a period who were brought in by loyalty program members. It quantifies your member base as an acquisition channel, sitting alongside paid and organic. Brands with a high new-from-referral rate reduce paid acquisition costs and improve new-customer quality, since referred customers convert faster and retain longer.",
-      formula: "Referred new customers ÷ Total new customers",
-      formulaParts: { num: "Referred new customers", denom: "Total new customers" },
+      definition: "The new customer rate measures the proportion of buyers acquired through referral, relative to the total number of new customers over a given period. It highlights the program's ability to generate organic growth and turn your satisfied customers into genuine acquisition channels. A good rate reflects an active community, a well-integrated referral experience and a marginal acquisition cost of almost zero, all of which are major assets for a profitable growth strategy.",
+      formula: "(New customers via referral / Total new customers) × 100",
+      formulaParts: { num: "New customers via referral", denom: "Total new customers" },
       tips: [
-        { title: "Promote post-purchase",   body: "Promote referral inside post-purchase emails — that's when intent peaks." },
-        { title: "Layer onto VIP tiers",    body: "Layer referral on top of VIP tiers: higher tier → higher reward." },
-        { title: "A/B test the reward type",body: "A/B test reward type (% off vs. fixed {currency} vs. points) per cohort." }
+        { title: "Personalise the referral message", body: "Personalise the referral message: an authentic tone, coming from the referrer, generates more trust than purely promotional communication." },
+        { title: "Make sharing easy",                body: "Make sharing easy (copy-and-paste links, email, SMS, etc.) to remove barriers to spontaneous recommendations." },
+        { title: "Regularly promote your program",   body: "Regularly promote your program with double bonus campaigns, community challenges or seasonal activations to maintain virality." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -111,13 +112,14 @@
       type: "rate",
       defaultViz: "ring",
       unit: "%",
-      definition: "Participation rate tracks the share of members who go beyond points accumulation to complete at least one optional mission per quarter. It is the strongest predictor of long-term retention: members who engage with missions build a habit loop that makes them significantly harder to churn. A rising participation rate signals that your program has moved from transactional to genuinely relational.",
-      formula: "Members completing ≥1 mission ÷ Total members",
-      formulaParts: { num: "Members with ≥1 mission", denom: "Total members" },
+      definition: "The participation rate refers to the proportion of customers who completed at least one engagement mechanism during the period observed. It reflects the relational vitality of your program and your brand's ability to create interactions beyond the purchase. A good rate shows that your customers do more than just consume: they participate, share, give their opinions and contribute to your brand's organic visibility. A true indicator of community performance.",
+      formula: "(Number of clients who completed a mission / Total number of active customers) × 100",
+      formulaParts: { num: "Clients who completed a mission", denom: "Total active customers" },
       tips: [
-        { title: "Rotate missions monthly",  body: "Rotate missions monthly — novelty drives a +18% lift in participation." },
-        { title: "Mix mission types",        body: "Mix social, content, and purchase missions so every persona has a path." },
-        { title: "'Wrapped' recap email",    body: "Recap completed missions in a 'wrapped' email to reinforce identity." }
+        { title: "Diversify engagement mechanisms",     body: "Diversify engagement mechanisms: opt-in, reviews, UGC, social interactions, surveys, etc." },
+        { title: "Make engagement mechanisms visible",  body: "Make engagement mechanisms visible and accessible throughout the customer journey: in emails, loyalty accounts, etc." },
+        { title: "Gamify the experience",               body: "Gamify the experience with symbolic rewards or temporary bonuses to boost long-term participation." },
+        { title: "Regularly promote your program",      body: "Regularly promote your program around key events (new products, events, seasonal campaigns) to renew interest." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
@@ -183,13 +185,13 @@
       type: "roi",
       defaultViz: "number",
       unit: "×",
-      definition: "ROI measures the net revenue generated by the loyalty program relative to its total cost. It is the definitive business case metric: it tells leadership whether the program creates incremental value or simply subsidizes existing customer behaviour. A program with a strong ROI converts member engagement into sustainable, measurable revenue growth.",
-      formula: "(Incremental revenue − Program cost) ÷ Program cost",
-      formulaParts: { num: "Incremental revenue − Program cost", denom: "Program cost" },
+      definition: "ROI measures the direct profitability of the loyalty program. It is the ultimate indicator for assessing the economic performance of a relationship strategy: it reflects the program's ability to convert customer engagement into measurable revenue. A good ROI demonstrates that, beyond the connection created with the community, the program generates profitable and sustainable growth.",
+      formula: "(Additional revenue generated / Total program cost (tool + rewards)) × 100",
+      formulaParts: { num: "Additional revenue generated", denom: "Total program cost (tool + rewards)" },
       tips: [
-        { title: "Attribute incrementally",      body: "Attribute incrementally — exclude organic repeat buyers from the numerator." },
-        { title: "Shift to mission rewards",     body: "Shift budget from blanket discounts to mission rewards (10× higher ROI)." },
-        { title: "Measure quarterly",            body: "Measure quarterly — most programs hit positive ROI by month 5." }
+        { title: "Optimise the rewards/margin mix",    body: "Optimise the rewards/margin mix: focus on benefits with high perceived value and low operational costs (e.g. exclusive access, dedicated after-sales service, etc.)." },
+        { title: "Segment your promotional efforts",   body: "Segment your promotional efforts: focus incentives on your highest-potential segments (top spenders, VIPs, dormant customers to reactivate)." },
+        { title: "Use data to drive your campaigns",   body: "Use data to drive your campaigns: use engagement signals (unused points, unconsumed rewards, thresholds almost reached) to trigger targeted and profitable reminders." }
       ],
       insights: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
