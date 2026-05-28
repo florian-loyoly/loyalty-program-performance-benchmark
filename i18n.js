@@ -30,7 +30,7 @@ window.LOYOLY_I18N = {
       footer_caption:     "Source : Loyoly Loyalty Benchmark 2026 - loyoly.io",
       footer_meta:        "600+ marques · 7 secteurs · 10 KPI · Méthodologie disponible sur demande",
 
-      hero_pill:          "Intelligence fidélité",
+      hero_pill:          "Données Fidélité",
       hero_h1_pre:        "Benchmark 2026 des",
       hero_h1_mid:        "",
       hero_h1_post:       "programmes de fidélité",
@@ -75,7 +75,7 @@ window.LOYOLY_I18N = {
 
       iv_eyebrow:         "VUE PAR INDUSTRIE",
       iv_title:           "Benchmark par secteur.",
-      iv_sector_overview: "Sector Overview",
+      iv_sector_overview: "Aperçu du secteur",
       iv_clients_eyebrow: "MARQUES SONDÉES",
       iv_clients_body:    "Quelques programmes représentatifs de ce secteur (panel anonymisé).",
       iv_kpi_count:       "{n} KPI",
@@ -147,6 +147,8 @@ window.LOYOLY_I18N = {
       bp_you_vs_avg:      "vous {you} vs. moy. {avg}",
       bp_not_entered:     "non renseigné",
       bp_add_kpi:         "Ajouter ce KPI",
+      bp_share:           "Partager",
+      bp_share_copied:    "Copié !",
       bp_expert_cta_title:"Besoin d'aide pour combler l'écart ?",
       bp_expert_cta_body: "Parler à un expert Loyoly",
       kv_tip_cta:         "Comment Loyoly gère ça"
@@ -319,7 +321,7 @@ window.LOYOLY_I18N = {
       footer_caption:     "Fuente: Loyoly Loyalty Benchmark 2026 - loyoly.io",
       footer_meta:        "600+ marcas · 7 sectores · 10 KPIs · Metodología disponible bajo solicitud",
 
-      hero_pill:          "Inteligencia de lealtad",
+      hero_pill:          "Datos de fidelización",
       hero_h1_pre:        "Benchmark 2026 de",
       hero_h1_mid:        "",
       hero_h1_post:       "programas de lealtad",
@@ -364,7 +366,7 @@ window.LOYOLY_I18N = {
 
       iv_eyebrow:         "VISTA POR INDUSTRIA",
       iv_title:           "Benchmark por sector.",
-      iv_sector_overview: "Sector Overview",
+      iv_sector_overview: "Descripción del sector",
       iv_clients_eyebrow: "MARCAS ANALIZADAS",
       iv_clients_body:    "Algunos programas representativos de este sector (panel anonimizado).",
       iv_kpi_count:       "{n} KPI",
@@ -436,6 +438,8 @@ window.LOYOLY_I18N = {
       bp_you_vs_avg:      "tú {you} vs. media {avg}",
       bp_not_entered:     "no introducido",
       bp_add_kpi:         "Añadir este KPI",
+      bp_share:           "Compartir",
+      bp_share_copied:    "¡Copiado!",
       bp_expert_cta_title:"¿Necesitas ayuda para cerrar la brecha?",
       bp_expert_cta_body: "Hablar con un experto de Loyoly",
       kv_tip_cta:         "Cómo lo gestiona Loyoly"
@@ -727,6 +731,8 @@ window.LOYOLY_I18N = {
       bp_you_vs_avg:      "you {you} vs. avg {avg}",
       bp_not_entered:     "not entered",
       bp_add_kpi:         "Add this KPI",
+      bp_share:           "Share",
+      bp_share_copied:    "Copied!",
       bp_expert_cta_title:"Want help closing the gap?",
       bp_expert_cta_body: "Talk to a Loyoly expert",
       kv_tip_cta:         "See how Loyoly handles this"

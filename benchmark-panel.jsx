@@ -117,7 +117,7 @@ function BenchmarkPanel({ open, onClose, dark, initialSector = null, goToKpi }) 
           {step === 3 && (
             <div style={{ display: "flex", gap: 8 }}>
               <button className="bm-btn bm-btn--ghost" onClick={handleShare} title="Copy link to share">
-                <Icon name="external" size={14} /> {shareCopied ? "Copied!" : "Share"}
+                <Icon name="external" size={14} /> {shareCopied ? t("bp_share_copied") : t("bp_share")}
               </button>
               <button className={"bm-btn bm-btn--primary" + (exporting ? " is-loading" : "")} onClick={handleExport}>
                 <Icon name="download" size={14} /> {t("export_btn")}
@@ -197,7 +197,8 @@ function Step2({ sector, values, setValues, filledCount, total, kpis }) {
 function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
   const { t, data, formatValue, lang } = useLang();
   const { KPIS } = data;
-  const filled = KPIS.filter(k => values[k.id] != null && values[k.id] !== "");
+  const step2Kpis = KPIS.filter(k => STEP2_KPI_IDS.includes(k.id));
+  const filled = step2Kpis.filter(k => values[k.id] != null && values[k.id] !== "");
   const above  = filled.filter(k => values[k.id] > sector.kpis[k.id]).length;
   const ratio  = filled.length > 0 ? above / filled.length : 0;
   const headline = ratio >= 0.66
@@ -227,7 +228,7 @@ function Step3({ sector, values, dark, goToKpi, onEditKpi }) {
         <p style={{ fontSize: 13, color: "var(--fg-muted)", margin: 0, lineHeight: 1.55 }}>{headline.body}</p>
       </div>
 
-      {KPIS.map(k => {
+      {step2Kpis.map(k => {
         const v = values[k.id];
         if (v == null || v === "") {
           return (
