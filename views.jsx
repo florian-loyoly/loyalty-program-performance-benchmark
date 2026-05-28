@@ -617,7 +617,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
             <div>
               <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_definition_lbl")}</div>
               <h2 className="bm-h2" style={{ fontSize: 28, marginBottom: 14 }}>{kpi.name}</h2>
-              <p className="bm-kpi-hero__def">{kpi.definition}</p>
+              <p className="bm-kpi-hero__def" style={{ fontSize: 13 }}>{kpi.definition}</p>
               {formulaStyle === "code" ? (
                 <div className="bm-kpi-hero__formula">
                   <strong style={{ marginRight: 8, color: "var(--fg-faint)" }}>{t("kv_formula_lbl")}</strong>{kpi.formula}
