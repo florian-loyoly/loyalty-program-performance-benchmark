@@ -84,6 +84,7 @@ window.LOYOLY_I18N = {
 
       kv_eyebrow:         "VUE PAR KPI",
       kv_title:           "Comparez les secteurs, un KPI à la fois.",
+      kpi_type_rate:      "taux",
       kv_definition_lbl:  "DÉFINITION",
       kv_formula_lbl:     "FORMULE",
       kv_cross_avg:       "MOYENNE INTER-SECTEURS",
@@ -348,6 +349,7 @@ window.LOYOLY_I18N = {
 
       kv_eyebrow:         "VISTA POR KPI",
       kv_title:           "Compara los sectores, un KPI a la vez.",
+      kpi_type_rate:      "tasa",
       kv_definition_lbl:  "DEFINICIÓN",
       kv_formula_lbl:     "FÓRMULA",
       kv_cross_avg:       "PROMEDIO ENTRE SECTORES",
@@ -614,6 +616,7 @@ window.LOYOLY_I18N = {
 
       kv_eyebrow:         "KPI VIEW",
       kv_title:           "Compare sectors, one KPI at a time.",
+      kpi_type_rate:      "rate",
       kv_definition_lbl:  "DEFINITION",
       kv_formula_lbl:     "FORMULA",
       kv_cross_avg:       "CROSS-SECTOR AVERAGE",

@@ -788,6 +788,12 @@ body {
   margin-left: auto; font-size: 11px;
   font-variant-numeric: tabular-nums; opacity: 0.7;
 }
+.bm-rail__type-tag {
+  font-style: normal; font-size: 9px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  opacity: 0.5; margin-left: 5px;
+  vertical-align: middle;
+}
 
 /* KPI hero panel */
 .bm-kpi-hero {

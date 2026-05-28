@@ -602,7 +602,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                           aria-current={k.id === kpi.id}
                           onClick={() => setKpiId(k.id)}>
                     <Icon name={KPI_ICONS[k.id] || "grid"} size={14} />
-                    <span>{k.short || k.name}</span>
+                    <span>{k.short || k.name}{k.type === "rate" && <em className="bm-rail__type-tag">{t("kpi_type_rate")}</em>}</span>
                     <span className="vmini">{formatValue(k, GLOBAL[k.id])}</span>
                   </button>
                 ))}
