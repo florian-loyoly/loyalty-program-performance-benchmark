@@ -352,7 +352,19 @@
     aov_growth: 21.1, orders_growth: 121.5, ltv_growth: 175.4, roi: 20.1
   };
 
-  const TOTAL_BRANDS = SECTORS.reduce((sum, s) => sum + s.brands, 0);
+  SECTORS.push({
+    id: "other",
+    name: "Other",
+    short: "Other",
+    icon: "layers",
+    brands: 0,
+    intro: "No specific sector matches your business model. Your brand will be compared against cross-sector averages, calculated across all 600+ brands in the panel. This is the most neutral reference point available.",
+    clients: [],
+    kpis: { ...GLOBAL },
+    mission_impact: { aov: [], ltv: [], orders: [] }
+  });
+
+  const TOTAL_BRANDS = SECTORS.reduce((sum, s) => sum + (s.brands || 0), 0);
 
   // helpers (lang-agnostic; "pts" label is translated at call site via t())
   function classify(value, avg) {

@@ -489,7 +489,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
 
       <div className="bm-industry">
         <nav className="bm-rail" aria-label="Sectors">
-          {SECTORS.map(s => (
+          {SECTORS.filter(s => s.id !== "other").map(s => (
             <button key={s.id}
                     className="bm-rail__btn"
                     aria-current={s.id === sector.id}
@@ -513,7 +513,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
               <h2 className="bm-h2" style={{ fontSize: 28 }}>{sector.name}</h2>
               <p>{sector.intro}</p>
             </div>
-            <ClientStrip sector={sector} />
+            {sector.clients && sector.clients.length > 0 && <ClientStrip sector={sector} />}
           </div>
 
           <div className="bm-iv__categories" key={"grid-" + sector.id}>
