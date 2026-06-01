@@ -286,3 +286,79 @@
     border-top: 1px solid #eee; padding-top: 10px;
   }
 }
+
+/* =========================================================
+   MOBILE — RESPONSIVE FIXES
+   ========================================================= */
+
+/* Prevent any overflowing child from creating horizontal scroll */
+html, body { overflow-x: hidden; }
+
+/* ── Nav (≤ 640px) ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .bm-nav__inner { padding: 10px 16px; gap: 8px; }
+  .bm-nav.is-stuck .bm-nav__inner { padding-top: 8px; padding-bottom: 8px; }
+  /* hide subtitle next to logo — saves ~140px */
+  .bm-nav__title { display: none; }
+  /* hide per-tab sub-labels */
+  .bm-nav__tab-sub { display: none; }
+  .bm-nav__tabs { margin-left: 4px; gap: 2px; }
+  .bm-nav__tab { padding: 6px 10px; }
+  /* no spacer push — let tabs + lang sit flush */
+  .bm-nav__spacer { display: none; }
+  /* shrink lang switcher */
+  .bm-langswitch { gap: 2px; }
+  .bm-langswitch__btn { padding: 4px 6px; font-size: 11px; }
+  .bm-langswitch__cur { display: none; }
+  .bm-nav__updated { display: none; }
+}
+
+/* ── Containers (≤ 640px) ─────────────────────────────────── */
+@media (max-width: 640px) {
+  .bm-container,
+  .bm-footer__inner { padding-left: 16px; padding-right: 16px; }
+  .bm-actionbar { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ── Hero (≤ 720px) ───────────────────────────────────────── */
+@media (max-width: 720px) {
+  .bm-hero { grid-template-columns: 1fr; gap: 24px; padding: 36px 0 24px; }
+  .bm-hero__kicker { white-space: normal; }
+}
+
+/* ── Entry CTAs (≤ 560px) ─────────────────────────────────── */
+@media (max-width: 560px) {
+  .bm-entries { grid-template-columns: 1fr; }
+}
+
+/* ── Banner (≤ 640px) ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .bm-banner { grid-template-columns: 1fr; padding: 28px 20px; }
+  .bm-banner__cta { justify-self: start; }
+  .bm-banner h2 { font-size: 24px; }
+}
+
+/* ── KPI hero panel (≤ 640px) ────────────────────────────── */
+@media (max-width: 640px) {
+  .bm-kpi-hero { grid-template-columns: 1fr; padding: 20px; }
+  .bm-kpi-hero__hero-num {
+    border-left: none; padding-left: 0;
+    border-top: 1px solid var(--border); padding-top: 20px;
+    align-items: flex-start;
+  }
+}
+
+/* ── Compare chart (≤ 560px) ─────────────────────────────── */
+@media (max-width: 560px) {
+  .bm-compare { padding: 16px; }
+  .bm-compare__row { grid-template-columns: 90px 1fr 68px; gap: 8px; }
+  .bm-compare__name { font-size: 12px; }
+  .bm-compare__value-num { font-size: 12px; }
+  /* axis ticks: match reduced left/right columns */
+  .bm-compare__axis { padding-left: 98px; padding-right: 76px; margin-left: 8px; margin-right: 8px; }
+}
+
+/* ── Footer (≤ 560px) ─────────────────────────────────────── */
+@media (max-width: 560px) {
+  .bm-footer__inner { flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 20px; padding-bottom: 20px; }
+}
