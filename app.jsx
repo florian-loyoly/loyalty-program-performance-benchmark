@@ -255,6 +255,7 @@ function Footer() {
           {tT("nav_updated")}
         </span>
       </div>
+      <div className="bm-footer__wordmark" aria-hidden="true">Loyoly</div>
     </footer>
   );
 }

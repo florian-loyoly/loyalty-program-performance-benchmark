@@ -1039,6 +1039,7 @@ body {
   border-top: 1px solid var(--border);
   font-size: 12px; color: var(--fg-faint);
   margin-top: auto;
+  overflow: hidden;
 }
 .bm-footer__inner {
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
@@ -1046,6 +1047,19 @@ body {
 }
 .bm-footer img { height: 18px; opacity: 0.7; }
 .bm-app[data-theme="dark"] .bm-footer { border-color: rgba(255,255,255,0.08); color: var(--pampas-400); }
+.bm-footer__wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 17vw, 210px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--pampas-200);
+  padding: 0 24px;
+  margin-bottom: -0.22em;
+  user-select: none;
+  pointer-events: none;
+}
+.bm-app[data-theme="dark"] .bm-footer__wordmark { color: rgba(255,255,255,0.06); }
 
 /* ── Benchmark side panel ── */
 .bm-panel-overlay {
