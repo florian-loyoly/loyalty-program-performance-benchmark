@@ -11,6 +11,20 @@ window.LangContext = LangContext;
 // Helper hook
 function useLang() { return useContext(LangContext); }
 
+// CSV download utility
+function downloadCSV(filename, rows) {
+  const escape = v => {
+    const s = String(v ?? "");
+    return (s.includes(",") || s.includes('"') || s.includes("\n")) ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  const csv = rows.map(r => r.map(escape).join(",")).join("\r\n");
+  const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 // ---------- Small icon set ----------
 function Icon({ name, size = 16 }) {
   const c = "currentColor";
@@ -492,14 +506,30 @@ function Methodology() {
 // INDUSTRY VIEW
 // ============================================================================
 function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId, setSectorId }) {
-  const { t, data } = useLang();
+  const { t, data, formatValue, formatDelta } = useLang();
   const { KPIS, SECTORS, GLOBAL, CATEGORIES } = data;
   const sector = SECTORS.find(s => s.id === sectorId) || SECTORS[0];
   const [exporting, setExporting] = useState(false);
   const handleExport = () => {
     if (exporting) return;
     setExporting(true);
-    setTimeout(() => { setExporting(false); if (window._showToast) window._showToast("Export ready — downloading…"); }, 1400);
+    const catMap = Object.fromEntries((CATEGORIES || []).map(c => [c.id, c.label]));
+    const rows = [
+      ["KPI", "Category", `${sector.name} value`, "Cross-sector avg", "Δ vs avg"]
+    ];
+    KPIS.forEach(k => {
+      const v = sector.kpis[k.id];
+      const avg = GLOBAL[k.id];
+      rows.push([
+        k.name,
+        catMap[k.category] || k.category,
+        formatValue(k, v),
+        formatValue(k, avg),
+        v != null && avg != null ? (v - avg >= 0 ? "+" : "") + formatDelta(k.id, v - avg) : ""
+      ]);
+    });
+    downloadCSV(`loyoly-benchmark-${sector.id}.csv`, rows);
+    setExporting(false);
   };
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: "smooth" }); }, [sectorId]);
@@ -586,17 +616,30 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
 // KPI VIEW
 // ============================================================================
 function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaStyle, insightsLayout = "split", goToIndustry }) {
-  const { t, data, formatValue, classify } = useLang();
+  const { t, data, formatValue, formatDelta, classify } = useLang();
   const { KPIS, SECTORS, GLOBAL, CATEGORIES } = data;
   const [exporting, setExporting] = useState(false);
-  const handleExport = () => {
-    if (exporting) return;
-    setExporting(true);
-    setTimeout(() => { setExporting(false); if (window._showToast) window._showToast("Export ready — downloading…"); }, 1400);
-  };
   const kpi = KPIS.find(k => k.id === kpiId) || KPIS[0];
   const avg = GLOBAL[kpi.id];
   const rankingSectors = SECTORS.filter(s => s.id !== "other");
+  const handleExport = () => {
+    if (exporting) return;
+    setExporting(true);
+    const sorted = [...rankingSectors].sort((a, b) => (b.kpis[kpi.id] || 0) - (a.kpis[kpi.id] || 0));
+    const rows = [["Rank", "Sector", kpi.name, "Cross-sector avg", "Δ vs avg"]];
+    sorted.forEach((s, i) => {
+      const v = s.kpis[kpi.id];
+      rows.push([
+        i + 1,
+        s.name,
+        formatValue(kpi, v),
+        formatValue(kpi, avg),
+        v != null ? (v - avg >= 0 ? "+" : "") + formatDelta(kpi.id, v - avg) : ""
+      ]);
+    });
+    downloadCSV(`loyoly-benchmark-${kpi.id}.csv`, rows);
+    setExporting(false);
+  };
   const allVals = rankingSectors.map(s => s.kpis[kpi.id]).concat([avg]).filter(v => typeof v === "number");
   const max = Math.max(...allVals);
   const axisMax = (kpi.type === "roi") ? Math.ceil(max + 1) : Math.ceil(max / 5) * 5 + 5;
