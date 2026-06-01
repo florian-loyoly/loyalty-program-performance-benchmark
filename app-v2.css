@@ -242,3 +242,37 @@
   .bm-compare__bar-wrap:hover .bm-compare__bar-fill::after { animation: none; }
   .bm-btn--primary::after { display: none; }
 }
+
+/* ── Print / PDF export ───────────────────────────────────────── */
+@media print {
+  @page { margin: 18mm 16mm; size: A4 portrait; }
+
+  /* hide chrome */
+  .bm-nav, .bm-footer, .bm-actionbar, .bm-banner,
+  .bm-panel-overlay, .bm-panel, .bm-toast,
+  button.bm-btn--primary, .bm-hero__index,
+  [class*="TweaksPanel"], .bm-viewfade { display: none !important; }
+
+  /* reset layout */
+  body, .bm-app, .bm-main { background: #fff !important; color: #000 !important; }
+  .bm-container { max-width: 100%; padding: 0; }
+  .bm-viewfade { opacity: 1 !important; transform: none !important; }
+
+  /* keep bars visible in print */
+  .bm-compare__bar-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bm-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; border: 1px solid #ddd !important; break-inside: avoid; }
+  .bm-kpi-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
+  .bm-industry { grid-template-columns: 1fr !important; }
+  .bm-rail { display: none !important; }
+  .bm-kpiv { grid-template-columns: 1fr !important; }
+  .bm-kpiv__rail { display: none !important; }
+  .bm-insights-split { grid-template-columns: 1fr 1fr !important; }
+  .bm-tips { grid-template-columns: repeat(3, 1fr) !important; }
+
+  /* print header */
+  .bm-container::before {
+    content: "Loyoly Loyalty Benchmark 2026";
+    display: block; font-size: 11px; color: #999;
+    border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;
+  }
+}

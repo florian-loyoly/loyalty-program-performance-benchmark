@@ -25,6 +25,57 @@ function downloadCSV(filename, rows) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
+// Export dropdown — CSV + PDF (print)
+function ExportMenu({ onCSV }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!open) return;
+    const close = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, [open]);
+  const handleCSV = () => { setOpen(false); onCSV(); };
+  const handlePDF = () => { setOpen(false); window.print(); };
+  return (
+    <div ref={ref} style={{ position: "relative" }}>
+      <button className="bm-btn bm-btn--secondary" onClick={() => setOpen(o => !o)}>
+        <Icon name="download" size={14} /> Export
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 2 }}><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      {open && (
+        <div style={{
+          position: "absolute", top: "calc(100% + 6px)", right: 0, zIndex: 200,
+          background: "var(--bg-raised)", border: "1px solid var(--border)",
+          borderRadius: 10, padding: 6, minWidth: 160,
+          boxShadow: "0 8px 24px rgba(43,37,31,0.12)"
+        }}>
+          <button onClick={handleCSV} style={{
+            display: "flex", alignItems: "center", gap: 10, width: "100%",
+            padding: "9px 12px", borderRadius: 6, border: 0, background: "transparent",
+            cursor: "pointer", fontSize: 13, color: "var(--fg)", fontFamily: "var(--font-body)",
+            textAlign: "left"
+          }}
+          onMouseEnter={e => e.currentTarget.style.background = "var(--pampas-100)"}
+          onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+            <Icon name="download" size={14} /> CSV
+          </button>
+          <button onClick={handlePDF} style={{
+            display: "flex", alignItems: "center", gap: 10, width: "100%",
+            padding: "9px 12px", borderRadius: 6, border: 0, background: "transparent",
+            cursor: "pointer", fontSize: 13, color: "var(--fg)", fontFamily: "var(--font-body)",
+            textAlign: "left"
+          }}
+          onMouseEnter={e => e.currentTarget.style.background = "var(--pampas-100)"}
+          onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+            <Icon name="external" size={14} /> PDF
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ---------- Small icon set ----------
 function Icon({ name, size = 16 }) {
   const c = "currentColor";
@@ -542,9 +593,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
           <h2 className="bm-h2" style={{ fontSize: 28 }}>{t("iv_title")}</h2>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
-          <button className={"bm-btn bm-btn--secondary" + (exporting ? " is-loading" : "")} onClick={handleExport}>
-            <Icon name="download" size={14} /> {t("export_btn")}
-          </button>
+          <ExportMenu onCSV={handleExport} />
           <button className="bm-btn bm-btn--primary" onClick={openBenchmark}>
             {t("benchmark_cta")}
           </button>
@@ -654,9 +703,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
           <h2 className="bm-h2" style={{ fontSize: 28 }}>{t("kv_title")}</h2>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
-          <button className={"bm-btn bm-btn--secondary" + (exporting ? " is-loading" : "")} onClick={handleExport}>
-            <Icon name="download" size={14} /> {t("export_btn")}
-          </button>
+          <ExportMenu onCSV={handleExport} />
           <button className="bm-btn bm-btn--primary" onClick={openBenchmark}>
             {t("benchmark_cta")}
           </button>
