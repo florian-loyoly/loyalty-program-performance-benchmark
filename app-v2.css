@@ -294,30 +294,47 @@
 /* Prevent any overflowing child from creating horizontal scroll */
 html, body { overflow-x: hidden; }
 
-/* ── Nav (≤ 640px) ────────────────────────────────────────── */
+/* ── Nav: 2-row layout on mobile (≤ 640px) ───────────────── */
 @media (max-width: 640px) {
-  .bm-nav__inner { padding: 10px 16px; gap: 8px; }
-  .bm-nav.is-stuck .bm-nav__inner { padding-top: 8px; padding-bottom: 8px; }
-  /* hide subtitle next to logo — saves ~140px */
+  .bm-nav__inner {
+    flex-wrap: wrap;
+    padding: 8px 16px 0;
+    gap: 0;
+    row-gap: 0;
+  }
+  .bm-nav.is-stuck .bm-nav__inner { padding-top: 6px; }
+  /* row 1: logo stretches, lang switcher sits right */
+  .bm-nav__logo { flex: 1; min-width: 0; }
   .bm-nav__title { display: none; }
-  /* hide per-tab sub-labels */
+  .bm-nav__spacer, .bm-nav__updated { display: none; }
+  /* row 2: tabs span full width */
+  .bm-nav__tabs {
+    order: 10;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 4px 0;
+    border-top: 1px solid var(--border);
+    gap: 2px;
+  }
+  .bm-nav__tab { flex: 1; justify-content: center; align-items: center; padding: 6px 4px; }
   .bm-nav__tab-sub { display: none; }
-  .bm-nav__tabs { margin-left: 4px; gap: 2px; }
-  .bm-nav__tab { padding: 6px 10px; }
-  /* no spacer push — let tabs + lang sit flush */
-  .bm-nav__spacer { display: none; }
-  /* shrink lang switcher */
-  .bm-langswitch { gap: 2px; }
-  .bm-langswitch__btn { padding: 4px 6px; font-size: 11px; }
+  /* lang switcher stays in row 1, shrink currency */
+  .bm-langswitch { flex-shrink: 0; }
   .bm-langswitch__cur { display: none; }
-  .bm-nav__updated { display: none; }
+  .bm-langswitch__btn { padding: 4px 7px; }
 }
+.bm-app[data-theme="dark"] .bm-nav__tabs { border-top-color: rgba(255,255,255,0.08); }
 
 /* ── Containers (≤ 640px) ─────────────────────────────────── */
 @media (max-width: 640px) {
-  .bm-container,
+  .bm-container { padding-left: 16px; padding-right: 16px; }
   .bm-footer__inner { padding-left: 16px; padding-right: 16px; }
-  .bm-actionbar { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ── Actionbar: stack buttons below title on mobile ─────── */
+@media (max-width: 640px) {
+  .bm-actionbar { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 4px; }
 }
 
 /* ── Hero (≤ 720px) ───────────────────────────────────────── */
@@ -338,6 +355,31 @@ html, body { overflow-x: hidden; }
   .bm-banner h2 { font-size: 24px; }
 }
 
+/* ── Side rails: remove sticky on collapsed layout ──────── */
+/* (sticky rail overlaps scrolled content in 1-column layout) */
+@media (max-width: 900px) {
+  .bm-rail { position: static; top: auto; align-self: auto; }
+}
+
+/* ── Side rails: horizontal scrollable strip on phones ───── */
+@media (max-width: 640px) {
+  .bm-industry, .bm-kpiv { padding-top: 16px; }
+  .bm-rail {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 6px;
+    gap: 4px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+  }
+  .bm-rail::-webkit-scrollbar { display: none; }
+  .bm-rail__btn { flex-shrink: 0; white-space: nowrap; width: auto; padding: 8px 12px; }
+  .bm-rail__group { display: none; }
+}
+
 /* ── KPI hero panel (≤ 640px) ────────────────────────────── */
 @media (max-width: 640px) {
   .bm-kpi-hero { grid-template-columns: 1fr; padding: 20px; }
@@ -354,7 +396,6 @@ html, body { overflow-x: hidden; }
   .bm-compare__row { grid-template-columns: 90px 1fr 68px; gap: 8px; }
   .bm-compare__name { font-size: 12px; }
   .bm-compare__value-num { font-size: 12px; }
-  /* axis ticks: match reduced left/right columns */
   .bm-compare__axis { padding-left: 98px; padding-right: 76px; margin-left: 8px; margin-right: 8px; }
 }
 
