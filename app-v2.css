@@ -247,32 +247,42 @@
 @media print {
   @page { margin: 18mm 16mm; size: A4 portrait; }
 
-  /* hide chrome */
+  /* hide UI chrome — NOT .bm-viewfade (that's the content wrapper!) */
   .bm-nav, .bm-footer, .bm-actionbar, .bm-banner,
   .bm-panel-overlay, .bm-panel, .bm-toast,
-  button.bm-btn--primary, .bm-hero__index,
-  [class*="TweaksPanel"], .bm-viewfade { display: none !important; }
+  .bm-hero__index, .twk-panel { display: none !important; }
 
-  /* reset layout */
-  body, .bm-app, .bm-main { background: #fff !important; color: #000 !important; }
-  .bm-container { max-width: 100%; padding: 0; }
-  .bm-viewfade { opacity: 1 !important; transform: none !important; }
+  /* ensure content wrapper is fully visible */
+  .bm-viewfade { opacity: 1 !important; transform: none !important; transition: none !important; }
 
-  /* keep bars visible in print */
-  .bm-compare__bar-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .bm-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; border: 1px solid #ddd !important; break-inside: avoid; }
+  /* reset backgrounds + colors */
+  body, .bm-app, .bm-main, .bm-container { background: #fff !important; color: #000 !important; }
+  .bm-app[data-theme="dark"] { background: #fff !important; color: #000 !important; }
+  .bm-container { max-width: 100% !important; padding: 0 !important; }
+
+  /* preserve bar + accent colors in print */
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  /* cards */
+  .bm-card { border: 1px solid #ddd !important; break-inside: avoid; box-shadow: none !important; }
   .bm-kpi-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
-  .bm-industry { grid-template-columns: 1fr !important; }
-  .bm-rail { display: none !important; }
-  .bm-kpiv { grid-template-columns: 1fr !important; }
-  .bm-kpiv__rail { display: none !important; }
+
+  /* hide sidebars, show full-width content */
+  .bm-rail, .bm-kpiv__rail { display: none !important; }
+  .bm-industry { display: block !important; }
+  .bm-kpiv { display: block !important; }
+
+  /* insights + tips */
   .bm-insights-split { grid-template-columns: 1fr 1fr !important; }
   .bm-tips { grid-template-columns: repeat(3, 1fr) !important; }
 
-  /* print header */
-  .bm-container::before {
-    content: "Loyoly Loyalty Benchmark 2026";
-    display: block; font-size: 11px; color: #999;
-    border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;
+  /* page breaks */
+  .bm-iv__cat, .bm-compare { break-inside: avoid; }
+
+  /* small print credit */
+  .bm-container > :last-child::after {
+    content: "Source: Loyoly Loyalty Benchmark 2026 — loyoly.io";
+    display: block; margin-top: 24px; font-size: 10px; color: #aaa;
+    border-top: 1px solid #eee; padding-top: 10px;
   }
 }
