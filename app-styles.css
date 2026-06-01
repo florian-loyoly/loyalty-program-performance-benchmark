@@ -1055,7 +1055,7 @@ body {
   line-height: 1;
   color: var(--pampas-950);
   text-align: center;
-  margin-bottom: -0.38em;
+  margin-bottom: -0.30em;
   user-select: none;
   pointer-events: none;
 }
