@@ -241,7 +241,7 @@ window.LOYOLY_I18N = {
         name: "Croissance LTV",
         short: "Croissance LTV",
         definition: "La croissance LTV mesure le delta de revenus entre les membres du programme de fidélité et une cohorte comparable de non-membres sur 12 mois. C'est la preuve fondamentale du ROI de la fidélité : la différence entre un programme qui génère une valeur incrémentale réelle et un autre qui récompense simplement des clients qui auraient acheté de toute façon. Suivre la croissance LTV par cohorte contrôle le biais de sélection et révèle l'impact causal réel de l'adhésion au programme.",
-        formula: "(LTV_membres − LTV_non-membres) ÷ LTV_non-membres",
+        formula: "(LTV membres − LTV non-membres) ÷ LTV non-membres",
         formulaParts: { num: "LTV(membres) − LTV(non-membres)", denom: "LTV(non-membres)" },
         tips: [
           { title: "Tiers VIP expérientiels", body: "Les tiers VIP avec récompenses expérientielles battent les tiers purement promo sur la rétention." },
@@ -254,7 +254,7 @@ window.LOYOLY_I18N = {
         name: "Croissance AOV",
         short: "Croissance AOV",
         definition: "La croissance AOV mesure combien le panier d'un membre est plus élevé sur les commandes où il utilise une récompense, par rapport à ses propres commandes sans utilisation. C'est la mesure la plus directe de l'impact au moment du paiement : un fort taux de croissance AOV signifie que vos récompenses tirent la dépense vers le haut, et ne récompensent pas simplement une dépense déjà engagée. Fixer un seuil de panier minimum pour l'utilisation des récompenses est le principal levier structurel pour faire progresser cette métrique.",
-        formula: "(AOV_avec_usage − AOV_sans) ÷ AOV_sans",
+        formula: "(AOV avec usage − AOV sans) ÷ AOV sans",
         formulaParts: { num: "AOV(avec usage) − AOV(sans)", denom: "AOV(sans)" },
         tips: [
           { title: "Plafonner la valeur des points", body: "Plafonnez la valeur de réduction-points pour pousser au palier de panier supérieur." },
@@ -267,7 +267,7 @@ window.LOYOLY_I18N = {
         name: "Croissance des commandes",
         short: "Croissance commandes",
         definition: "La croissance des commandes mesure à quelle fréquence les membres du programme achètent davantage par rapport à une cohorte comparable de non-membres sur 12 mois. C'est l'indicateur le plus pur pour savoir si l'adhésion au programme de fidélité modifie réellement le comportement d'achat, indépendamment de la taille du panier. Combinée avec la croissance LTV, elle permet aux marques de décomposer l'impact revenus de leur programme en une composante fréquence et une composante AOV.",
-        formula: "(Commandes_par_membre − Commandes_par_non_membre) ÷ Commandes_par_non_membre",
+        formula: "(Commandes par membre − Commandes par non-membre) ÷ Commandes par non-membre",
         formulaParts: { num: "Commandes/membre − Commandes/non-membre", denom: "Commandes/non-membre" },
         tips: [
           { title: "Missions anniversaires", body: "Les missions anniversaire (naissance + ancienneté) créent des déclencheurs naturels de re-achat." },
@@ -534,7 +534,7 @@ window.LOYOLY_I18N = {
         name: "Crecimiento de LTV",
         short: "Crecimiento LTV",
         definition: "El crecimiento de LTV mide el delta de ingresos entre los miembros del programa de lealtad y una cohorte comparable de no miembros en 12 meses. Es la prueba fundamental del ROI de la fidelización: la diferencia entre un programa que genera valor incremental real y uno que simplemente recompensa a clientes que habrían comprado de todas formas. Seguir el crecimiento de LTV por cohorte controla el sesgo de selección y revela el impacto causal real de la membresía en el programa.",
-        formula: "(LTV_miembros − LTV_no-miembros) ÷ LTV_no-miembros",
+        formula: "(LTV miembros − LTV no-miembros) ÷ LTV no-miembros",
         formulaParts: { num: "LTV(miembros) − LTV(no-miembros)", denom: "LTV(no-miembros)" },
         tips: [
           { title: "Tiers VIP experienciales", body: "Los tiers VIP con recompensas experienciales superan a los puramente promo en retención." },
@@ -547,7 +547,7 @@ window.LOYOLY_I18N = {
         name: "Crecimiento de AOV",
         short: "Crecimiento AOV",
         definition: "El crecimiento de AOV mide cuánto mayor es el carrito de un miembro en los pedidos donde aplica una recompensa, comparado con sus propios pedidos sin canje. Es la medida más directa del impacto en el momento de pago: una tasa de crecimiento de AOV alta significa que tus recompensas impulsan el gasto hacia arriba, no solo recompensan un gasto ya comprometido. Establecer un umbral mínimo de carrito para el canje de recompensas es la palanca estructural principal para mejorar esta métrica.",
-        formula: "(AOV_con_canje − AOV_sin) ÷ AOV_sin",
+        formula: "(AOV con canje − AOV sin) ÷ AOV sin",
         formulaParts: { num: "AOV(con canje) − AOV(sin)", denom: "AOV(sin)" },
         tips: [
           { title: "Limitar descuento por puntos", body: "Limita el descuento-puntos para empujar al miembro al siguiente tier de carrito." },
@@ -560,7 +560,7 @@ window.LOYOLY_I18N = {
         name: "Crecimiento de pedidos",
         short: "Crecimiento pedidos",
         definition: "El crecimiento de pedidos mide con qué frecuencia compran más los miembros del programa de lealtad en comparación con una cohorte comparable de no miembros en 12 meses. Es el indicador más puro de si la membresía en el programa cambia el comportamiento de compra real, independientemente del valor del carrito. Combinado con el crecimiento de LTV, permite a las marcas descomponer el impacto en ingresos de su programa en un componente de frecuencia y un componente de AOV.",
-        formula: "(Pedidos_miembro − Pedidos_no_miembro) ÷ Pedidos_no_miembro",
+        formula: "(Pedidos miembro − Pedidos no miembro) ÷ Pedidos no miembro",
         formulaParts: { num: "Pedidos/miembro − Pedidos/no-miembro", denom: "Pedidos/no-miembro" },
         tips: [
           { title: "Misiones de aniversario", body: "Misiones de cumpleaños y aniversario crean disparadores naturales de recompra." },

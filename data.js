@@ -132,7 +132,7 @@
       defaultViz: "bar",
       unit: "%",
       definition: "AOV growth measures how much larger a member's basket is on orders where they apply a reward, compared to their own non-redemption orders. It is the most direct measure of checkout-level impact: a high AOV growth rate means your rewards pull forward spend, not just reward spend that was already committed. Setting a minimum cart threshold for reward redemption is the primary structural lever to drive this metric.",
-      formula: "(AOV_with_redemption − AOV_without) ÷ AOV_without",
+      formula: "(AOV with redemption − AOV without) ÷ AOV without",
       formulaParts: { num: "AOV(with redemption) − AOV(without)", denom: "AOV(without)" },
       tips: [
         { title: "Cap point-discount value",     body: "Cap point-discount value so redemption pushes members up a basket tier." },
@@ -150,7 +150,7 @@
       defaultViz: "bar",
       unit: "%",
       definition: "Orders growth tracks how much more frequently loyalty members purchase compared to a matched non-member cohort over 12 months. It is the purest indicator of whether loyalty membership changes actual buying behaviour, independent of basket size. Combined with LTV growth, it lets brands decompose their program's revenue impact into a frequency component and an AOV component.",
-      formula: "(Orders_per_member − Orders_per_non-member) ÷ Orders_per_non-member",
+      formula: "(Orders per member − Orders per non-member) ÷ Orders per non-member",
       formulaParts: { num: "Orders/member − Orders/non-member", denom: "Orders/non-member" },
       tips: [
         { title: "Anniversary missions",       body: "Birthday and anniversary missions create natural re-purchase triggers." },
@@ -168,7 +168,7 @@
       defaultViz: "bar",
       unit: "%",
       definition: "LTV growth measures the revenue delta between loyalty members and a matched cohort of non-members over 12 months. It is the foundational proof of loyalty ROI: the difference between a program that drives real incremental value and one that simply rewards customers who would have bought anyway. Tracking LTV growth by cohort controls for selection bias and reveals the true causal impact of program membership.",
-      formula: "(LTV_members − LTV_non-members) ÷ LTV_non-members",
+      formula: "(LTV members − LTV non-members) ÷ LTV non-members",
       formulaParts: { num: "LTV(members) − LTV(non-members)", denom: "LTV(non-members)" },
       tips: [
         { title: "Experiential VIP tiers",      body: "VIP tiers with experiential rewards beat pure-discount tiers on retention." },
