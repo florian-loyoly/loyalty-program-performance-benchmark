@@ -294,6 +294,19 @@
 /* Prevent any overflowing child from creating horizontal scroll */
 html, body { overflow-x: hidden; }
 
+/* ── Critical: grid/flex children must shrink to fit tracks ─ */
+/* Without min-width:0, grid cells auto-expand to content width */
+@media (max-width: 900px) {
+  .bm-industry, .bm-kpiv { overflow: hidden; }
+  .bm-industry > *, .bm-kpiv > * { min-width: 0; }
+  .bm-iv__intro > * { min-width: 0; }
+  .bm-kpi-hero > * { min-width: 0; }
+}
+@media (max-width: 640px) {
+  .bm-kpi-grid > * { min-width: 0; }
+  .bm-entries > * { min-width: 0; }
+}
+
 /* ── Nav: 2-row layout on mobile (≤ 640px) ───────────────── */
 @media (max-width: 640px) {
   .bm-nav__inner {
@@ -307,22 +320,22 @@ html, body { overflow-x: hidden; }
   .bm-nav__logo { flex: 1; min-width: 0; }
   .bm-nav__title { display: none; }
   .bm-nav__spacer, .bm-nav__updated { display: none; }
+  /* lang switcher: small margin below before tabs row */
+  .bm-langswitch { flex-shrink: 0; margin-bottom: 4px; }
+  .bm-langswitch__cur { display: none; }
+  .bm-langswitch__btn { padding: 4px 7px; }
   /* row 2: tabs span full width */
   .bm-nav__tabs {
     order: 10;
     width: 100%;
     margin-left: 0;
     margin-top: 0;
-    padding: 4px 0;
+    padding: 5px 0 6px;
     border-top: 1px solid var(--border);
     gap: 2px;
   }
   .bm-nav__tab { flex: 1; justify-content: center; align-items: center; padding: 6px 4px; }
   .bm-nav__tab-sub { display: none; }
-  /* lang switcher stays in row 1, shrink currency */
-  .bm-langswitch { flex-shrink: 0; }
-  .bm-langswitch__cur { display: none; }
-  .bm-langswitch__btn { padding: 4px 7px; }
 }
 .bm-app[data-theme="dark"] .bm-nav__tabs { border-top-color: rgba(255,255,255,0.08); }
 
@@ -356,7 +369,6 @@ html, body { overflow-x: hidden; }
 }
 
 /* ── Side rails: remove sticky on collapsed layout ──────── */
-/* (sticky rail overlaps scrolled content in 1-column layout) */
 @media (max-width: 900px) {
   .bm-rail { position: static; top: auto; align-self: auto; }
 }
@@ -368,12 +380,18 @@ html, body { overflow-x: hidden; }
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 6px;
     gap: 4px;
     margin-bottom: 8px;
     border-radius: 10px;
+    /* constrain to grid cell — critical to avoid page overflow */
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .bm-rail::-webkit-scrollbar { display: none; }
   .bm-rail__btn { flex-shrink: 0; white-space: nowrap; width: auto; padding: 8px 12px; }
