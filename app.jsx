@@ -10,10 +10,23 @@ function AppToast({ message, onDone }) {
   return <div className="bm-toast"><span className="bm-toast__dot" />{message}</div>;
 }
 
+function ViewFade({ children }) {
+  const [inn, setInn] = useState(false);
+  const [done, setDone] = useState(false);
+  useEffect(() => {
+    const a = setTimeout(() => setInn(true), 20);
+    const b = setTimeout(() => setDone(true), 440);
+    return () => { clearTimeout(a); clearTimeout(b); };
+  }, []);
+  const style = done ? { opacity: 1, transform: "none", transition: "none" } : undefined;
+  return <div className={"bm-viewfade" + (inn ? " is-in" : "")} style={style}>{children}</div>;
+}
+
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "vizOverride": "auto",
   "formulaStyle": "visual",
   "density": "comfortable",
+  "insightsLayout": "panel",
   "darkMode": false,
   "primaryAccent": "blue"
 }/*EDITMODE-END*/;
@@ -40,6 +53,14 @@ function App() {
     try { return localStorage.getItem(LANG_KEY) || "en"; } catch (e) { return "en"; }
   });
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  const [navStuck, setNavStuck] = useState(false);
+  useEffect(() => {
+    const fn = () => setNavStuck(window.scrollY > 8);
+    fn();
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
 
   useEffect(() => {
     window._showToast = (msg) => { setToast(msg); };
@@ -73,9 +94,11 @@ function App() {
     <LangContext.Provider value={langCtx}>
       <div className="bm-app" data-theme={t.darkMode ? "dark" : "light"} data-density={t.density}>
         <Nav view={view} setView={setView} dark={t.darkMode}
+             stuck={navStuck}
              lang={lang} setLang={setLang} />
 
-        <main className="bm-main" key={view}>
+        <main className="bm-main">
+          <ViewFade key={view}>
           {view === "overview" && (
             <OverviewView
               goTo={setView}
@@ -104,9 +127,11 @@ function App() {
               setKpiId={setKpiId}
               vizOverride={t.vizOverride}
               formulaStyle={t.formulaStyle}
+              insightsLayout={t.insightsLayout}
               goToIndustry={(sid) => { setSectorId(sid); setView("industry"); }}
             />
           )}
+          </ViewFade>
         </main>
 
         <Footer />
@@ -135,6 +160,10 @@ function App() {
                         value={t.density}
                         options={["comfortable", "compact"]}
                         onChange={v => setTweak('density', v)} />
+            <TweakRadio label="Insights layout"
+                        value={t.insightsLayout}
+                        options={["split", "panel", "editorial"]}
+                        onChange={v => setTweak('insightsLayout', v)} />
           </TweakSection>
           <TweakSection label="Theme">
             <TweakToggle label="Dark mode"
@@ -156,7 +185,7 @@ function App() {
   );
 }
 
-function Nav({ view, setView, dark, lang, setLang }) {
+function Nav({ view, setView, dark, stuck, lang, setLang }) {
   const ctx = React.useContext(LangContext);
   const tT = ctx ? ctx.t : (k) => k;
   const tabs = [
@@ -165,7 +194,7 @@ function Nav({ view, setView, dark, lang, setLang }) {
     { id: "kpi",      label: tT("nav_kpi_label"),      sub: tT("nav_kpi_sub") }
   ];
   return (
-    <nav className="bm-nav" aria-label="Primary">
+    <nav className={"bm-nav" + (stuck ? " is-stuck" : "")} aria-label="Primary">
       <div className="bm-nav__inner">
         <div className="bm-nav__logo">
           <img src={dark ? "assets/logo-loyoly-white.svg" : "assets/logo-loyoly.svg"} alt="Loyoly" />

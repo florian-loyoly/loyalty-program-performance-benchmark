@@ -115,12 +115,12 @@ function KpiCard({ kpi, value, benchmark, vizOverride, formulaStyle = "visual", 
   }
 
   const clickable = !!onClick;
-  const formula = formulaStyle === "code" ? (
-    <div className="bm-card__formula">
-      <span className="bm-card__formula-lbl">{t("kv_formula_lbl")}</span>
+  const formula = (
+    <div className="bm-card__formula-q">
+      <b>{t("kv_formula_lbl")}</b>
       <code>{kpi.formula}</code>
     </div>
-  ) : <VisualFormula kpi={kpi} />;
+  );
 
   return (
     <div className={"bm-card" + (clickable ? " bm-card--clickable" : "")}
@@ -130,7 +130,10 @@ function KpiCard({ kpi, value, benchmark, vizOverride, formulaStyle = "visual", 
          tabIndex={clickable ? 0 : undefined}
          onKeyDown={clickable ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(); } } : undefined}>
       <div className="bm-card__head">
-        <div className="bm-card__title">{kpi.type === "rate" ? t("kpi_nav_" + kpi.id) : (kpi.short || kpi.name)}</div>
+        <div className="bm-card__title">
+          <span className="bm-card__ic"><Icon name={KPI_ICONS[kpi.id] || "grid"} size={15} /></span>
+          {kpi.type === "rate" ? t("kpi_nav_" + kpi.id) : (kpi.short || kpi.name)}
+        </div>
         {showDelta && cmp && (
           <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
             <span style={{ fontSize: 10, color: "var(--fg-faint)", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>vs. {t("card_avg_prefix")}</span>
@@ -302,13 +305,11 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
 
   return (
     <div className="bm-container">
-      {/* Hero — no stats aside per Florian */}
-      <header className="bm-hero bm-hero--solo">
-        <div>
-          <div className="bm-hero__pill">
-            <span className="dot"></span>
-            {t("hero_pill")}
-            <span className="yr">2026</span>
+      {/* Hero B — data-forward + wayfinding index */}
+      <header className="bm-hero bm-hero--index">
+        <div className="bm-hero__main">
+          <div className="bm-eyebrow bm-hero__kicker">
+            {t("hero_pill")} · 2026
           </div>
           <h1 className="bm-h1">
             {t("hero_h1_pre")}<br/><span style={{ color: "var(--blue-primary)" }}>{t("hero_h1_post")}</span>
@@ -324,12 +325,36 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
             </button>
           </div>
         </div>
+        <nav className="bm-hero__index" aria-label="Jump to a section">
+          <button className="bm-hero__index-item" onClick={() => {
+            const el = document.getElementById("bm-cross");
+            if (el) { const y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top: y, behavior: "smooth" }); }
+          }}>
+            <span className="bm-hero__index-num">01</span>
+            <span><span className="bm-hero__index-t">{t("nav_overview_label")}</span><span className="bm-hero__index-s">{t("nav_overview_sub")}</span></span>
+            <span className="bm-hero__index-arrow"><Icon name="arrow-right" size={16} /></span>
+          </button>
+          <button className="bm-hero__index-item" onClick={() => goTo("industry")}>
+            <span className="bm-hero__index-num">02</span>
+            <span><span className="bm-hero__index-t">{t("nav_industry_label")}</span><span className="bm-hero__index-s">{t("nav_industry_sub")}</span></span>
+            <span className="bm-hero__index-arrow"><Icon name="arrow-right" size={16} /></span>
+          </button>
+          <button className="bm-hero__index-item" onClick={() => goTo("kpi")}>
+            <span className="bm-hero__index-num">03</span>
+            <span><span className="bm-hero__index-t">{t("nav_kpi_label")}</span><span className="bm-hero__index-s">{t("nav_kpi_sub")}</span></span>
+            <span className="bm-hero__index-arrow"><Icon name="arrow-right" size={16} /></span>
+          </button>
+        </nav>
       </header>
 
       {/* TWO WAYS IN */}
       <div className="bm-section-head">
         <div className="bm-section-head__left">
-          <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("sec01_eyebrow")}</div>
+          <div className="bm-numhead">
+            <span className="bm-numhead__n">01</span>
+            <span className="bm-numhead__lbl">{t("sec01_eyebrow").replace(/^\s*\d+\s*[—–-]\s*/, "")}</span>
+            <span className="bm-numhead__rule"></span>
+          </div>
           <h2 className="bm-h2">{t("sec01_title")}</h2>
           <p style={{ marginTop: 10 }}>{t("sec01_lead")}</p>
         </div>
@@ -359,9 +384,13 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
       </div>
 
       {/* CROSS-SECTOR AVERAGES */}
-      <div className="bm-section-head">
+      <div className="bm-section-head" id="bm-cross">
         <div className="bm-section-head__left">
-          <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("sec02_eyebrow")}</div>
+          <div className="bm-numhead">
+            <span className="bm-numhead__n">02</span>
+            <span className="bm-numhead__lbl">{t("sec02_eyebrow").replace(/^\s*\d+\s*[—–-]\s*/, "")}</span>
+            <span className="bm-numhead__rule"></span>
+          </div>
           <h2 className="bm-h2">{t("sec02_title_a")}<br/>{t("sec02_title_b")}</h2>
           <p style={{ marginTop: 10 }}>{t("sec02_lead")}</p>
         </div>
@@ -556,7 +585,7 @@ function IndustryView({ openBenchmark, vizOverride, formulaStyle, dark, sectorId
 // ============================================================================
 // KPI VIEW
 // ============================================================================
-function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaStyle, goToIndustry }) {
+function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaStyle, insightsLayout = "split", goToIndustry }) {
   const { t, data, formatValue, classify } = useLang();
   const { KPIS, SECTORS, GLOBAL, CATEGORIES } = data;
   const [exporting, setExporting] = useState(false);
@@ -626,7 +655,9 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
                   <strong style={{ marginRight: 8, color: "var(--fg-faint)" }}>{t("kv_formula_lbl")}</strong>{kpi.formula}
                 </div>
               ) : (
-                <div className="bm-kpi-hero__formula-vis"><VisualFormula kpi={kpi} /></div>
+                <div className="bm-kpi-hero__formula">
+                  <strong style={{ marginRight: 8, color: "var(--fg-faint)" }}>{t("kv_formula_lbl")}</strong>{kpi.formula}
+                </div>
               )}
             </div>
             <div className="bm-kpi-hero__hero-num">
@@ -675,24 +706,9 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
             </div>
           </div>
 
-          {/* TIPS */}
+          {/* INSIGHTS */}
           {kpi.insights && (
-            <React.Fragment>
-              <div style={{ height: "1px", backgroundColor: "var(--pampas-200)", margin: "32px 0 24px" }} />
-              <div style={{ marginBottom: 14 }}>
-                <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_insights_eyebrow")}</div>
-                <h3 className="bm-h3">{t("kv_insights_title", { kpi: kpi.short || kpi.name })}</h3>
-              </div>
-              <div style={{
-                background: "color-mix(in srgb, #10A370 8%, var(--bg-raised))",
-                border: "1px solid var(--border)",
-                borderRadius: 0, padding: "14px 16px", marginBottom: 24
-              }}>
-                {kpi.insights.split("\n").map((para, i) => (
-                  <p key={i} style={{ fontSize: 13, color: "var(--fg-muted)", lineHeight: 1.65, margin: i > 0 ? "10px 0 0" : 0 }}>{para}</p>
-                ))}
-              </div>
-            </React.Fragment>
+            <InsightsSection kpi={kpi} sorted={sorted} formatValue={formatValue} t={t} dark={dark} layout={insightsLayout} />
           )}
 
           <div className="bm-section-head" style={{ borderTop: "1px solid var(--border)", paddingTop: 24 }}>
@@ -725,6 +741,8 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
 function CompareRow({ sector, value, pct, cmp, kpi, index, goToIndustry }) {
   const { formatValue, formatDelta, t, data } = useLang();
   const [hover, setHover] = useState(false);
+  const [w, setW] = useState(0);
+  useEffect(() => { const id = setTimeout(() => setW(pct), 40); return () => clearTimeout(id); }, [pct]);
   const avg = data.GLOBAL[kpi.id];
   const delta = value - avg;
   return (
@@ -744,10 +762,10 @@ function CompareRow({ sector, value, pct, cmp, kpi, index, goToIndustry }) {
         <div className="bm-compare__bar-track" />
         <div className="bm-compare__bar-fill"
              style={{
-               width: `${pct}%`,
+               width: `${w}%`,
                background: cmp.tone === "above" ? "var(--blue-primary)" : cmp.tone === "below" ? "var(--pampas-500)" : "var(--pampas-600)",
                opacity: hover ? 1 : 0.9,
-               transition: "opacity 150ms, background 200ms"
+               transition: `width 820ms cubic-bezier(0.2,0.8,0.2,1) ${index * 55}ms, opacity 150ms, background 200ms, transform 200ms cubic-bezier(0.2,0.8,0.2,1), filter 200ms`
              }}
         />
         {hover && (
@@ -765,7 +783,87 @@ function CompareRow({ sector, value, pct, cmp, kpi, index, goToIndustry }) {
   );
 }
 
+// ============================================================================
+// INSIGHTS SECTION — "What the data says" (3 switchable layouts)
+// ============================================================================
+function InsightsSection({ kpi, sorted, formatValue, t, dark, layout = "split" }) {
+  const paras = (kpi.insights || "").split("\n").map(s => s.trim()).filter(Boolean);
+  const leadPara = paras[0] || "";
+  const lagPara = paras[1] || paras[0] || "";
+  const top = sorted && sorted[0];
+  const bottom = sorted && sorted[sorted.length - 1];
+  const topVal = top ? formatValue(kpi, top.kpis[kpi.id]) : "";
+  const botVal = bottom ? formatValue(kpi, bottom.kpis[kpi.id]) : "";
+
+  const Header = (
+    <div className="bm-insights__head">
+      <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_insights_eyebrow")}</div>
+      <h3 className="bm-h3">{t("kv_insights_title", { kpi: kpi.short || kpi.name })}</h3>
+    </div>
+  );
+
+  let body;
+  if (layout === "panel") {
+    body = (
+      <div className="bm-insights-panel">
+        {paras.map((para, i) => (
+          <p key={i} style={{ margin: i > 0 ? "10px 0 0" : 0 }}>{para}</p>
+        ))}
+      </div>
+    );
+  } else if (layout === "editorial") {
+    body = (
+      <div className="bm-insights-ed">
+        <div className="bm-insights-ed__pills">
+          {top && <span className="bm-ipill bm-ipill--up"><Icon name="trending-up" size={13} />{top.name}<b>{topVal}</b></span>}
+          {bottom && <span className="bm-ipill bm-ipill--down"><Icon name="trending-up" size={13} />{bottom.name}<b>{botVal}</b></span>}
+        </div>
+        {paras.map((para, i) => (
+          <p key={i} style={{ margin: i > 0 ? "12px 0 0" : 0 }}>{para}</p>
+        ))}
+      </div>
+    );
+  } else {
+    // split (default): leader vs laggard cards
+    body = (
+      <div className="bm-insights-split">
+        <article className="bm-insight bm-insight--up">
+          <div className="bm-insight__head">
+            <span className="bm-insight__icon"><Icon name="trending-up" size={15} /></span>
+            <div className="bm-insight__meta">
+              <div className="bm-insight__tag">{t("insights_leader")}</div>
+              <div className="bm-insight__sector">{top && <Icon name={top.icon} size={14} />}{top && top.name}</div>
+            </div>
+            <span className="bm-insight__val">{topVal}</span>
+          </div>
+          <p className="bm-insight__body">{leadPara}</p>
+        </article>
+        <article className="bm-insight bm-insight--down">
+          <div className="bm-insight__head">
+            <span className="bm-insight__icon"><Icon name="trending-up" size={15} /></span>
+            <div className="bm-insight__meta">
+              <div className="bm-insight__tag">{t("insights_laggard")}</div>
+              <div className="bm-insight__sector">{bottom && <Icon name={bottom.icon} size={14} />}{bottom && bottom.name}</div>
+            </div>
+            <span className="bm-insight__val">{botVal}</span>
+          </div>
+          <p className="bm-insight__body">{lagPara}</p>
+        </article>
+      </div>
+    );
+  }
+
+  return (
+    <section className="bm-insights">
+      <div style={{ height: "1px", backgroundColor: "var(--border)", margin: "32px 0 24px" }} />
+      {Header}
+      {body}
+    </section>
+  );
+}
+
 Object.assign(window, {
   OverviewView, IndustryView, KpiView, Icon, LangContext, useLang,
-  resolveViz, ClientStrip, EntryCard, Methodology, MissionImpactChart, KpiCard
+  resolveViz, ClientStrip, EntryCard, Methodology, MissionImpactChart, KpiCard,
+  InsightsSection
 });
