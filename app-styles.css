@@ -1049,9 +1049,9 @@ body {
 .bm-app[data-theme="dark"] .bm-footer { border-color: rgba(255,255,255,0.08); color: var(--pampas-400); }
 .bm-footer__wordmark {
   font-family: var(--font-display);
-  font-size: clamp(80px, 22vw, 320px);
+  font-size: clamp(80px, 26vw, 380px);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.04em;
   line-height: 1;
   color: var(--pampas-950);
   text-align: center;
