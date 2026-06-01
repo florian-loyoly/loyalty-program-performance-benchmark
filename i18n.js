@@ -76,7 +76,7 @@ window.LOYOLY_I18N = {
       iv_eyebrow:         "VUE PAR INDUSTRIE",
       iv_title:           "Benchmark par secteur.",
       iv_sector_overview: "Aperçu du secteur",
-      iv_clients_eyebrow: "MARQUES SONDÉES",
+      iv_clients_eyebrow: "ÉCHANTILLON",
       iv_clients_body:    "Quelques programmes représentatifs de ce secteur (panel anonymisé).",
       iv_kpi_count:       "{n} KPI",
       iv_kpis_count:      "{n} KPI",
