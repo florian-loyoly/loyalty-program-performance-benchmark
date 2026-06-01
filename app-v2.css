@@ -373,28 +373,28 @@ html, body { overflow-x: hidden; }
   .bm-rail { position: static; top: auto; align-self: auto; }
 }
 
-/* ── Side rails: horizontal scrollable strip on phones ───── */
+/* ── Side rails: 2-column grid on phones ─────────────────── */
 @media (max-width: 640px) {
   .bm-industry, .bm-kpiv { padding-top: 16px; }
   .bm-rail {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: visible;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: visible;
     padding: 6px;
     gap: 4px;
     margin-bottom: 8px;
     border-radius: 10px;
-    /* constrain to grid cell — critical to avoid page overflow */
     width: 100%;
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
   }
-  .bm-rail::-webkit-scrollbar { display: none; }
-  .bm-rail__btn { flex-shrink: 0; white-space: nowrap; width: auto; padding: 8px 12px; }
+  .bm-rail__btn {
+    width: 100%;
+    padding: 10px 12px;
+    justify-content: flex-start;
+    white-space: normal;
+  }
   .bm-rail__group { display: none; }
 }
 
