@@ -806,7 +806,7 @@ body {
 }
 .bm-app[data-theme="dark"] .bm-kpi-hero { background: #1A1611; border-color: rgba(255,255,255,0.08); }
 .bm-kpi-hero h2 { margin-bottom: 8px; }
-.bm-kpi-hero p { color: var(--fg-muted); font-size: 13px; line-height: 1.55; margin: 0; }
+.bm-kpi-hero p { color: var(--fg-muted); font-size: 13px; line-height: 1.7; margin: 0; }
 .bm-app[data-theme="dark"] .bm-kpi-hero p { color: var(--pampas-300); }
 .bm-kpi-hero__def {
   font-size: 12px; line-height: 1.6; color: var(--fg-muted);
