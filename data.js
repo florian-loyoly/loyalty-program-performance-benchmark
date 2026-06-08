@@ -433,6 +433,7 @@
       return { ...k,
         name:       overlay.name       || k.name,
         short:      overlay.short      || k.short,
+        nameAbout:  overlay.nameAbout  || k.nameAbout,
         definition: overlay.definition || k.definition,
         formula:    overlay.formula    || k.formula,
         formulaParts,
