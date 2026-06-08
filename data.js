@@ -143,7 +143,7 @@
     },
     {
       id: "orders_growth",
-      name: "Orders growth",
+      name: "Number of orders growth",
       short: "Orders growth",
       category: "Business",
       type: "growth",

@@ -264,8 +264,8 @@ window.LOYOLY_I18N = {
       },
       orders_growth: {
         insights: "Les secteurs Mode & Prêt-à-porter (+147,2%) et Maison & Décoration (+143,4%) affichent les progressions les plus élevées. La mode est portée par une dynamique de réachat émotionnel intense : les collections, les tendances et les nouveautés créent des occasions d'achat répétées que le programme vient amplifier. Pour le secteur Maison & Décoration, la croissance des commandes confirme que le programme parvient à transformer des acheteurs occasionnels en clients réguliers sur des projets successifs.\nLe secteur Santé & Compléments ferme le classement (+87,6%, -33,9 pts), ce qui peut sembler paradoxal pour une catégorie à forte participation. Le problème est la nature de la demande : l'achat est conditionné par le besoin réel, et la fidélité ne peut pas créer une fréquence artificielle dans une catégorie où le client rachète quand son stock est épuisé. Le programme augmente la rétention mais ne compresse pas les intervalles d'achat.",
-        name: "Croissance des commandes",
-        short: "Croissance commandes",
+        name: "Croissance du nombre de commandes",
+        short: "Nb. de commandes",
         definition: "La croissance des commandes mesure à quelle fréquence les membres du programme achètent davantage par rapport à une cohorte comparable de non-membres sur 12 mois. C'est l'indicateur le plus pur pour savoir si l'adhésion au programme de fidélité modifie réellement le comportement d'achat, indépendamment de la taille du panier. Combinée avec la croissance LTV, elle permet aux marques de décomposer l'impact revenus de leur programme en une composante fréquence et une composante AOV.",
         formula: "(Commandes par membre − Commandes par non-membre) ÷ Commandes par non-membre",
         formulaParts: { num: "Commandes/membre − Commandes/non-membre", denom: "Commandes/non-membre" },
@@ -557,8 +557,8 @@ window.LOYOLY_I18N = {
       },
       orders_growth: {
         insights: "Los sectores Moda & Confección (+147,2%) y Hogar & Decoración (+143,4%) muestran los crecimientos más elevados. La moda está impulsada por una intensa dinámica de recompra emocional: las colecciones, las tendencias y las novedades crean ocasiones de compra repetidas que el programa amplifica. Para el sector Hogar & Decoración, el crecimiento de los pedidos confirma que el programa logra transformar compradores ocasionales en clientes regulares en proyectos sucesivos.\nEl sector Salud & Suplementos cierra el ranking (+87,6%, -33,9 pts), lo que puede parecer paradójico para una categoría de alta participación. El problema es la naturaleza de la demanda: la compra está condicionada por la necesidad real, y la fidelización no puede crear una frecuencia artificial en una categoría donde el cliente recompra cuando su stock se agota. El programa aumenta la retención pero no comprime los intervalos de compra.",
-        name: "Crecimiento de pedidos",
-        short: "Crecimiento pedidos",
+        name: "Crecimiento del número de pedidos",
+        short: "Nº de pedidos",
         definition: "El crecimiento de pedidos mide con qué frecuencia compran más los miembros del programa de lealtad en comparación con una cohorte comparable de no miembros en 12 meses. Es el indicador más puro de si la membresía en el programa cambia el comportamiento de compra real, independientemente del valor del carrito. Combinado con el crecimiento de LTV, permite a las marcas descomponer el impacto en ingresos de su programa en un componente de frecuencia y un componente de AOV.",
         formula: "(Pedidos miembro − Pedidos no miembro) ÷ Pedidos no miembro",
         formulaParts: { num: "Pedidos/miembro − Pedidos/no-miembro", denom: "Pedidos/no-miembro" },
