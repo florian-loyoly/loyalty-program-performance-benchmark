@@ -217,7 +217,7 @@
         { name: "PXP",             logo: "assets/logos/pxp.png",                url: "https://www.projectxparis.com/pages/fidelite-et-parrainage" }
       ],
       kpis: {
-        activation_rate: 4.7, points_usage_rate: 8.2, redemption_rate: 44.4, referral_conversion: 35, new_customer_rate: 0.6, participation_rate: 5.9,
+        activation_rate: 6.1, points_usage_rate: 12.4, redemption_rate: 55.1, referral_conversion: 35, new_customer_rate: 1.1, participation_rate: 5.9,
         aov_growth: 20.5, orders_growth: 147.2, ltv_growth: 195, roi: 20.6
       },
       mission_impact: { aov: [78, 86, 94, 108, 121], ltv: [100, 132, 168, 211, 248], orders: [100, 118, 141, 172, 198] }
@@ -238,7 +238,7 @@
         { name: "Nubiance",        logo: "assets/logos/nubiance.png",         url: "https://nubiance.fr/pages/programme-de-fidelite-parrainage" }
       ],
       kpis: {
-        activation_rate: 5.7, points_usage_rate: 10, redemption_rate: 48.5, referral_conversion: 35.8, new_customer_rate: 0.6, participation_rate: 13.3,
+        activation_rate: 8.3, points_usage_rate: 15.2, redemption_rate: 62.4, referral_conversion: 35.8, new_customer_rate: 1.2, participation_rate: 13.3,
         aov_growth: 11, orders_growth: 120.8, ltv_growth: 141.7, roi: 13.3
       },
       mission_impact: { aov: [62, 71, 82, 96, 112], ltv: [100, 148, 194, 256, 312], orders: [100, 124, 152, 188, 224] }
@@ -259,7 +259,7 @@
         { name: "Féroce",      logo: "assets/logos/feroce.webp",      url: "https://feroce.food/pages/fidelite-parrainage-1" }
       ],
       kpis: {
-        activation_rate: 4.9, points_usage_rate: 17.4, redemption_rate: 44.8, referral_conversion: 35.9, new_customer_rate: 0.6, participation_rate: 9.2,
+        activation_rate: 6.6, points_usage_rate: 21, redemption_rate: 72.3, referral_conversion: 35.9, new_customer_rate: 1.2, participation_rate: 9.2,
         aov_growth: 19.7, orders_growth: 102.8, ltv_growth: 147.9, roi: 8.9
       },
       mission_impact: { aov: [22, 24, 26, 29, 32], ltv: [100, 138, 172, 214, 252], orders: [100, 132, 168, 211, 256] }
@@ -280,7 +280,7 @@
         { name: "Novoma",       logo: "assets/logos/novoma.webp",        url: "https://novoma.com/pages/club-fidelite-novoma" }
       ],
       kpis: {
-        activation_rate: 4, points_usage_rate: 7.6, redemption_rate: 47, referral_conversion: 38.5, new_customer_rate: 0.6, participation_rate: 18.8,
+        activation_rate: 5.7, points_usage_rate: 18.3, redemption_rate: 73, referral_conversion: 38.5, new_customer_rate: 1.3, participation_rate: 18.8,
         aov_growth: 28.7, orders_growth: 87.6, ltv_growth: 144, roi: 19.1
       },
       mission_impact: { aov: [54, 59, 66, 74, 83], ltv: [100, 162, 224, 298, 372], orders: [100, 119, 142, 168, 194] }
@@ -301,7 +301,7 @@
         { name: "La Bourse aux Livres", logo: "assets/logos/la-bourse-aux-livres.webp", url: "https://labourseauxlivres.fr/pages/gagner-des-cadeaux" }
       ],
       kpis: {
-        activation_rate: 4.7, points_usage_rate: 9, redemption_rate: 38.8, referral_conversion: 44.1, new_customer_rate: 0.9, participation_rate: 1.7,
+        activation_rate: 6.4, points_usage_rate: 11.6, redemption_rate: 51.8, referral_conversion: 44.1, new_customer_rate: 1.6, participation_rate: 1.7,
         aov_growth: 34, orders_growth: 143.4, ltv_growth: 263.5, roi: 25.8
       },
       mission_impact: { aov: [145, 168, 198, 234, 276], ltv: [100, 121, 144, 169, 196], orders: [100, 112, 128, 146, 164] }
@@ -322,7 +322,7 @@
         { name: "Toutou Vert",            logo: "assets/logos/toutou-vert.png",              url: "https://toutouvert.com/pages/fidelite" }
       ],
       kpis: {
-        activation_rate: 5.5, points_usage_rate: 15.1, redemption_rate: 47.4, referral_conversion: 42.2, new_customer_rate: 0.8, participation_rate: 10.3,
+        activation_rate: 7.7, points_usage_rate: 19.8, redemption_rate: 73.2, referral_conversion: 42.2, new_customer_rate: 1.5, participation_rate: 10.3,
         aov_growth: 8.7, orders_growth: 112.1, ltv_growth: 134.7, roi: 34.3
       },
       mission_impact: { aov: [38, 42, 47, 53, 59], ltv: [100, 142, 188, 246, 304], orders: [100, 126, 156, 192, 228] }
@@ -343,7 +343,7 @@
         { name: "Ohlala",         logo: "assets/logos/ohlala.webp",      url: "https://ohlala-equestrian.com/fr/pages/programme-de-fidelite-ohlala" }
       ],
       kpis: {
-        activation_rate: 4.8, points_usage_rate: 9.8, redemption_rate: 43.9, referral_conversion: 37.1, new_customer_rate: 0.7, participation_rate: 9.8,
+        activation_rate: 4.9, points_usage_rate: 14.1, redemption_rate: 43.6, referral_conversion: 37.1, new_customer_rate: 2.4, participation_rate: 9.8,
         aov_growth: 21.1, orders_growth: 121.5, ltv_growth: 175.4, roi: 20.1
       },
       mission_impact: { aov: [68, 74, 82, 92, 103], ltv: [100, 128, 158, 192, 224], orders: [100, 122, 148, 178, 208] }
@@ -360,7 +360,7 @@
 
   // ---- Global cross-sector averages (sourced from Google Sheet pivot table) --
   const GLOBAL = {
-    activation_rate: 4.8, points_usage_rate: 9.8, redemption_rate: 43.9, referral_conversion: 37.1, new_customer_rate: 0.7, participation_rate: 9.8,
+    activation_rate: 6.5, points_usage_rate: 16.1, redemption_rate: 61.6, referral_conversion: 37.1, new_customer_rate: 1.5, participation_rate: 9.8,
     aov_growth: 21.1, orders_growth: 121.5, ltv_growth: 175.4, roi: 20.1
   };
 
