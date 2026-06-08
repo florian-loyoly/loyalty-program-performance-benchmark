@@ -153,7 +153,7 @@ window.LOYOLY_I18N = {
       bp_share_copied:    "Copié !",
       bp_expert_cta_title:"Besoin d'aide pour combler l'écart ?",
       bp_expert_cta_body: "Parler à un expert Loyoly",
-      kv_tip_cta:         "Comment Loyoly gère ça"
+      kv_tip_cta:         "Découvrir l'approche Loyoly"
     },
     kpis: {
       activation_rate: {
@@ -456,7 +456,7 @@ window.LOYOLY_I18N = {
       bp_share_copied:    "¡Copiado!",
       bp_expert_cta_title:"¿Necesitas ayuda para cerrar la brecha?",
       bp_expert_cta_body: "Hablar con un experto de Loyoly",
-      kv_tip_cta:         "Cómo lo gestiona Loyoly"
+      kv_tip_cta:         "Descubre el enfoque Loyoly"
     },
     kpis: {
       activation_rate: {
