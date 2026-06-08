@@ -853,7 +853,7 @@ function CompareRow({ sector, value, pct, cmp, kpi, index, goToIndustry }) {
         {hover && (
           <div className="bm-compare__bar-tooltip">
             <strong>{formatValue(kpi, value)}</strong>
-            <span>{delta >= 0 ? "+" : ""}{formatDelta(kpi.id, delta)} vs avg</span>
+            <span>{formatDelta(kpi, delta)} vs avg</span>
           </div>
         )}
       </div>
