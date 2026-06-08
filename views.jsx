@@ -391,21 +391,13 @@ function OverviewView({ goTo, goToKpi, openBenchmark, vizOverride, formulaStyle,
           </div>
         </div>
         <nav className="bm-hero__index" aria-label="Jump to a section">
-          <button className="bm-hero__index-item" onClick={() => {
-            const el = document.getElementById("bm-cross");
-            if (el) { const y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top: y, behavior: "smooth" }); }
-          }}>
-            <span className="bm-hero__index-num">01</span>
-            <span><span className="bm-hero__index-t">{t("nav_overview_label")}</span><span className="bm-hero__index-s">{t("nav_overview_sub")}</span></span>
-            <span className="bm-hero__index-arrow"><Icon name="arrow-right" size={16} /></span>
-          </button>
           <button className="bm-hero__index-item" onClick={() => goTo("industry")}>
-            <span className="bm-hero__index-num">02</span>
+            <span className="bm-hero__index-num">01</span>
             <span><span className="bm-hero__index-t">{t("nav_industry_label")}</span><span className="bm-hero__index-s">{t("nav_industry_sub")}</span></span>
             <span className="bm-hero__index-arrow"><Icon name="arrow-right" size={16} /></span>
           </button>
           <button className="bm-hero__index-item" onClick={() => goTo("kpi")}>
-            <span className="bm-hero__index-num">03</span>
+            <span className="bm-hero__index-num">02</span>
             <span><span className="bm-hero__index-t">{t("nav_kpi_label")}</span><span className="bm-hero__index-s">{t("nav_kpi_sub")}</span></span>
             <span className="bm-hero__index-arrow"><Icon name="arrow-right" size={16} /></span>
           </button>
