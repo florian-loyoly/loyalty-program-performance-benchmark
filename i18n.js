@@ -159,6 +159,7 @@ window.LOYOLY_I18N = {
       activation_rate: {
         name: "Taux d'activation",
         short: "Activation",
+        nameAbout: "le taux d'activation",
         definition: "Le taux d'activation mesure la part des commandes incluant une récompense issue du programme. C'est l'indicateur de référence pour évaluer l'adoption réelle du programme de fidélité par vos clients. Un bon taux traduit une perception claire de la valeur du programme : vos membres comprennent les avantages, les utilisent et les intègrent naturellement dans leur parcours post-achat.",
         formula: "(Commandes avec récompense utilisée / Volume total de commandes) × 100",
         formulaParts: { num: "Commandes avec récompense utilisée", denom: "Volume total de commandes" },
@@ -172,6 +173,7 @@ window.LOYOLY_I18N = {
       points_usage_rate: {
         name: "Taux d'utilisation des points",
         short: "Utilisation des points",
+        nameAbout: "le taux d'utilisation des points",
         definition: "Le taux d'utilisation des points mesure la part des points crédités qui sont effectivement dépensés par vos clients. C'est un indicateur clé de la liquidité de votre programme et de la valeur perçue de vos récompenses. Un bon taux traduit un parcours fluide et des avantages suffisamment attractifs pour inciter vos membres à passer à l'action. Un véritable baromètre de l'efficacité de votre mécanique d'engagement.",
         formula: "(Points utilisés / Points gagnés) × 100",
         formulaParts: { num: "Points utilisés", denom: "Points gagnés" },
@@ -185,6 +187,7 @@ window.LOYOLY_I18N = {
       redemption_rate: {
         name: "Taux d'utilisation des récompenses",
         short: "Utilisation",
+        nameAbout: "le taux d'utilisation des récompenses",
         definition: "Le taux d'utilisation des récompenses mesure la part des avantages réclamés qui sont effectivement utilisés par les clients. C'est un indicateur clé de l'activation réelle du programme et de la valeur perçue des bénéfices proposés. Un bon taux traduit une expérience fluide, compréhensible et incitative, tandis qu'un faible taux signale souvent un manque de clarté, de visibilité ou des conditions d'usage trop restrictives.",
         formula: "(Récompenses utilisées / Récompenses réclamées) × 100",
         formulaParts: { num: "Récompenses utilisées", denom: "Récompenses réclamées" },
@@ -198,6 +201,7 @@ window.LOYOLY_I18N = {
       referral_conversion: {
         name: "Taux de conversion du parrainage",
         short: "Conversion parrainage",
+        nameAbout: "le taux de conversion du parrainage",
         definition: "Le taux de conversion du parrainage mesure la part de filleuls qui réalisent un premier achat après avoir reçu une invitation ou un code de parrainage. Il évalue la capacité de votre marque à transformer une recommandation en acquisition effective. Un bon taux traduit une promesse claire, un avantage bien positionné et un parcours d'achat sans friction pour le filleul.",
         formula: "(Nombre de filleuls ayant passé commande / Nombre total de filleuls invités) × 100",
         formulaParts: { num: "Filleuls ayant passé commande", denom: "Total de filleuls invités" },
@@ -212,6 +216,7 @@ window.LOYOLY_I18N = {
       new_customer_rate: {
         name: "Taux de nouveaux clients (issus du parrainage)",
         short: "Nouveaux du parrainage",
+        nameAbout: "le taux de nouveaux clients",
         definition: "Le taux de nouveaux clients mesure la part d'acheteurs acquis via le parrainage, par rapport à l'ensemble des nouveaux clients sur une période donnée. Il met en lumière la capacité du programme à générer de la croissance organique et à transformer vos clients satisfaits en véritables relais d'acquisition. Un bon taux traduit une communauté active, une expérience de recommandation bien intégrée et un coût d'acquisition marginal quasi nul, des atouts majeurs pour une stratégie de croissance rentable.",
         formula: "(Nouveaux clients via parrainage / Total des nouveaux clients) × 100",
         formulaParts: { num: "Nouveaux clients via parrainage", denom: "Total des nouveaux clients" },
@@ -225,6 +230,7 @@ window.LOYOLY_I18N = {
       participation_rate: {
         name: "Taux de participation",
         short: "Participation",
+        nameAbout: "le taux de participation",
         definition: "Le taux de participation correspond à la part de clients ayant complété au moins une mécanique d'engagement sur la période observée. Il reflète la vitalité relationnelle de votre programme et la capacité de votre marque à créer des interactions au-delà de l'achat. Un bon taux montre que vos clients ne se limitent pas à consommer : ils participent, partagent, donnent leur avis et contribuent à la visibilité organique de votre marque. Un véritable indicateur de performance communautaire.",
         formula: "(Nombre de clients ayant complété une mission / Nombre total de clients actifs) × 100",
         formulaParts: { num: "Clients ayant complété une mission", denom: "Total de clients actifs" },
@@ -240,6 +246,7 @@ window.LOYOLY_I18N = {
         insights: "Le secteur Maison & Décoration réalise une performance exceptionnelle (+263,5%, +88 pts). Cette catégorie cumule deux effets favorables : une forte croissance de l'AOV (+34%) et un très bon taux de réachat (+143,4%). Les membres fidèles de ce secteur dépensent plus à chaque visite et reviennent plus souvent, ce qui démultiplie la valeur vie client par rapport aux non-membres.\nLe secteur Animalerie (+134,7%) est en queue de peloton malgré son excellent ROI global. L'explication est mécanique : dans une catégorie où l'AOV est faible et peu extensible, la croissance du LTV est plafonnée par l'équation panier x fréquence. Le programme crée de la rétention mais ne peut pas corriger structurellement un panier moyen faible. C'est une catégorie où la valeur du programme réside davantage dans la réduction du churn que dans l'expansion du revenu par client.",
         name: "Croissance LTV",
         short: "Croissance LTV",
+        nameAbout: "la croissance du LTV",
         definition: "La croissance LTV mesure le delta de revenus entre les membres du programme de fidélité et une cohorte comparable de non-membres sur 12 mois. C'est la preuve fondamentale du ROI de la fidélité : la différence entre un programme qui génère une valeur incrémentale réelle et un autre qui récompense simplement des clients qui auraient acheté de toute façon. Suivre la croissance LTV par cohorte contrôle le biais de sélection et révèle l'impact causal réel de l'adhésion au programme.",
         formula: "(LTV membres − LTV non-membres) ÷ LTV non-membres",
         formulaParts: { num: "LTV(membres) − LTV(non-membres)", denom: "LTV(non-membres)" },
@@ -253,6 +260,7 @@ window.LOYOLY_I18N = {
         insights: "Les secteurs Maison & Décoration (+34%) et Santé & Compléments (+28,7%) enregistrent les progressions les plus marquées. Dans des catégories à panier élevé, le programme de fidélité donne au client une raison concrète de franchir un palier de dépense supplémentaire : passer à une gamme supérieure, ajouter un produit complémentaire, ou profiter d'un seuil de récompense. L'effet levier sur l'AOV est d'autant plus fort que le client est en phase de réflexion.\nLe secteur Animalerie (+8,7%) est à contre-courant. La catégorie génère pourtant un excellent ROI (34,3x) grâce au volume et à la fréquence, mais l'AOV progresse peu car les achats sont essentiellement récurrents et fonctionnels. Les clients rachètent les mêmes références sans être incités à monter en gamme ou à élargir leur panier. Travailler les cross-sell et les montées en gamme via la mécanique de fidélité reste un levier sous-exploité dans cette catégorie.",
         name: "Croissance AOV",
         short: "Croissance AOV",
+        nameAbout: "la croissance de l'AOV",
         definition: "La croissance AOV mesure combien le panier d'un membre est plus élevé sur les commandes où il utilise une récompense, par rapport à ses propres commandes sans utilisation. C'est la mesure la plus directe de l'impact au moment du paiement : un fort taux de croissance AOV signifie que vos récompenses tirent la dépense vers le haut, et ne récompensent pas simplement une dépense déjà engagée. Fixer un seuil de panier minimum pour l'utilisation des récompenses est le principal levier structurel pour faire progresser cette métrique.",
         formula: "(AOV avec usage − AOV sans) ÷ AOV sans",
         formulaParts: { num: "AOV(avec usage) − AOV(sans)", denom: "AOV(sans)" },
@@ -266,6 +274,7 @@ window.LOYOLY_I18N = {
         insights: "Les secteurs Mode & Prêt-à-porter (+147,2%) et Maison & Décoration (+143,4%) affichent les progressions les plus élevées. La mode est portée par une dynamique de réachat émotionnel intense : les collections, les tendances et les nouveautés créent des occasions d'achat répétées que le programme vient amplifier. Pour le secteur Maison & Décoration, la croissance des commandes confirme que le programme parvient à transformer des acheteurs occasionnels en clients réguliers sur des projets successifs.\nLe secteur Santé & Compléments ferme le classement (+87,6%, -33,9 pts), ce qui peut sembler paradoxal pour une catégorie à forte participation. Le problème est la nature de la demande : l'achat est conditionné par le besoin réel, et la fidélité ne peut pas créer une fréquence artificielle dans une catégorie où le client rachète quand son stock est épuisé. Le programme augmente la rétention mais ne compresse pas les intervalles d'achat.",
         name: "Croissance du nombre de commandes",
         short: "Nb. de commandes",
+        nameAbout: "la croissance du nombre de commandes",
         definition: "La croissance des commandes mesure à quelle fréquence les membres du programme achètent davantage par rapport à une cohorte comparable de non-membres sur 12 mois. C'est l'indicateur le plus pur pour savoir si l'adhésion au programme de fidélité modifie réellement le comportement d'achat, indépendamment de la taille du panier. Combinée avec la croissance LTV, elle permet aux marques de décomposer l'impact revenus de leur programme en une composante fréquence et une composante AOV.",
         formula: "(Commandes par membre − Commandes par non-membre) ÷ Commandes par non-membre",
         formulaParts: { num: "Commandes/membre − Commandes/non-membre", denom: "Commandes/non-membre" },
@@ -279,6 +288,7 @@ window.LOYOLY_I18N = {
         insights: "Les secteurs Animalerie (34,3x) et Maison & Décoration (25,8x) mènent le classement. Leur domination s'explique par des mécaniques différentes mais complémentaires : le secteur Animalerie tire sa performance d'un fort volume de transactions récurrentes avec un coût de récompenses maîtrisé, tandis que le secteur Maison & Décoration capitalise sur un ticket moyen élevé qui démultiplie le revenu additionnel généré par chaque membre actif.\nLe secteur Alimentation & Boissons (8,9x) arrive en dernière position. Le paradoxe de cette catégorie est visible dans les données : malgré le meilleur taux d'utilisation des points (17,4%) et une forte fréquence d'achat, le ROI reste en deçà de la moyenne. La combinaison d'un ticket moyen structurellement faible et d'un coût des récompenses proportionnellement élevé comprime les marges. La fidélité génère de l'engagement, mais la rentabilité nette du programme est plus difficile à construire.",
         name: "ROI",
         short: "ROI",
+        nameAbout: "le ROI",
         definition: "Le ROI mesure la rentabilité directe du programme de fidélité. C'est l'indicateur ultime pour évaluer la performance économique d'une stratégie relationnelle : il traduit la capacité du programme à convertir l'engagement client en revenu mesurable. Un bon ROI démontre qu'au-delà du lien créé avec la communauté, le programme génère une croissance rentable et durable.",
         formula: "(Revenus additionnels générés / Coût total du programme (outil + récompenses)) × 100",
         formulaParts: { num: "Revenus additionnels générés", denom: "Coût total du programme (outil + récompenses)" },
@@ -452,6 +462,7 @@ window.LOYOLY_I18N = {
       activation_rate: {
         name: "Tasa de activación",
         short: "Activación",
+        nameAbout: "la tasa de activación",
         definition: "La tasa de activación mide la proporción de pedidos que incluyen una recompensa obtenida a través del programa. Es el indicador de referencia para evaluar la adopción real del programa de fidelización por parte de tus clientes. Una buena tasa refleja una percepción clara del valor del programa: tus miembros comprenden los beneficios, los utilizan y los integran de forma natural en su recorrido post-compra.",
         formula: "(Pedidos con recompensa utilizada / Volumen total de pedidos) × 100",
         formulaParts: { num: "Pedidos con recompensa utilizada", denom: "Volumen total de pedidos" },
@@ -465,6 +476,7 @@ window.LOYOLY_I18N = {
       points_usage_rate: {
         name: "Tasa de uso de puntos",
         short: "Uso de puntos",
+        nameAbout: "la tasa de uso de puntos",
         definition: "La tasa de uso de puntos mide la proporción de puntos acreditados que son efectivamente gastados por tus clientes. Es un indicador clave de la liquidez de tu programa y del valor percibido de tus recompensas. Una buena tasa refleja un recorrido fluido y beneficios suficientemente atractivos para incitar a tus miembros a actuar. Un verdadero barómetro de la eficacia de tu mecánica de engagement.",
         formula: "(Puntos utilizados / Puntos ganados) × 100",
         formulaParts: { num: "Puntos utilizados", denom: "Puntos ganados" },
@@ -478,6 +490,7 @@ window.LOYOLY_I18N = {
       redemption_rate: {
         name: "Tasa de utilización de recompensas",
         short: "Utilización",
+        nameAbout: "la tasa de utilización de recompensas",
         definition: "La tasa de utilización de recompensas mide la proporción de beneficios reclamados que son efectivamente utilizados por los clientes. Es un indicador clave de la activación real del programa y del valor percibido de los beneficios ofrecidos. Una buena tasa refleja una experiencia fluida, comprensible e incentivadora, mientras que una tasa baja suele señalar falta de claridad, visibilidad o condiciones de uso demasiado restrictivas.",
         formula: "(Recompensas utilizadas / Recompensas reclamadas) × 100",
         formulaParts: { num: "Recompensas utilizadas", denom: "Recompensas reclamadas" },
@@ -491,6 +504,7 @@ window.LOYOLY_I18N = {
       referral_conversion: {
         name: "Tasa de conversión de referidos",
         short: "CVR referidos",
+        nameAbout: "la tasa de conversión de referidos",
         definition: "La tasa de conversión de referidos mide la proporción de referidos que realizan una primera compra tras recibir una invitación o un código de referido. Evalúa la capacidad de tu marca para convertir una recomendación en una adquisición efectiva. Una buena tasa refleja una promesa clara, un beneficio bien posicionado y un recorrido de compra sin fricciones para el referido.",
         formula: "(Número de referidos que realizaron una compra / Número total de referidos invitados) × 100",
         formulaParts: { num: "Referidos que realizaron una compra", denom: "Total de referidos invitados" },
@@ -505,6 +519,7 @@ window.LOYOLY_I18N = {
       new_customer_rate: {
         name: "Tasa de nuevos clientes (desde referidos)",
         short: "Nuevos por referido",
+        nameAbout: "la tasa de nuevos clientes",
         definition: "La tasa de nuevos clientes mide la proporción de compradores adquiridos a través del referido, en relación con el total de nuevos clientes en un período determinado. Pone de relieve la capacidad del programa para generar crecimiento orgánico y convertir a tus clientes satisfechos en verdaderos canales de adquisición. Una buena tasa refleja una comunidad activa, una experiencia de recomendación bien integrada y un coste de adquisición marginal casi nulo, activos fundamentales para una estrategia de crecimiento rentable.",
         formula: "(Nuevos clientes vía referido / Total de nuevos clientes) × 100",
         formulaParts: { num: "Nuevos clientes vía referido", denom: "Total de nuevos clientes" },
@@ -518,6 +533,7 @@ window.LOYOLY_I18N = {
       participation_rate: {
         name: "Tasa de participación",
         short: "Participación",
+        nameAbout: "la tasa de participación",
         definition: "La tasa de participación corresponde a la proporción de clientes que han completado al menos una mecánica de engagement en el período observado. Refleja la vitalidad relacional de tu programa y la capacidad de tu marca para crear interacciones más allá de la compra. Una buena tasa muestra que tus clientes no se limitan a consumir: participan, comparten, dan su opinión y contribuyen a la visibilidad orgánica de tu marca. Un verdadero indicador de rendimiento comunitario.",
         formula: "(Número de clientes que completaron una misión / Número total de clientes activos) × 100",
         formulaParts: { num: "Clientes que completaron una misión", denom: "Total de clientes activos" },
@@ -533,6 +549,7 @@ window.LOYOLY_I18N = {
         insights: "El sector Hogar & Decoración logra un rendimiento excepcional (+263,5%, +88 pts). Esta categoría acumula dos efectos favorables: un fuerte crecimiento del AOV (+34%) y una muy buena tasa de recompra (+143,4%). Los miembros fieles de este sector gastan más en cada visita y regresan con más frecuencia, lo que multiplica el valor de vida del cliente frente a los no miembros.\nEl sector Mascotas (+134,7%) se sitúa en la cola del pelotón a pesar de su excelente ROI global. La explicación es mecánica: en una categoría donde el AOV es bajo y poco extensible, el crecimiento del LTV está limitado por la ecuación cesta × frecuencia. El programa crea retención pero no puede corregir estructuralmente una cesta media baja. Es una categoría donde el valor del programa reside más en la reducción del churn que en la expansión del ingreso por cliente.",
         name: "Crecimiento de LTV",
         short: "Crecimiento LTV",
+        nameAbout: "el crecimiento del LTV",
         definition: "El crecimiento de LTV mide el delta de ingresos entre los miembros del programa de lealtad y una cohorte comparable de no miembros en 12 meses. Es la prueba fundamental del ROI de la fidelización: la diferencia entre un programa que genera valor incremental real y uno que simplemente recompensa a clientes que habrían comprado de todas formas. Seguir el crecimiento de LTV por cohorte controla el sesgo de selección y revela el impacto causal real de la membresía en el programa.",
         formula: "(LTV miembros − LTV no-miembros) ÷ LTV no-miembros",
         formulaParts: { num: "LTV(miembros) − LTV(no-miembros)", denom: "LTV(no-miembros)" },
@@ -546,6 +563,7 @@ window.LOYOLY_I18N = {
         insights: "Los sectores Hogar & Decoración (+34%) y Salud & Suplementos (+28,7%) registran los crecimientos más marcados. En categorías con cesta alta, el programa de fidelización da al cliente una razón concreta para superar un umbral de gasto adicional: pasar a una gama superior, añadir un producto complementario o aprovechar un nivel de recompensa. El efecto palanca sobre el AOV es tanto más fuerte cuanto más avanzada es la fase de reflexión del cliente.\nEl sector Mascotas (+8,7%) va a contracorriente. La categoría genera sin embargo un excelente ROI (34,3x) gracias al volumen y la frecuencia, pero el AOV crece poco porque las compras son esencialmente recurrentes y funcionales. Los clientes recompran las mismas referencias sin ser incentivados a subir de gama o ampliar su cesta. Trabajar el cross-sell y las subidas de gama a través de la mecánica de fidelización sigue siendo un lever infrautilizado en esta categoría.",
         name: "Crecimiento de AOV",
         short: "Crecimiento AOV",
+        nameAbout: "el crecimiento del AOV",
         definition: "El crecimiento de AOV mide cuánto mayor es el carrito de un miembro en los pedidos donde aplica una recompensa, comparado con sus propios pedidos sin canje. Es la medida más directa del impacto en el momento de pago: una tasa de crecimiento de AOV alta significa que tus recompensas impulsan el gasto hacia arriba, no solo recompensan un gasto ya comprometido. Establecer un umbral mínimo de carrito para el canje de recompensas es la palanca estructural principal para mejorar esta métrica.",
         formula: "(AOV con canje − AOV sin) ÷ AOV sin",
         formulaParts: { num: "AOV(con canje) − AOV(sin)", denom: "AOV(sin)" },
@@ -559,6 +577,7 @@ window.LOYOLY_I18N = {
         insights: "Los sectores Moda & Confección (+147,2%) y Hogar & Decoración (+143,4%) muestran los crecimientos más elevados. La moda está impulsada por una intensa dinámica de recompra emocional: las colecciones, las tendencias y las novedades crean ocasiones de compra repetidas que el programa amplifica. Para el sector Hogar & Decoración, el crecimiento de los pedidos confirma que el programa logra transformar compradores ocasionales en clientes regulares en proyectos sucesivos.\nEl sector Salud & Suplementos cierra el ranking (+87,6%, -33,9 pts), lo que puede parecer paradójico para una categoría de alta participación. El problema es la naturaleza de la demanda: la compra está condicionada por la necesidad real, y la fidelización no puede crear una frecuencia artificial en una categoría donde el cliente recompra cuando su stock se agota. El programa aumenta la retención pero no comprime los intervalos de compra.",
         name: "Crecimiento del número de pedidos",
         short: "Nº de pedidos",
+        nameAbout: "el crecimiento del número de pedidos",
         definition: "El crecimiento de pedidos mide con qué frecuencia compran más los miembros del programa de lealtad en comparación con una cohorte comparable de no miembros en 12 meses. Es el indicador más puro de si la membresía en el programa cambia el comportamiento de compra real, independientemente del valor del carrito. Combinado con el crecimiento de LTV, permite a las marcas descomponer el impacto en ingresos de su programa en un componente de frecuencia y un componente de AOV.",
         formula: "(Pedidos miembro − Pedidos no miembro) ÷ Pedidos no miembro",
         formulaParts: { num: "Pedidos/miembro − Pedidos/no-miembro", denom: "Pedidos/no-miembro" },
@@ -572,6 +591,7 @@ window.LOYOLY_I18N = {
         insights: "Los sectores Mascotas (34,3x) y Hogar & Decoración (25,8x) lideran el ranking. Su dominio se explica por mecánicas diferentes pero complementarias: el sector Mascotas extrae su rendimiento de un alto volumen de transacciones recurrentes con un coste de recompensas controlado, mientras que el sector Hogar & Decoración capitaliza sobre un ticket medio elevado que multiplica el ingreso adicional generado por cada miembro activo.\nEl sector Alimentación & Bebidas (8,9x) llega en última posición. La paradoja de esta categoría es visible en los datos: a pesar de la mejor tasa de uso de puntos (17,4%) y una alta frecuencia de compra, el ROI se mantiene por debajo de la media. La combinación de un ticket medio estructuralmente bajo y un coste de recompensas proporcionalmente elevado comprime los márgenes. La fidelización genera engagement, pero la rentabilidad neta del programa es más difícil de construir.",
         name: "ROI",
         short: "ROI",
+        nameAbout: "el ROI",
         definition: "El ROI mide la rentabilidad directa del programa de fidelización. Es el indicador definitivo para evaluar el rendimiento económico de una estrategia relacional: refleja la capacidad del programa para convertir el engagement del cliente en ingresos medibles. Un buen ROI demuestra que, más allá del vínculo creado con la comunidad, el programa genera un crecimiento rentable y sostenible.",
         formula: "(Ingresos adicionales generados / Coste total del programa (herramienta + recompensas)) × 100",
         formulaParts: { num: "Ingresos adicionales generados", denom: "Coste total del programa (herramienta + recompensas)" },

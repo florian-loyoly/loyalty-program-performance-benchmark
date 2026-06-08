@@ -804,7 +804,7 @@ function KpiView({ openBenchmark, dark, kpiId, setKpiId, vizOverride, formulaSty
           <div className="bm-section-head" style={{ borderTop: "1px solid var(--border)", paddingTop: 24 }}>
             <div className="bm-section-head__left">
               <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_tips_eyebrow")}</div>
-              <h3 className="bm-h3">{t("kv_tips_title", { kpi: kpi.short || kpi.name })}</h3>
+              <h3 className="bm-h3">{t("kv_tips_title", { kpi: kpi.nameAbout || kpi.short || kpi.name })}</h3>
             </div>
           </div>
           <div className="bm-tips">
@@ -888,7 +888,7 @@ function InsightsSection({ kpi, sorted, formatValue, t, dark, layout = "split" }
   const Header = (
     <div className="bm-insights__head">
       <div className="bm-eyebrow" style={{ marginBottom: 8 }}>{t("kv_insights_eyebrow")}</div>
-      <h3 className="bm-h3">{t("kv_insights_title", { kpi: kpi.short || kpi.name })}</h3>
+      <h3 className="bm-h3">{t("kv_insights_title", { kpi: kpi.nameAbout || kpi.short || kpi.name })}</h3>
     </div>
   );
 
