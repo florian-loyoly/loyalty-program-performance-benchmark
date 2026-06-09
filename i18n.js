@@ -336,7 +336,7 @@ window.LOYOLY_I18N = {
       hero_pill:          "Datos de fidelización",
       hero_h1_pre:        "Benchmark 2026 de",
       hero_h1_mid:        "",
-      hero_h1_post:       "programas de lealtad",
+      hero_h1_post:       "programas de fidelización",
       hero_lead:          "KPIs reales de {n}+ marcas Loyoly, desglosados por sector y por métrica. Descubre dónde se sitúa tu programa en menos de un minuto.",
       hero_secondary_cta: "Explorar los datos",
 
@@ -354,7 +354,7 @@ window.LOYOLY_I18N = {
       entry_more:         "+ {n} más",
 
       sec02_eyebrow:      "02 — PROMEDIOS ENTRE SECTORES",
-      sec02_title_a:      "Cómo es un programa de lealtad",
+      sec02_title_a:      "Cómo es un programa de fidelización",
       sec02_title_b:      "promedio en 2026.",
       sec02_lead:         "Haz clic en cualquier tarjeta para abrir el desglose completo del KPI: ranking por sector y tres consejos concretos para mejorar el número.",
       chip_rates:         "Tasas: 0-100 %",
