@@ -337,7 +337,7 @@ window.LOYOLY_I18N = {
       hero_h1_pre:        "Benchmark 2026 de",
       hero_h1_mid:        "",
       hero_h1_post:       "programas de fidelización",
-      hero_lead:          "KPIs reales de {n}+ marcas Loyoly, desglosados por sector y por métrica. Descubre dónde se sitúa tu programa en menos de un minuto.",
+      hero_lead:          "KPIs reales de más de {n} marcas que utilizan Loyoly, desglosados por sector y por métrica. Compara el rendimiento de tu programa con los referentes de tu industria y descubre en menos de un minuto dónde te sitúas.",
       hero_secondary_cta: "Explorar los datos",
 
       sec01_eyebrow:      "01 — DOS ENTRADAS",
