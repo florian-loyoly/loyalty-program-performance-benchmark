@@ -327,7 +327,7 @@ window.LOYOLY_I18N = {
       nav_kpi_label:      "Por KPI",
       nav_kpi_sub:        "Ranking de una métrica",
       nav_updated:        "Actualizado en mayo de 2026",
-      nav_subtitle:       "Benchmark de Lealtad 2026",
+      nav_subtitle:       "Benchmark de Fidelización 2026",
       benchmark_cta:      "Compara tu marca",
 
       footer_caption:     "Fuente: Loyoly Loyalty Benchmark 2026 - loyoly.io",
