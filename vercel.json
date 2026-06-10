@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "loyalty-program-performance-benchma.vercel.app" }],
+      "destination": "https://loyalty-program-performance-benchmark.vercel.app/$1",
+      "permanent": true
+    }
+  ]
+}
